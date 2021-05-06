@@ -1,0 +1,13 @@
+.app-servers {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 150px;
+}
+
+p {
+    color: wheat;
+}

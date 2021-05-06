@@ -1,0 +1,17 @@
+<section class="app-servers">
+    <h1>Olen Servers - komponentissa</h1>
+
+
+    <!--<input type="text" class="form-control" (input)="onUpdateServerName($event)">-->
+
+    <input type="text" class="form-control" [(ngModel)]="serverName">
+
+    <button [disabled]="!allowNewServer" (click)="onCreateServer()" class="btn btn-primary">String interpolation  - Add server</button>
+
+    <!-- <p class="sisennys"> {{ serverName }} </p> -->
+    <p class="sisennys"> {{ serverCreationStatus }} </p>
+    <p>Tän alla on 2 server komponenttia</p>
+    <app-server></app-server>
+    <app-server></app-server>
+
+</section>

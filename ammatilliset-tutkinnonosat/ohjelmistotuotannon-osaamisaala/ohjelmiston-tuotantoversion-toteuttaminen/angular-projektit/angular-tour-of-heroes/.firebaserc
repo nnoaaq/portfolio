@@ -1,0 +1,20 @@
+{
+  "targets": {
+    "angular-projektit": {
+      "hosting": {
+        "target-name": [
+          "site-name",
+          "angular-tour-of-heroes",
+          "angular-tour-of-heroes-a522.web.app"
+        ]
+      }
+    },
+    "angular-tour-of-heroes-2cf3d": {
+      "hosting": {
+        "angular-tour-of-heros": [
+          "angular-tour-of-heroes-2cf3d"
+        ]
+      }
+    }
+  }
+}

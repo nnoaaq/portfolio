@@ -1,0 +1,16 @@
+{
+  "targets": {
+    "angular-projektit": {
+      "hosting": {
+        "warning-ja-success": [
+          "warning-ja-success-fd8a6"
+        ],
+        "target-name": [
+          "site-name",
+          "warning-ja-success",
+          "warning-ja-success-fd8a6.web.app"
+        ]
+      }
+    }
+  }
+}

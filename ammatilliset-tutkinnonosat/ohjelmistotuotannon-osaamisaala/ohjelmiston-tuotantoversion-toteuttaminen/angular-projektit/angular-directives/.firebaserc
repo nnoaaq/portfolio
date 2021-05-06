@@ -1,0 +1,16 @@
+{
+  "targets": {
+    "angular-projektit": {
+      "hosting": {
+        "angular-directives": [
+          "angular-directives-124kn"
+        ],
+        "target-name": [
+          "site-name",
+          "angular-directives",
+          "angular-directives-124kn.web.app"
+        ]
+      }
+    }
+  }
+}

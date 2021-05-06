@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-projektit": {
+      "hosting": {
+        "angular-debug": [
+          "aangular-debuggaus-fd62"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-projektit"
+  }
+}

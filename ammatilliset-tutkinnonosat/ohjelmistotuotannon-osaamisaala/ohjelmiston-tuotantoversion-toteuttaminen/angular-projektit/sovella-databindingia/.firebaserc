@@ -1,0 +1,16 @@
+{
+  "targets": {
+    "angular-projektit": {
+      "hosting": {
+        "sovella-databindingia": [
+          "sovella-databindingia-158c0"
+        ],
+        "target-name": [
+          "https://sovella-databindingia-158c0.web.app/",
+          "site-name",
+          "sovella-databindingia"
+        ]
+      }
+    }
+  }
+}

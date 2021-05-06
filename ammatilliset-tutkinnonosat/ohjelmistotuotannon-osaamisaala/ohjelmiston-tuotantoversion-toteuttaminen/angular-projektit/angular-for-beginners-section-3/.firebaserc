@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-for-beginners-section3": {
+      "hosting": {
+        "angular-course": [
+          "angular-for-beginners-section3"
+        ]
+      }
+    }
+  }
+}

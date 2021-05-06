@@ -1,0 +1,18 @@
+{
+  "targets": {
+    "angular-for-beginners-sektion2": {
+      "hosting": {
+        "angular-course": [
+          "angular-for-beginners-sektion2"
+        ]
+      }
+    },
+    "angular-projektit": {
+      "hosting": {
+        "angular-course": [
+          "angular-projektit"
+        ]
+      }
+    }
+  }
+}

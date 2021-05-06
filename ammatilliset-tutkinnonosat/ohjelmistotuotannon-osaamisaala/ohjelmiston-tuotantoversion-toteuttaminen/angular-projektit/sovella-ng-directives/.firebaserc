@@ -1,0 +1,16 @@
+{
+  "targets": {
+    "angular-projektit": {
+      "hosting": {
+        "sovella-ng-directives": [
+          "sovella-ng-directives-cd69e"
+        ],
+        "target-name": [
+          "site-name",
+          "sovella-ng-directives",
+          "sovella-ng-directives-cd69e.web.app"
+        ]
+      }
+    }
+  }
+}

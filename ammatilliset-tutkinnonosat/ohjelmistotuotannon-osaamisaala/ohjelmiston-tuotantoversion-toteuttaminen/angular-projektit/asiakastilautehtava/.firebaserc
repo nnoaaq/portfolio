@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "asiakas-tilaus-2f0e8": {
+      "hosting": {
+        "asiakastilaustehtava": [
+          "asiakas-tilaus-2f0e8"
+        ]
+      }
+    }
+  }
+}

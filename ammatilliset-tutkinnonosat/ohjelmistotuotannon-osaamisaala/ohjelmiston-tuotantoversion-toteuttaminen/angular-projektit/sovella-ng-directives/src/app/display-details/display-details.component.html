@@ -1,0 +1,7 @@
+<button (click)=piilotus()>Display details</button>
+<p *ngIf="!piilotettu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur qui sunt perspiciatis distinctio facilis assumenda aspernatur accusamus? Commodi, dolore quasi?</p>
+<p *ngFor="let tapahtuma of loki; let i = index" [ngStyle]="{'background-color': i >=4 ? 'black' : 'white'}" [ngClass]="{'vari': i >=4 }"> {{tapahtuma}} </p>
+<hr>
+<button (click)=piilotusAika()>Display details</button>
+<p *ngIf="!piilotettuAika">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur qui sunt perspiciatis distinctio facilis assumenda aspernatur accusamus? Commodi, dolore quasi?</p>
+<p *ngFor="let tapahtuma of lokiAika; let i = index" [ngStyle]="{'background-color': i >=4 ? 'black' : 'white'}" [ngClass]="{'vari': i >=4 }"> {{tapahtuma}} </p>

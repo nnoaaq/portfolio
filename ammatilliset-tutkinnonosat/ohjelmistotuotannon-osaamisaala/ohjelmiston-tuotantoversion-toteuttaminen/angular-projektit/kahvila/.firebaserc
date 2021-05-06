@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kahvila-6e6e9": {
+      "hosting": {
+        "kahvila": [
+          "kahvila-6e6e9"
+        ]
+      }
+    }
+  }
+}
