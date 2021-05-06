@@ -132,7 +132,7 @@ function observerFunktio(entries) {
         if (entry.isIntersecting) {
             if (entry.target.id === "aloitus") {
                 bubble.style.display = "none";
-            } else if (window.innerWidth < 680) {
+            } else if (window.innerWidth < 1200) {
                 bubble.style.display = "none";
 
             } else {

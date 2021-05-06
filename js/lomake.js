@@ -50,5 +50,5 @@ function ilmoitus(teksti, vari) {
     document.querySelector("#ilmoitus div p").innerHTML = teksti;
     setTimeout(function() {
         document.getElementById("ilmoitus").classList.remove("ilmoitus-nakyy");
-    }, 4000);
+    }, 6000);
 }
