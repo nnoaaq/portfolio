@@ -1,0 +1,320 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/*navigointi palkki*/
+
+.nav {
+    background-color: #da2027;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+#otsikkopieni {
+    margin: 5px;
+    flex-grow: 2;
+}
+
+.oikea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#kirjaudu {
+    display: flex;
+    color: white;
+    padding: 15px;
+}
+
+#kirjaudu p,
+#hae p {
+    padding: 5px;
+}
+
+#hae {
+    display: flex;
+    padding: 15px;
+    color: white;
+}
+
+.ala-otsikot ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.ala-otsikot ul li {
+    background-color: rgb(251, 250, 250);
+    height: 40px;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ala-otsikot ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.ulkomaat {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+}
+
+
+/*uutinen*/
+
+.uutinen-otsikko {
+    display: flex;
+}
+
+.uutinen-otsikko p {
+    font-size: 30px;
+}
+
+.vahva {
+    font-weight: bold;
+}
+
+.nuolet {
+    display: flex;
+    margin: 5px;
+}
+
+.nuolet i {
+    background-color: rgb(158, 152, 152);
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    height: 30px;
+}
+
+.uutiskuva {
+    width: 100%;
+    padding: 5px;
+    height: 300px;
+}
+
+.uutiskuva img {
+    width: 100%;
+    height: 100%;
+}
+
+.uutiskuva p {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.somet {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: 30px 5px 0px 5px;
+}
+
+.face {
+    background-color: blue;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    align-items: center;
+}
+
+.twitter {
+    background-color: rgb(36, 182, 250);
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    align-items: center;
+}
+
+.mail {
+    background-color: grey;
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    align-items: center;
+}
+
+.face:hover,
+.twitter:hover,
+.mail:hover {
+    cursor: pointer;
+}
+
+.uutinen p {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.kuva {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.kuva img {
+    width: 100%;
+}
+
+.sininen {
+    color: blue;
+}
+
+
+/*ala osa*/
+
+.takaisin {
+    background-color: #da2027;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.ala-osa {
+    background-color: darkgrey;
+    padding: 10px;
+}
+
+.punainen {
+    color: red;
+    font-size: 20px;
+}
+
+
+/*ala nav*/
+
+.alanav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.linkki:nth-child(odd) {
+    background: rgb(53, 53, 53);
+}
+
+.linkki:nth-child(even) {
+    background: rgb(77, 77, 77);
+}
+
+.kevyt {
+    font-weight: 10;
+}
+
+.linkki {
+    display: flex;
+    flex-grow: 1;
+    width: 50%;
+    padding-left: 20px;
+    border: 1px solid black;
+    color: rgb(207, 205, 205);
+}
+
+.linkkikuva i {
+    margin: 5px;
+}
+
+
+/*footteri*/
+
+footer {
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.footeryla {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.footeryla p {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.kuplatausta {
+    background-image: url(images/kupla2.png);
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+}
+
+.kupla p {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#otsikkoiso {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .ala-otsikot,
+    .ulkomaat,
+    .uutinen,
+    .uutinen-otsikko,
+    .uutiskuva,
+    .somet,
+    .uutinen,
+    .takaisin,
+    .ala-osa,
+    .alanav,
+    footer {
+        width: 50%;
+        margin: auto;
+        border: 1px solid black;
+    }
+    .kuplatausta {
+        background-image: none;
+    }
+    #otsikkopieni {
+        display: none;
+    }
+    #otsikkoiso {
+        display: block;
+    }
+    nav {
+        width: 100%;
+        background-color: #da2027;
+    }
+    .nav {
+        width: 50%;
+        margin: auto;
+        justify-content: space-between;
+    }
+    .kuva img {
+        width: 75%;
+    }
+    .kuplatausta {
+        height: 100px;
+    }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Mitä head-osaan kannattaa lisätä: https://github.com/joshbuchea/HEAD -->
+    <meta charset="utf-8">
+    <!--Ääkköset käyttöön tällä sivulla-->
+    <meta name="viewport" content="widht=device-width, initial-scale=1">
+    <meta name="description" content="Business College palvelujen sijainti">
+    <!-- Provides information about an author or another person -->
+    <link rel="me" href="mailto:s1900877@edu.bc.fi">
+
+    <title>Koulun palvelut haltuun</title>
+    <link href="https://fonts.googleapis.com/css?family=Nova+Mono&display=swap" rel="stylesheet">
+    <!-- CSS-säännöt lisätään style-tagin sisään -->
+    <style>
+        /* CSS-säännöt Mobile-näkymälle */
+        
+        body {
+            font-family: 'Nova Mono', monospace;
+        }
+        
+        body * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            margin: 0.5em 0;
+        }
+        
+        h2 {
+            margin: 0.5em 0;
+        }
+        
+        p {
+            margin: 0.5em 0;
+        }
+        
+        figure {
+            display: block;
+        }
+        
+        figure img {
+            max-width: 100%;
+        }
+        /* CSS-säännöt Desktop-näkymälle */
+        
+        @media only screen and (min-width: 768px) {
+            /* Etsi miten flex-sääntöä käytetään */
+            .parent {
+                /* tämä sääntö section-tagille */
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .parent>* {
+                /* tämä sääntö sectionin lapsille */
+                flex-basis: 33%;
+                /* flex-grow: 1; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <h1>Koulun palvelut haltuun</h1>
+    <h2>Koulun palvelujen etsiminen ja selfieden ottaminen</h2>
+    <section class="parent">
+        <figure>
+            <img src="images/helpdesk.jpg" alt="kuvan sanallinen kuvaus">
+            <figcaption>Helpdesk</figcaption>
+        </figure>
+        <figure>
+            <img src="images/info.jpg" alt="kuvan sanallinen kuvaus">
+            <figcaption>Info</figcaption>
+        </figure>
+        <figure>
+            <img src="images/opot.jpg" alt="kuvan sanallinen kuvaus">
+            <figcaption>Opot</figcaption>
+        </figure>
+        <figure>
+            <img src="images/opintotoimisto.jpg" alt="kuvan sanallinen kuvaus">
+            <figcaption>Opintotoimisto</figcaption>
+        </figure>
+        <figure>
+            <img src="images/terveydenhoitaja.jpg" alt="kuvan sanallinen kuvaus">
+            <figcaption>Terveydenhoitaja</figcaption>
+        </figure>
+    </section>
+    <footer>
+        <p> &#169;Noa Julkunen, Sasu Huovinen, Marco Kammer ja Nikita Sirmitev</p>
+        <footer/>
+
+</body>
+
+</html>

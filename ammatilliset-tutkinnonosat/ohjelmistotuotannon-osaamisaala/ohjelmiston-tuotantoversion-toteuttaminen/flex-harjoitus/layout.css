@@ -1,0 +1,129 @@
+body {
+    font-family: Gotham, Helvetica, Arial, sans-serif;
+    background-color: darkcyan;
+    padding: 10px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.wrapper>* {
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
+.header {
+    background-color: gold;
+}
+
+.main {
+    background-color: darkorange;
+    padding: 0px;
+}
+
+.main p {
+    padding: 10px;
+}
+
+.main>* {
+    padding: 0px;
+}
+
+.aside-1 {
+    background-color: mediumseagreen;
+}
+
+.aside-2 {
+    background-color: seagreen;
+}
+
+.footer {
+    background-color: lightgreen;
+}
+
+@media screen and (min-width:426px) {
+    .wrapper {
+        flex-direction: row;
+    }
+    .aside-1 {
+        flex-basis: auto;
+    }
+    .aside-2 {
+        flex-basis: auto;
+    }
+}
+
+@media screen and (min-width:769px) {
+    .aside-1 {
+        order: 1;
+        flex-basis: 0px;
+    }
+    .main {
+        order: 2;
+        flex-basis: 400px;
+    }
+    .aside-2 {
+        order: 3;
+        flex-basis: 0px;
+    }
+    .footer {
+        order: 4;
+    }
+}
+
+.logot {
+    padding: 0px;
+    margin: 0px;
+}
+
+.logot ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0px;
+}
+
+.logot ul>* {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    border: 1px solid white;
+}
+
+i {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.face {
+    background-color: blue;
+}
+
+.twitter {
+    background-color: rgb(138, 138, 250);
+}
+
+.mail {
+    background-color: grey;
+}
+
+.linkit {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+}
+
+.linkit li {
+    background-color: rgb(231, 227, 227);
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+.linkit>* {
+    flex-grow: 1;
+}

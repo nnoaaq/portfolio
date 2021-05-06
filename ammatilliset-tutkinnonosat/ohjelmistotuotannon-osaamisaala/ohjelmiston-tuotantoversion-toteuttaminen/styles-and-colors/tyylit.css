@@ -1,0 +1,76 @@
+#wrapper {
+    border: 10px solid orangered;
+    border-radius: 4px;
+    margin: 20px;
+    padding: 10px;
+    z-index: -1;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+span {
+    background-color: rgb(242, 17, 234);
+    letter-spacing: 20px;
+    padding: 5px;
+    color: white;
+}
+
+.kappale1 {
+    padding-left: 25px;
+    letter-spacing: 15px;
+    font-family: 'Syne Mono', monospace;
+}
+
+.kappale2 {
+    color: blue;
+    letter-spacing: 15px;
+    font-family: 'Roboto Slab', serif;
+    padding-left: 25px;
+}
+
+#eka {
+    background-color: rgba(37, 126, 242, 0.4);
+    position: absolute;
+    top: -50px;
+    left: 70px;
+    width: 350px;
+    height: 180px;
+    animation-name: sininen;
+    animation-duration: 5s;
+}
+
+#toka {
+    background-color: rgba(23, 247, 42, 0.4);
+    position: absolute;
+    top: 40px;
+    left: 135px;
+    width: 90px;
+    height: 150px;
+    z-index: -2;
+    animation-name: keltainen;
+    animation-duration: 10s;
+}
+
+
+/*animaatiot*/
+
+@keyframes sininen {
+    from {
+        top: -900px;
+    }
+    to {
+        top: -50px;
+    }
+}
+
+@keyframes keltainen {
+    from {
+        left: -500px;
+    }
+    to {
+        left: 135px;
+    }
+}

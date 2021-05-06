@@ -1,0 +1,29 @@
+#rinnakkain {
+    display: flex;
+    flex-direction: row;
+    border: 1px dashed rgb(180, 180, 180);
+    padding: 0px 5px 0px 5px;
+}
+
+#rinnakkain>* {
+    flex-grow: 1;
+}
+
+#kuvanpaikka {
+    width: 100%;
+    padding: 0px 5px 0px 5px;
+}
+
+#kuvanpaikka img {
+    padding: 0px;
+}
+
+.ylatunniste {
+    border: 1px dashed rgb(180, 180, 180);
+    padding: 0px 5px 0px 5px;
+}
+
+footer {
+    border: 1px dashed rgb(180, 180, 180);
+    padding: 0px 5px 0px 5px;
+}

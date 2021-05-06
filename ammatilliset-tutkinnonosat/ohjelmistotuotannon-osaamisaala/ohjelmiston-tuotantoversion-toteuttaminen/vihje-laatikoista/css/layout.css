@@ -1,0 +1,36 @@
+#container {
+    text-align: center;
+    width: 250px;
+}
+
+#container2 {
+    text-align: center;
+    width: 500px;
+}
+
+#container li:nth-child(odd) {
+    background: #E0EAC7;
+}
+
+#container li:nth-child(even) {
+    background: #FFFFFF;
+}
+
+#container2 li:nth-child(even) {
+    background: #E0EAC7;
+}
+
+#container2 li:nth-child(odd) {
+    background: #FFFFFF;
+}
+
+li {
+    margin: 10px;
+    border-radius: 0px 0px 10px 0px;
+}
+
+section {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}

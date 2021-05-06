@@ -1,0 +1,58 @@
+body {
+    font-size: 62.5%;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+p {
+    margin-bottom: 10px;
+}
+article {
+    padding: 10px;
+    clear: both;
+}
+nav ul {
+   float: left;
+   width: 100%;
+   padding-top: 10px;
+   padding-left: 46px;
+   background-color: #ffcb2d;
+   list-style-type: none;
+   background-image: url(../images/nav_bg.gif);
+   background-repeat: repeat-x;
+   background-position: left bottom;
+}
+nav ul li {
+   float: left;
+   margin-top: 0px;
+   margin-right: 1px;
+   margin-bottom: 0px;
+   margin-left: 0px;
+   font-size: 1.6em;
+}
+nav ul a {
+float: left;
+display: block;
+margin: 0px;
+padding: 4px 8px;
+color: #333;
+text-decoration: none;
+border-width: 1px;
+border-style: solid;
+border-bottom-style: none;
+border-color: #9b8748;
+-webkit-border-radius: 5px 5px 0px 0px;
+-moz-border-radius: 5px 5p 0px 0px;
+border-radius: 5px 5px 0px 0px;
+background-color: #EBCB6A;
+}
+nav ul li a:hover, nav ul li a.active {
+    color: #331;
+    background-color: #FFF;
+    border-color: #000000;
+    padding-bottom: 5px;
+}
+section {
+    margin: 10px;
+    overflow: hidden; /*piilottaa ylimenevän osan*/
+    border: 1px black solid;
+    border-radius: 5px;
+}

@@ -1,0 +1,118 @@
+@media only screen and (max-width:1200px) {
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    span {
+        color: yellow;
+    }
+    .kortti {
+        border: 1px solid white;
+        display: flex;
+        flex-direction: row;
+    }
+    .kortti:nth-child(even) {
+        flex-direction: row-reverse;
+        text-align: left;
+    }
+    .kortti:nth-child(odd) {
+        flex-direction: row;
+        text-align: right;
+    }
+    .korrtti-sisalto {
+        width: 100%;
+    }
+    .kortti-otsikko {
+        background-color: #ff2257;
+        height: auto;
+        width: 100%;
+        max-width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .kortti-teksti {
+        padding: 10px;
+    }
+    .kortti-otsikko p {
+        display: none;
+    }
+    #tietoja {
+        padding-top: 60px;
+    }
+}
+
+.nimetty {
+    cursor: pointer;
+}
+
+.kysymys {
+    color: yellow;
+}
+
+@media only screen and (min-width: 1200px) {
+    .info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: nowrap;
+        padding: 15px;
+        height: 100vh;
+    }
+    .info>* {
+        flex-grow: 1;
+        width: 100%;
+    }
+    .kortti {
+        margin: 10px;
+        height: 100%;
+        max-height: 500px;
+        overflow: hidden;
+        border: 0px solid gray;
+    }
+    .kortti-otsikko {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        height: 220px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #ff2257;
+        text-align: center;
+        padding: 10px;
+        transition: 0.5s all ease-in-out;
+        transform: translateY(100px);
+        z-index: 2;
+        font-size: 14px;
+        box-shadow: 10px 5px 10px rgb(45, 44, 44);
+    }
+    .kortti-otsikko i {
+        font-size: 35px;
+        padding: 10px;
+    }
+    .kysymys {
+        display: none;
+    }
+    .kortti:hover .kortti-otsikko {
+        transform: translateY(50px);
+    }
+    .kortti-teksti {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        position: relative;
+        padding: 15px;
+        height: 220px;
+        font-size: 14px;
+        overflow: scroll;
+        transition: 0.5s all ease-in-out;
+        transform: translateY(-120px);
+        background-color: #383838;
+        color: rgb(255, 255, 255);
+    }
+    .kortti:hover .kortti-teksti {
+        transform: translateY(50px);
+    }
+}

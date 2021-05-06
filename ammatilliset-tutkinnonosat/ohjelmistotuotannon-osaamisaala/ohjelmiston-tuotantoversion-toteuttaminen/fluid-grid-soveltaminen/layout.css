@@ -1,0 +1,109 @@
+.neljasosa {
+    width: 24.25%;
+    float: left;
+}
+
+.puolet {
+    width: 49.5%;
+    float: left;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*kaksi kolumnia*/
+
+.levea {
+    width: 66%;
+    float: left;
+}
+
+.kapea {
+    width: 33%;
+    float: left;
+}
+
+p {
+    margin: 1%;
+}
+
+
+/*kaksi ja puoli kolumnia*/
+
+.vasen {
+    width: 66%;
+    float: left;
+}
+
+.oikea {
+    width: 33%;
+    float: left;
+}
+
+.ala {
+    float: left;
+    width: 49.5%;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    clear: both;
+}
+
+.vasen2 {
+    float: left;
+    width: 66%;
+}
+
+.oikea2 {
+    float: left;
+    width: 33%;
+}
+
+.kolmasosa {
+    float: left;
+    width: 33%;
+}
+
+.vasen3 {
+    float: left;
+    width: 66%;
+}
+
+.oikea3 {
+    float: left;
+    width: 33%;
+}
+
+.puolikas {
+    float: left;
+    width: 49.5%;
+}
+
+.vaseniso {
+    float: left;
+    width: 66%;
+}
+
+.oikeapieni {
+    float: left;
+    width: 33%;
+}
+
+article {
+    clear: both;
+}
+
+.neljasosa {
+    float: left;
+    width: 24.5%;
+}
+
+.neljasosa p {
+    margin-bottom: 10px;
+}

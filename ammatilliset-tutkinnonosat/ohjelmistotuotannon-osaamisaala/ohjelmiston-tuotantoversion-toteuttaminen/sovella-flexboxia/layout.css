@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    background-color: #84c15b;
+    padding: 5px;
+}
+
+
+/*footer*/
+
+footer {
+    background-color: #84c15b;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+footer section {
+    margin-right: 15px;
+}
+
+footer li {
+    list-style: none;
+    list-style-type: none;
+}
+
+footer p,
+i {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.musta {
+    color: black;
+}
+
+
+/*header*/
+
+header {
+    background-color: #84c15b;
+}
+
+
+/*nav*/
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 0;
+}
+
+nav ul li {
+    background-color: #9dcd7c;
+    border: 1px solid #5b8533;
+    width: 100%;
+    height: 75px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+
+/*#vision*/
+
+#vision {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border: 10px solid white;
+}
+
+.teksti {
+    flex-grow: 1;
+    background-color: #e2dbc0;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    font-size: 30px;
+}
+
+#vision img {
+    width: 20%;
+    height: 20%;
+}
+
+
+/*boxes*/
+
+#boxes img {
+    width: 100%;
+}
+
+#boxes {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    border: 10px solid white;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+#boxes>* {
+    padding: 0px 2px 0px 2px;
+    flex-grow: 1;
+    width: 33%;
+}
+
+#boxes i {
+    color: black;
+}
+
+#kuva {
+    width: 5px;
+}
+
+#specials section,
+#events section,
+#news section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: grey;
+}
+
+#specials section>*,
+#events section>*,
+#news section>* {
+    margin: 0px 5px 0px 5px;
+    color: black;
+    font-size: 20px;
+}
+
+#boxes img {
+    width: 100;
+}
+
+#news ul {
+    list-style-type: none;
+}
+
+#news ul li {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#news ul li p:last-of-type {
+    padding-left: 10px;
+}
+
+@media only screen and (max-width: 425px) {
+    #boxes {
+        flex-direction: column;
+    }
+    #boxes section {
+        width: 100%;
+    }
+    #kuva {
+        display: none;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    .teksti {
+        background-color: #84c15b;
+        font-size: 20px;
+    }
+    #vision {
+        border: none;
+    }
+}
+
+@media only screen and (max-width:1220px) {
+    #vision img {
+        width: 50%;
+    }
+}
+
+#logo h1,
+#logo h2 {
+    display: none;
+}

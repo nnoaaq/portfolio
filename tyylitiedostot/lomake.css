@@ -1,0 +1,198 @@
+.taydennettava {
+    background-color: rgb(245, 50, 50) !important;
+    transition: 0.5s all;
+}
+
+.lomake input:hover,
+.lomake textarea:hover {
+    background-color: transparent !important;
+}
+
+.lomake input:focus,
+.lomake textarea:focus {
+    background-color: transparent !important;
+}
+
+.laheta {
+    background-color: orange;
+}
+
+body {
+    background: #151515;
+    color: white;
+    font-family: 'consolas';
+}
+
+.lomake {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lomake h3 {
+    text-align: left;
+    width: 100%;
+}
+
+.lomake div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lomake label {
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 10px 0px;
+    transform: translate(10%, 50%);
+    width: max-content;
+    background: #151515;
+    padding: 5px;
+}
+
+.lomake div input {
+    border: 1px solid white;
+    padding: 15px;
+    background: transparent;
+    color: inherit;
+}
+
+.lomake button {
+    max-width: 100%;
+    background: orange;
+    border: 1px solid yellow;
+    color: inherit;
+    margin-top: 5px;
+    padding: 20px;
+}
+
+#ilmoitus {
+    max-height: 0;
+    overflow: hidden;
+    color: inherit;
+    top: 0%;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    height: 55px;
+    flex-direction: row-reverse;
+}
+
+#viesti-otsikko {
+    height: 50px;
+    background: transparent;
+    color: inherit;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    overflow: hidden;
+}
+
+#viesti-sisalto {
+    height: auto;
+    background: transparent;
+    color: inherit;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 15px;
+}
+
+#viesti-email {
+    height: 50px;
+    background: transparent;
+    color: inherit;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    overflow: hidden;
+}
+
+#lomake-sisalto {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 70px;
+}
+
+.ilmoitus {
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+    max-height: 70px;
+}
+
+.sulje {
+    /* padding: 15px; */
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 50px !important;
+    overflow: hidden;
+    height: 50px;
+}
+
+.ilmoitus-nakyy {
+    max-height: 100% !important;
+}
+
+@media only screen and (min-width:850px) {
+    .lomake {
+        max-width: 100%;
+        margin: 0;
+    }
+    .laheta {
+        height: 75px;
+        flex-grow: 1;
+        padding: 15px;
+        background: #510720;
+        text-transform: uppercase;
+        cursor: pointer;
+        flex-direction: row;
+        justify-content: center;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(5px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-transition-property: color;
+        transition-property: color;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+    }
+    .laheta:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: 50%;
+        transform-origin: 50%;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    .laheta:hover {
+        color: black;
+    }
+    .laheta:hover:before,
+    .laheta:active:before {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+
+
+<img src="/intra/kuvat/helpdesk.jpg style="width:500px;height:350px;">
+<img src="/intra/kuvat/info.jpg">
+<img src="/intra/kuvat/opintotoimisto.jpg">
+<img src="/intra/kuvat/opot.jpg">
+<img src="/intra/kuvat/terveydenhoitaja.jpg">
+<html>

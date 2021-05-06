@@ -1,0 +1,106 @@
+/*kaikkin tageihin bodyn sisällä marginint ja paddingit nollaksi*/
+
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 10px;
+}
+
+section {
+    background-color: #BCDDED;
+    margin-bottom: 10px;
+}
+
+#toka {
+    border: black 1px solid;
+}
+
+h1 {
+    padding: 10px;
+}
+
+.sininen-tausta {
+    background-color: #87ABB8;
+    text-align: right;
+    text-transform: lowercase;
+}
+
+h2 {
+    padding: 10px;
+    padding-top: 0;
+}
+
+p {
+    padding: 10px;
+    padding-top: 0;
+}
+
+pre {
+    padding: 10px 10px 10px 30px;
+    padding-top: 0;
+}
+
+.ekaa {
+    margin: 10px 0px 0px 0px;
+}
+
+ul {
+    padding: 10px 10px 10px 30px;
+    padding-top: 0;
+}
+
+.iso-kirjain {
+    font-size: 500%;
+    float: left;
+    width: 1.2em;
+    text-align: center;
+    padding: 0.1em 0.1em 0;
+    background-color: #568;
+    color: white;
+    border: solid;
+    border-width: 0 0.2em 0.2em 0;
+    margin: 0 0.5em 0.2em 0;
+}
+
+
+/*Responsiivinen kuva vaatii seuraavat kaksi sääntöä*/
+
+figure {
+    display: block;
+}
+
+figure img {
+    max-width: 100%;
+}
+
+.pieni-kuva {
+    float: left;
+    background-color: white;
+    width: 10%;
+    margin: -1px 2.5em 1em -1px;
+    border: black 0 solid;
+    border-width: 0 1px 1px 0;
+}
+
+.myyntiteksti {
+    float: left;
+    background-color: white;
+    width: 50%;
+    margin: -1px 2.5em 1em -1px;
+    border: black 0 solid;
+    border-width: 0 1px 1px 0;
+    padding: 13px;
+}
+
+.better {
+    float: right;
+    background-color: white;
+    padding: 13px;
+    border: 1px solid black;
+    border-width: 1px 0px 1px 1px;
+    margin: 1px -1px 1px 1px;
+    width: 25%;
+}

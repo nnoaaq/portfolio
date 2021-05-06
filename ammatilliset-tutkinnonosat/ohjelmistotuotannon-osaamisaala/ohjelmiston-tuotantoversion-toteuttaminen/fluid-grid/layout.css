@@ -1,0 +1,119 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: whitesmoke;
+    color: black;
+    margin: 0%;
+    padding: 0;
+    font-size: 100%;
+}
+
+
+/*säännöt*/
+
+.col-2 section {
+    background-color: grey;
+    float: left;
+    height: 50px;
+    margin-right: 1%;
+    width: 49.5%;
+}
+
+.col-3 section {
+    background-color: blue;
+    float: left;
+    height: 50px;
+    margin-right: 1%;
+    width: 32.666667%;
+}
+
+.col-4 section {
+    background-color: darkblue;
+    float: left;
+    height: 50px;
+    margin-right: 1%;
+    width: 24.250000%;
+}
+
+.col-5 section {
+    background-color: rgb(38, 241, 38);
+    float: left;
+    height: 50px;
+    margin-right: 1%;
+    width: 19.2000000%;
+}
+
+.col-6 section {
+    background-color: darkgreen;
+    float: left;
+    height: 50px;
+    margin-right: 1%;
+    width: 15.8333333%;
+}
+
+.col-7 section {
+    background-color: red;
+    float: left;
+    height: 50px;
+    margin-right: 1%;
+    width: 13.428571%;
+}
+
+.col-8 section {
+    background-color: darkorange;
+    float: left;
+    height: 50px;
+    margin-right: 1%;
+    width: 11.6250%;
+}
+
+.col-9 section {
+    background-color: orange;
+    float: left;
+    height: 50px;
+    margin-right: 1%;
+    width: 10.2%;
+}
+
+.col-10 section {
+    background-color: rgb(241, 180, 66);
+    float: left;
+    height: 50px;
+    margin-right: 1%;
+    width: 9.10%;
+}
+
+.col-11 section {
+    background-color: yellow;
+    float: left;
+    height: 50px;
+    margin-right: 1%;
+    width: 8.1818%;
+}
+
+.col-12 section {
+    background-color: coral;
+    float: left;
+    height: 50px;
+    margin-right: 1%;
+    width: 7.416666%;
+}
+
+
+/*vika lapsi*/
+
+.col-2 section:last-child,
+.col-3 section:last-child,
+.col-4 section:last-child,
+.col-5 section:last-child,
+.col-7 section:last-child,
+.col-6 section:last-child,
+.col-8 section:last-child,
+.col-9 section:last-child,
+.col-10 section:last-child,
+.col-11 section:last-child,
+.col-12 section:last-child {
+    margin-right: 0;
+}

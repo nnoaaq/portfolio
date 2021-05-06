@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="layout.css">
+    <title>Vaihda kuva ja teksti</title>
+    <script src="js.js" async></script>
+</head>
+
+<body>
+    <h1>Mozilla is cool</h1>
+    <figure>
+        <img src="kuvat/mozilla.jpg" alt="brave logo">
+    </figure>
+    <button onclick="kayttaja()">Change user</button>
+    <form id="kentta">
+        <input type="text" placeholder="Syötä nimesi" id="tekstikentta">
+        <input type="button" value="Valmista" id="laheta">
+    </form>
+    <h3>At Mozilla, we´re a global community of</h3>
+    <ul>
+        <li>techologists</li>
+        <li>thinkers</li>
+        <li>builders</li>
+    </ul>
+    <button id="versio" onClick="window.location.reload();">Mozilla versioon</button>
+</body>
+
+</html>

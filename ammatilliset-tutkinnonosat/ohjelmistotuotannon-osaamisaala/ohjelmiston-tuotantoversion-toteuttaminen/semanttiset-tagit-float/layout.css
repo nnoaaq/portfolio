@@ -1,0 +1,34 @@
+body * {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: white;
+}
+header {
+    background-color: #DE1527;
+}
+nav {
+    background-color: #F28E30;
+}
+section {
+    background-color: #FEBF15;
+    width: 50%;
+    float: left;
+    
+}
+article {
+    background-color: #78C044;
+}
+aside {
+    background-color: #086FB2;
+    width: 50%;
+    float: right;
+}
+footer {
+    background-color: #8F2D8A;
+    clear: both;
+}
+p {
+    padding: 10px;
+}

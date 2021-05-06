@@ -1,0 +1,63 @@
+body {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+}
+figure {
+    display: block;
+}
+figure img {
+    max-width: 100%; /*kuvasta responsiivinen*/
+}
+
+footer {
+    background-color: #B9C826;
+    padding: 10px;
+    border-radius: 0px 0px 20px 20px;
+}
+    header {
+       background-color:#B9C826;
+       border-radius: 20px 20px 0px 0px;
+    }
+h1 {
+    font-size: 26px;
+}
+.main-nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.main-nav ul > * {
+    padding: 0px 7px 7px 7px;
+    font-size: 1.2em;
+}
+.main-nav a {
+    text-decoration: none;
+    color: #4B4853;
+}
+.main-nav a:hover {
+    background-color: #B9C826;
+    border-radius: 0px 0px 10px 10px;
+}
+.main-nav a.active {
+    background-color: #B9C826;
+    border-radius: 0px 0px 10px 10px;
+}
+/*Säännöt isoa näyttöä varten (leveys vähintään 768px)*/
+@media only screen and (min-width: 768px) {
+    body {
+      background-color: white;
+    }
+    .parent {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    }
+    .parent > * {
+        flex-basis: 0px;
+        flex-grow: 1;
+          }
+}

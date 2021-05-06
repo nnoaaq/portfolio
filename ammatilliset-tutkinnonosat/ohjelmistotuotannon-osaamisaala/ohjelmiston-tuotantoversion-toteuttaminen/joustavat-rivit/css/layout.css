@@ -1,0 +1,21 @@
+body {
+    font-size: 62.5%;
+    max-width: 1920px;
+}
+
+header {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    margin: 0px;
+    padding: 0px;
+    background-color: #e0e0e0;
+    background-image: url("../images/border-top.png"), url("../images/border-bottom.png"), url("../images/abstract-background.png");
+    background-position: top left, bottom left, center left;
+    background-repeat: no-repeat;
+}
+
+header h1 {
+    margin: 0px;
+    padding: 2em 0 2em 20px;
+    color: white;
+}

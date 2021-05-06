@@ -1,0 +1,99 @@
+figure {
+    width: 100%;
+}
+
+figure img {
+    width: 100%;
+}
+
+.sivu1 {
+    display: none;
+}
+
+.sivu2 {
+    display: none;
+}
+
+.sivu3 {
+    display: none;
+}
+
+.sivu4 {
+    display: none;
+}
+
+
+/*toinen sivu carousel*/
+
+.toinen-figure {
+    width: 20%;
+    margin: auto;
+}
+
+.toinen-figure img {
+    width: 100%;
+    border-radius: 100%;
+}
+
+
+/*kolmas sivu blog*/
+
+.jumbotroni {
+    background-image: url("../../bootstrap-start/kuvat/carousel.png");
+    background-size: cover;
+}
+
+.blogi {
+    width: 40%;
+}
+
+.blogi img {
+    width: 100%;
+}
+
+
+/*neljäs sivu products*/
+
+.product-device {
+    background-image: url("../../bootstrap-start/kuvat/12.jpg");
+}
+
+.product-figure img {
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.vihrea {
+    background-color: rgb(102, 253, 102);
+}
+
+.punainen {
+    background-color: rgb(247, 72, 72);
+}
+
+.keltainen {
+    background-color: rgb(242, 242, 85);
+}
+
+.sininen {
+    background-color: rgba(51, 51, 255, 0.624);
+}
+
+.etusivu-ul {
+    display: flex;
+    list-style: none;
+    width: 99%;
+    justify-content: center;
+}
+
+.etusivu-ul>* {
+    border: 1px solid black;
+}
+
+.etusivu {
+    width: auto;
+}
+
+.etusivu img {
+    width: 100%;
+}

@@ -1,0 +1,213 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'consolas';
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    body {
+        background-color: #151515;
+        color: white;
+        width: 100%;
+        margin: 0px auto;
+        overflow-x: hidden;
+    }
+    
+    .rajoitettu-korkeus {
+        max-height: 0vh;
+        overflow: hidden;
+    }
+    
+     :root {
+        --pallo1: #ffa500;
+        --pallo2: #ff2257;
+        --pallo3: #192138;
+        --pallo4: white;
+    }
+    
+    .latausvaihe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: scale(1);
+        height: 100vh;
+        z-index: 1000;
+        background-color: #151515;
+    }
+    
+    .pallot {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .pallo1,
+    .pallo2,
+    .pallo3,
+    .pallo4 {
+        width: 3vw;
+        height: 3vw;
+        border-radius: 100%;
+        margin: 2vw;
+        background-image: linear-gradient(15deg, #143af7 0%, rgba(0, 0, 0, 0) 100%);
+        animation: effekti 1.5s 0.5s linear infinite;
+    }
+    
+    .pallo1 {
+        background-color: var(--pallo1);
+    }
+    
+    .pallo2 {
+        background-color: var(--pallo2);
+        animation-delay: 0.1s;
+    }
+    
+    .pallo3 {
+        background-color: var(--pallo3);
+        animation-delay: 0.2s;
+    }
+    
+    .pallo4 {
+        background-color: var(--pallo4);
+        animation-delay: 0.3s;
+    }
+    
+    @keyframes effekti {
+        0%,
+        50%,
+        100% {
+            transform: scale(1);
+            filter: blur(0px);
+            background-image: linear-gradient(145deg, #143af7 0%, rgba(0, 0, 0, 0) 100%);
+        }
+        25% {
+            transform: scale(0.8);
+            filter: blur(0.5px);
+            background-image: linear-gradient(175deg, #143af7 0%, rgba(0, 0, 0, 0) 100%);
+        }
+        75% {
+            filter: blur(0.6px);
+            transform: scale(1.3);
+        }
+    }
+    
+    .lataus-valmis {
+        transform: scale(0);
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s all ease-in;
+    }
+    
+    .aktiivinen {
+        background-color: green;
+        max-width: 65px;
+    }
+    
+    #sisalto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #aloitus {
+        height: 100vh;
+        width: 100%;
+        margin: auto;
+    }
+    
+    #tietoja {
+        min-height: 100%;
+        width: 70%;
+        margin: auto;
+    }
+    
+    #lomake {
+        width: 70%;
+        padding-top: 60px;
+        position: sticky;
+        top: 60px;
+        height: 100%;
+    }
+    
+    #tehtava {
+        min-height: 100vh;
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        padding-top: 50px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-image: url(../kuvat/etusivu_sinertava2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .tehtavia {
+        position: relative;
+        top: 0px;
+        left: 0;
+        width: 100%;
+    }
+    
+    .piilotettu {
+        display: none;
+    }
+    
+    .erottaja {
+        width: 100%;
+        height: 1px;
+    }
+    
+    .piilotettuna {
+        transform: translateX(0%);
+    }
+    
+    .piilotettuna-vasen {
+        transform: translateX(-100%);
+    }
+    
+    .kupla {
+        position: absolute;
+        z-index: -2;
+        left: 10px;
+        top: 9px;
+        width: 66.533px;
+        height: 18.9833px;
+        background: rgb(243, 243, 169) none repeat scroll 0% 0%;
+    }
+    /*Pienemmällä näytön koolla koko leveys käyttöön*/
+    
+    @media only screen and (max-width:1000px) {
+        body {
+            width: 100%;
+            margin: 0px auto;
+        }
+        header {
+            width: 100vw !important;
+        }
+        #lomake {
+            width: 100%;
+        }
+        #tehtava {
+            min-height: 100%;
+            height: 100%;
+        }
+    }

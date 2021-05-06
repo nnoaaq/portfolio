@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Mitä head-osaan kannattaa lisätä: https://github.com/joshbuchea/HEAD -->
+		<meta charset="utf-8"> <!--Ääkköset käyttöön tällä sivulla-->
+		<meta name="viewport" content="widht=device-width, initial-scale=1"> 
+		<meta name="description" content="Business College palvelujen sijainti">
+		<!-- Provides information about an author or another person -->
+		<link rel="me" href="mailto:s1900877@edu.bc.fi">
+		
+		<title>Google forms-kyselyt</title>
+		<link href="https://fonts.googleapis.com/css?family=Nova+Mono&display=swap" rel="stylesheet">
+		<!-- CSS-säännöt lisätään style-tagin sisään -->
+		<style> 
+				/* CSS-säännöt Mobile-näkymälle */
+				body{
+					font-family: 'Nova Mono', monospace;
+				}
+				body * {
+					margin: 0;
+					padding:0;
+				}
+				h1 {
+				    margin: 0.5em 0; 
+				}
+				h2 {
+					margin: 0.5em 0;
+				}
+				p {
+				    margin: 0.5em 0;
+				}
+				section 	{
+					display: block;
+				}
+				section iframe {
+					width: 100%;
+				}
+				/* CSS-säännöt Desktop-näkymälle */
+				@media only screen and (min-width: 768px) {
+					/* Etsi miten flex-sääntöä käytetään */
+					.parent {	 /* tämä sääntö section-tagille */
+						display: flex;
+						flex-direction: row;
+						flex-wrap: wrap;
+					}
+					.parent > * {	 /* tämä sääntö sectionin lapsille */
+						flex-basis: 33%;
+						/* flex-grow: 1; */
+					}
+				}
+		</style>
+	</head>
+	<body>
+	
+
+
+		<h1>Google Forms-kysely linkkinä ja upotettuna</h1>
+		<h2>Linkki</h2>
+		<p>Käy vastaamassa oheiseen kyselyyn:
+			<a href="https://forms.gle/yiZEBtdtaBozKate6" target="_blank">"Pitäisikö toisen asteen oppikirjat olla ilmaisia?"</a>
+		
+	</p>
+	<h2>Kysely upotettuna</h2>
+	<section>
+		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfa7oUrsWhWB4YeFpgCCzOnutKdJIYrFkQxlHlSTW1ChYCpsw/viewform?embedded=true" height="907"  frameborder="0" marginheight="0" marginwidth="0">Ladataan…</iframe>
+	</section>
+		
+	
+	
+			<footer>
+				<p> &#169 2019 ;Noa Julkunen</p>
+			<footer/>
+			
+	</body>
+</html>
+

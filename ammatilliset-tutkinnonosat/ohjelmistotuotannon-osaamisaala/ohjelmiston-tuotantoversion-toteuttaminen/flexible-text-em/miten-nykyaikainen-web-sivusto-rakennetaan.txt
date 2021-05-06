@@ -1,0 +1,15 @@
+Miten nykyaikainen web-sivusto rakennetaan
+Miten nykyaikainen web-sivusto rakennetaan
+HTML5 ja CSS3
+Nykyaikaisen Web-sivun tekemisessä tarvitaan HTML5-merkkauskielellä tehtyjä html-tageja ja näihin liitettyjä CSS3-sääntäjä. HTML5-tagein merkataan sivun rakenne. CSS3-säännäin lisätään sivun rakenteeseen muotoillu.
+
+JavaScriptiä ja JavaScript-kirjastoja
+JavaScriptin avulla sivulle saa lisättyä vuorovaikutteisuutta.
+
+PHP-ohjelmointia ja jokin tietokanta sivuston taustalle
+Vuorovaikutteinen, käyttäjän tekemien valintojen kautta muotoutuvan dynaamisen sivuston teossa tarvitaan monesti tietokanta ja php-ohjelmointitaitoja sivun liittämiseksi tietokantaan.
+
+Kehittämisympäristä
+Kehittämisympäristän avulla sivustoja voidaan laatia ja hallita kehittämisympäristän tarjoamien tyäkalujen avulla. Kehittämisympäristäinä voidaan käyttää esim. Drupalia, Wordpressiä, HTML5 Boilerplatea tai Bootstrapia.
+
+Copyright ä Etunimi Sukunimi

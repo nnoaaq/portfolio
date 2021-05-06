@@ -1,0 +1,19 @@
+body {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: blue;
+    font-size: 35px;
+}
+
+#versio {
+    display: none;
+}
+
+#kentta {
+    display: none;
+}

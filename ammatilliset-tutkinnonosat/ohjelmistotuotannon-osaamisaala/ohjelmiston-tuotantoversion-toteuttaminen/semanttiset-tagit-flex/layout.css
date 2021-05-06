@@ -1,0 +1,45 @@
+body * {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: white;
+}
+header {
+    background-color: #DE1527;
+}
+nav {
+    background-color: #F28E30;
+}
+section {
+    background-color: #FEBF15;
+}
+article {
+    background-color: #78C044;
+    margin-bottom: 10px;
+}
+section article:last-child {
+    margin-bottom: 0;
+}
+aside {
+    background-color: #086FB2;
+}
+footer {
+    background-color: #8F2D8A;
+}
+p, section {
+    padding: 10px;
+}
+.parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.parent > * {
+    flex-basis: 100%;
+    flex-grow: 1;
+}
+
+.parent .rinnakkain {
+    flex-basis: 0;
+}

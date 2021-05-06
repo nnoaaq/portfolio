@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+}
+
+.container {
+    width: 100%x;
+    border: 1px black solid;
+    border-radius: 5px;
+    background-color: gainsboro;
+    background-image: linear-gradient(-45deg, gainsboro, white);
+    padding: 1em;
+}
+
+.container .heading h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.container .text p {
+    font-size: 1em;
+}
+
+.clearfix {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto;
+    grid-template-areas: "image heading" "image text";
+    margin-bottom: 20px
+}
+
+.heading {
+    grid-area: heading;
+}
+
+.image {
+    grid-area: image;
+}
+
+.text {
+    grid-area: text;
+}
+
+.container .image img {
+    padding: 5px;
+    border: 1px lightgrey solid;
+    border-color: lightgrey darkgrey darkgrey lightgrey;
+    box-shadow: 3px 3px darkgrey;
+    max-width: 100%;
+}
+
+.otherway {
+    grid-gap: 10px;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: "heading image" "text image";
+    margin-bottom: 20px
+}
+
+.otherway .image {
+    text-align: right;
+    margin-right: 10px;
+}
+
+
+/*säännöt tabletti näkymälle*/
+
+@media screen and (min-width:768px) {
+    body {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    .clearfix {
+        flex-grow: 50%;
+        flex-basis: 0px;
+    }
+}

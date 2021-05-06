@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox malli</title>
+<style>
+    p {
+    padding: 10px;
+}
+.color-red {
+    background-color: red;
+}
+.color-blue {
+    background-color: blue;
+}
+.color-green {
+    background-color: green;
+}
+.parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.parent > *{
+    flex-basis: 0px;
+    flex-grow: 1;
+    order: 2;
+    
+}
+
+.jarjestys {
+    order:1;
+}
+.tupla {
+    flex-grow: 2;
+}
+</style>
+</head>
+<body>
+        <h1>Palkit yhtä leveät ja rinnakkain</h1>
+    <article class="parent">
+        <p class="color-red"></p>
+        <p class="color-blue"></p>
+        <p class="color-green"></p>
+    </article>
+        <h1>Sininen palkki on 2 kertaa leveämpi kuin muut</h1>
+    <article class="parent">
+        <p class="color-red"></p>
+        <p class="color-blue tupla"></p>
+        <p class="color-green"></p>
+    </article>
+        <h1>Vihreä palkki siirtyi ensimmäiseksi</h1>
+    <article class="parent">
+        <p class="color-red"></p>
+        <p class="color-blue"></p>
+        <p class="color-green jarjestys"></p>
+    </article>
+    
+</body>
+</html>

@@ -1,0 +1,385 @@
+<div class="tapahtuma oikealla">
+    <div class="tapahtuma-sisalto">
+        <p class="aika">10.10.2019</p>
+        <p class="nimi">Järjestelmän hankinta ja käyttöönotto</p>
+    </div>
+</div>
+<div class="tapahtuma vasemmalla">
+    <div class="tapahtuma-sisalto ">
+        <p class="aika">2.12.2019</p>
+        <p class="nimi">Palvelutehtävissä toimiminen</p>
+    </div>
+</div>
+<div class="tapahtuma oikealla">
+    <div class="tapahtuma-sisalto">
+        <p class="aika">30.11.2021</p>
+        <p class="nimi">Testaus</p>
+    </div>
+</div>
+<div class="tapahtuma vasemmalla">
+    <div class="tapahtuma-sisalto">
+        <p class="aika">20.1.2021</p>
+        <p class="nimi">Ohjelmiston prototyypin toteuttaminen</p>
+    </div>
+</div>
+<div class="tapahtuma oikealla">
+    <div class="tapahtuma-sisalto">
+        <p class="aika">12.4.2021</p>
+        <p class="nimi">Ohjelmiston tuotantoversion toteuttaminen</p>
+    </div>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Tyylitiedostot, jokaiselle sivun osalle oma tiedosto-->
+    <link rel="stylesheet" href="tyylitiedostot/yleiset.css">
+    <link rel="stylesheet" href="tyylitiedostot/esittely.css">
+    <link rel="stylesheet" href="tyylitiedostot/tietoja.css">
+    <link rel="stylesheet" href="tyylitiedostot/aikajana.css">
+    <link rel="stylesheet" href="tyylitiedostot/tehtavat.css">
+    <link rel="stylesheet" href="tyylitiedostot/ylapalkki.css">
+    <link rel="stylesheet" href="tyylitiedostot/alapalkki.css">
+    <script src="https://kit.fontawesome.com/d186af660e.js" crossorigin="anonymous"></script>
+    <title>Portfolio | Noa Julkunen</title>
+</head>
+
+<body class="rajoitettu-korkeus">
+    <div class="latausvaihe ">
+        <div class="pallot ">
+            <div class="pallo1 "></div>
+            <div class="pallo2 "></div>
+            <div class="pallo3 "></div>
+            <div class="pallo4 "></div>
+
+        </div>
+        <p>Sivua ladataan.</p>
+    </div>
+    <header>
+        <div class="ylapalkki-nimi">
+            <p data-page="aloitus" class="nimetty" onclick="ylos()">
+                Etusivu </p>
+        </div>
+        <div class="ylapalkki-pikalinkit">
+            <ul class="pikalinkit" id="pikalinkit">
+                <li>
+                    <a data-page="tietoja" href="#tietoja" class="tietoja-linkki" onclick="hampurilainen()">Tietoja</a>
+                </li>
+                <li>
+                    <a data-page="aikajana" href="#aikajana" class="aikajana-linkki" onclick="hampurilainen()">Aikajana</a>
+                </li>
+                <li>
+                    <a data-page="tehtava" href="#tehtava" class="tehtava-linkki" onclick="hampurilainen()">Tehtävät</a>
+                </li>
+            </ul>
+
+        </div>
+        <div onclick="hampurilainen()" class="hampurilainen">
+            <div class="viiva1"></div>
+            <div class="viiva2"></div>
+            <div class="viiva3"></div>
+        </div>
+    </header>
+
+    <div id="sisalto">
+        <p class="aloitus erottaja" data-index="0"></p>
+        <section id="aloitus">
+            <div class="esittely">
+                <div class="esittely-teksti">
+                    <h2 class="yla"></h2>
+                    <h2 class="ala">
+
+                    </h2>
+                </div>
+                <a class="button-tehtaviin" href="#tehtava">Tehtäviin</a>
+            </div>
+        </section>
+        <p class="tietoja erottaja " data-index="1"></p>
+        <section id="tietoja" class="piilotettuna">
+            <div class="info ">
+                <div class="kortti ">
+                    <div class="kortti-sisalto kortti-otsikko ">
+                        <p>Kuka olen?</p>
+                        <i class="fas fa-user "></i>
+                    </div>
+                    <div class="kortti-sisalto kortti-teksti ">
+                        <div class="info-piilossa ">
+                            <p class="kysymys">Kuka olen?</p>
+                            <p>Olen Noa, 17 vuotias tieto- ja viestintätekniikan opiskelija ammattikoulussa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="kortti ">
+                    <div class="kortti-sisalto kortti-otsikko ">
+                        <p>Mitä tällä sivulla on?</p>
+                        <i class="fas fa-sitemap "></i>
+                    </div>
+                    <div class="kortti-sisalto kortti-teksti ">
+                        <div class="info-piilossa ">
+                            <p class="kysymys">Mitä tällä sivulla on?</p>
+                            <p>Olen koonnut tälle sivulle tehtyjä tehtäviäni datanomi- opintojeni varrelta.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kortti ">
+                    <div class="kortti-sisalto kortti-otsikko ">
+                        <p>Missä ja mitä opiskelen?</p>
+                        <i class="fas fa-school "></i>
+                    </div>
+                    <div class="kortti-sisalto kortti-teksti ">
+                        <div class="info-piilossa ">
+                            <p class="kysymys">Missä ja mitä opiskelen?</p>
+                            <p>Opiskelen Helsinki Business Collegessa WEB - ohjelmointia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="kortti ">
+                    <div class="kortti-sisalto kortti-otsikko ">
+                        <p>Mitä ohjelmointikieliä osaan?</p>
+                        <i class="fas fa-file-code "></i>
+                    </div>
+                    <div class="kortti-sisalto kortti-teksti ">
+                        <div class="info-piilossa ">
+                            <p class="kysymys">Mitä ohjelmointikieliä osaan?</p>
+                            <p>Osaan luoda nettisivujen rakenteen <span>HTML</span> avulla, ulkoasun <span>CSS</span> avulla ja toiminnallisuuden <span>JavaScriptin</span> avulla.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kortti ">
+                    <div class="kortti-sisalto kortti-otsikko ">
+                        <p>Mitä aikajanalla on?</p>
+                        <i class="fas fa-history"></i> </div>
+                    <div class="kortti-sisalto kortti-teksti ">
+                        <div class="info-piilossa ">
+                            <p class="kysymys">Mitä aikajanalla on?</p>
+                            <p>Aikajanalla on arvioitujen tutkinnonosioiden tehtävien arvioismisaika. (Aika viimeisimmästä arvioinnista)</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <p class="aikajana erottaja " data-index="2"></p>
+        <section id="aikajana" class="piilotettuna-vasen">
+            <div class="tapahtuma oikealla">
+                <div class="tapahtuma-sisalto">
+                    <p class="aika">10.10.2019</p>
+                    <p class="nimi">Järjestelmän hankinta ja käyttöönotto</p>
+                </div>
+            </div>
+            <div class="tapahtuma vasemmalla">
+                <div class="tapahtuma-sisalto ">
+                    <p class="aika">2.12.2019</p>
+                    <p class="nimi">Palvelutehtävissä toimiminen</p>
+                </div>
+            </div>
+            <div class="tapahtuma oikealla">
+                <div class="tapahtuma-sisalto">
+                    <p class="aika">30.11.2021</p>
+                    <p class="nimi">Testaus</p>
+                </div>
+            </div>
+            <div class="tapahtuma vasemmalla">
+                <div class="tapahtuma-sisalto">
+                    <p class="aika">20.1.2021</p>
+                    <p class="nimi">Ohjelmiston prototyypin toteuttaminen</p>
+                </div>
+            </div>
+            <div class="tapahtuma oikealla">
+                <div class="tapahtuma-sisalto">
+                    <p class="aika">12.4.2021</p>
+                    <p class="nimi">Ohjelmiston tuotantoversion toteuttaminen</p>
+                </div>
+            </div>
+        </section>
+        <p class="tehtava erottaja" data-index="3"></p>
+        <section id="tehtava" class="piilotettuna">
+            <div class="buttonit ">
+                <button class="ammatilliset " onclick="tutkinnonOsat( 'ammatilliset-tutkinnon-osat',event) "><i class="fas fa-plus i-vihrea"></i>ammatilliset tutkinnon osat</button>
+                <button class="yhteiset " onclick="tutkinnonOsat( 'yhteiset-tutkinnon-osat',event) "><i class="fas fa-plus i-vihrea "></i>yhteiset tutkinnon osat</button>
+                <button class="vapaasti " onclick="tutkinnonOsat( 'vapaasti-valittavat-tutkinnon-osat',event) "><i class="fas fa-plus i-vihrea "></i>vapaasti valittavat tutkinnon osat</button>
+            </div>
+            <div class="tehtavia">
+                <div class="ammatilliset-tutkinnon-osat piilossa ">
+
+                    <div class="pakolliset-tutkinnon-osat ">
+                        <div class="palvelutehtavissa-toimiminen ">
+                            <p onclick="tehtavat(event) "><i class="fas fa-plus i-vihrea "></i>Palvelutehtavissa toimiminen</p>
+                            <div class="piilossa ">
+                                <ol class="oppimistehtavia " style="overflow-y: hidden; ">
+                                    <li>DPATOXA :
+                                        <a href="https://public.bc.fi/s1900877/DPATOAG/ " target="_blank ">Työvälineet ja viestintä - arvionti</a>
+                                    </li>
+                                    <li>DPATOXB :
+                                        <a href="https://public.bc.fi/s1900877/wp_web19/ " target="_blank ">WordPress asentaminen ja käyttö</a>
+                                    </li>
+                                    <li>DPATOXC :
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/palvelutehtavissa-toimiminen/dpatoxc/LIIKEIDEAN%20KUVAUS%20JA%20M%C3%84%C3%84RITYS.docx " target="_blank ">Tehtävä: Liikeidea</a>
+                                        <a href="https://public.bc.fi/s1900877/laske-hinta/laskehinta.pdf " target="_blank ">Laske hinta</a>
+                                    </li>
+                                    <li>DPATOXD :
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/palvelutehtavissa-toimiminen/dpatoxd/bmcotto.docx " target="_blank ">Tehtävä: BMC</a>
+                                    </li>
+                                    <li>DPATOXE :
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/palvelutehtavissa-toimiminen/dpatoxe/palvelutilanteensuunnittelu.pdf " target="_blank ">Palvelitilanteen suunnittelu</a>
+                                    </li>
+                                    <li>DPATOXF :
+                                        <a href="https://public.bc.fi/s1900877/palvelutilanne/ " target="_blank ">Palvelutilanteessa toiminta</a>
+                                    </li>
+                                    <li>DPATOXG :
+                                        <a href=" ">Palvelutilanteen jälkitoimet ja dokumentointi : "Opiskelija on suorittanut tämän aiemman perusteella... "</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="jarjestelman-hankinta-ja-kayttoonotto ">
+                            <p onclick="tehtavat(event) "><i class="fas fa-plus i-vihrea "></i>Järjestelmän hankinta ja käyttöönotto</p>
+                            <div class="piilossa ">
+
+                                <ol class="oppimistehtavia " style="overflow-y: hidden; ">
+                                    <li>DJÄKÄXB :
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxb/virtualboksi.pptx " target="_blank ">Windows 10 ja virtuaaliboxi</a>
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxb/xampp-asennus.pptx " target="_blank ">Asenna XAMPP</a>
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxb/python-lataus.pptx " target="_blank ">Asenna Python</a>
+                                    </li>
+                                    <li>DJÄKÄXC :
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxc/ty%C3%B6asemantestaaminen.pdf " target="_blank ">Työaseman testaaminen</a>
+                                        <a href="https://public.bc.fi/s1900877/phpoikea/ " target="_blank ">Nettisivu, missä tieto syötetään ja se tallentuu .txt -  tiedostoon</a>
+                                    </li>
+                                    <li>DJÄKÄXD :
+                                        <a href="https://trello.com/b/GeWtfptG/nettiyhteys-kes%C3%A4m%C3%B6kille " target="_blank ">Kanbaan (Trello / Asanna)</a>
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxd/ganttinkuvioo.pdf " target="_blank ">GANTT:in kuvio</a>
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxd/wbs.html " target="_blank ">WBS</a>
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxd/viimeisin-tietotekninen-hankintani.pdf " target="_blank ">Omat tietotekniset hankinnat</a>
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxd/hankitaprosessi.pdf " target="_blank ">Hankintaprosessi</a>
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxd/tarjoustietokoneistayms.pdf " target="_blank ">Kokoava tehtävä - tarjous</a>
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxd/EAP%20Suomi%20(1).pdf " target="_blank ">Kokoava tehtävä - EAP</a>
+                                    </li>
+                                    <li>DJÄKÄXE :
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxe/tiedonhakuteht%C3%A4v%C3%A4.pptx " target="_blank ">Tiedonhakutehtava</a>
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxe/julksiahankintoja.pptx " target="_blank ">Julkiset hankinnat</a>
+                                    </li>
+                                    <li>DJÄJÄXF :
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxf/Arkkitehtuuri%20on%20toiselta%20nimelt%C3%A4%C3%A4n%20rakennustaide.docx
+    " target="_blank ">Laske tai arvio työmäärä</a>
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxf/suhteellinentyomaara.docx " target="_blank ">Suhteellinen työmäärä</a>
+                                    </li>
+                                </ol>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ohjelmistotuotannon-osaamisala ">
+                        <div class="ohjelmiston-prototyypin-toteuttaminen ">
+                            <p onclick="tehtavat(event) "><i class="fas fa-plus i-vihrea "></i>Ohjelmiston prototyypin toteuttaminen</p>
+                            <div class="piilossa ">
+                                <ol class="oppimistehtavia " style="overflow-y: hidden; ">
+                                    <li>DOPROXA :
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/ohjelmistotuotannon-osaamisala/ohjelmiston-prototyypin-toteuttaminen/doproxa/doproxa.pdf " target="_blank ">Käsitemallitehtävä HELPPO,</a>
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/ohjelmistotuotannon-osaamisala/ohjelmiston-prototyypin-toteuttaminen/doproxa/uistelukisa.png " target="_blank ">Käsitemallitehtävä VAIKEA mutta hauska,</a>
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/ohjelmistotuotannon-osaamisala/ohjelmiston-prototyypin-toteuttaminen/doproxa/uistelu-laskenta.xlsx " target="_blank ">Uistelu-laskenta.xlsx</a>
+                                    </li>
+                                    <li>DOPROXB :
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/ohjelmistotuotannon-osaamisala/ohjelmiston-prototyypin-toteuttaminen/doproxb/vaatimusm%C3%A4%C3%A4rittely.pdf " target="_blank ">Käyttötapauskuvaus,</a>
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/ohjelmistotuotannon-osaamisala/ohjelmiston-prototyypin-toteuttaminen/doproxb/sekvenssikaavio.PNG " target="_blank ">Sekvenssikaavio tai aktiviteeetti</a>
+                                    </li>
+                                    <li>DOPROXC :
+                                        <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/ohjelmistotuotannon-osaamisala/ohjelmiston-prototyypin-toteuttaminen/doproxc/doproxc.pdf " target="_blank ">Käyttöliittymän tehtävä</a>
+                                    </li>
+                                    <li>DOPROXD :
+                                        <a href="https://public.bc.fi/s1900877/protodoku.pdf " target="_blank ">KL-prototyyppi</a>
+                                    </li>
+                                    <li>DOPROXE :
+                                        <a href="https://public.bc.fi/s1900877/testaussuunnitelma.pdf " target="_blank ">Testaussuunnitelma</a>
+                                    </li>
+                                    <li>DOPROXF :
+                                        <a href="https://public.bc.fi/s1900877/DOPROXF/ " target="_blank ">DOPROXF - tehtävät</a>
+                                    </li>
+                                    <li>DOPROXG :
+                                        <a href="https://public.bc.fi/s1900877/doproxg/ " target="_blank ">Helppo mutta pakollinen rakenteinen tieto</a>
+                                    </li>
+                                    <li>DOPROXH :
+                                        <a href="https://public.bc.fi/s1900877/doproxh/kaaviot/doproxh_versio2.pdf " target="_blank ">PALAUTUS ja Dokumentointi - malli</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="ohjelmiston-tuotantoversion-toteuttaminen ">
+
+                            <p onclick="tehtavat(event) "><i class="fas fa-plus i-vihrea "></i>Ohjemiston tuotantoversion toteuttaminen</p>
+                            <div class="piilossa ">
+                                <button class="kuvat " onclick="kuvat() ">Näytä kuvat</button>
+                                <input type="text " placeholder="Kirjoita tehtävät numero tai nimi suodattaaksesi tehtäviä " id="hakupalkki">
+                                <ol class="oppimistehtavat "></ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="piilossa ">
+                        <button class="kuvat " onclick="kuvat() ">Näytä kuvat</button>
+                        <input type="text " placeholder="Kirjoita tehtävät numero tai nimi suodattaaksesi tehtäviä " id="hakupalkki ">
+                        <ol class="oppimistehtavat "></ol>
+                        <div class="valinnaiset-tutkinnon-osat ">
+                            <div class="testaus ">
+                                <p onclick="tehtavat(event) "><i class="fas fa-plus i-vihrea "></i>Testaus</p>
+                                <div class="piilossa ">
+                                    <p class="taydennetaan ">Täydennetään myöhemmin.</p>
+                                </div>
+                            </div>
+                            <div class="tietoturvan-yllapito ">
+                                <p onclick="tehtavat(event) "><i class="fas fa-plus i-vihrea "></i>Tietoturvan ylläpito</p>
+                                <div class="piilossa ">
+                                    <p class="taydennetaan ">Täydennetään myöhemmin.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yhteiset-tutkinnon-osat piilossa ">
+                    <div class="viestinta-ja-vuorovaikutusosaaminen ">
+                        <p onclick="tehtavat(event) "><i class="fas fa-plus i-vihrea "></i>Viestintä ja vuorovaikutusosaaminen</p>
+                        <div class="piilossa ">
+                            <p class="taydennetaan ">Täydennetään myöhemmin.</p>
+                        </div>
+                    </div>
+                    <div class="matemaattis-luonnontieteellinen-osaaminen ">
+                        <p onclick="tehtavat(event) "><i class="fas fa-plus i-vihrea "></i>Matemaattis-luonnontieteellinen osaaminen</p>
+                        <div class="piilossa ">
+                            <p class="taydennetaan ">Täydennetään myöhemmin.</p>
+                        </div>
+                    </div>
+                    <div class="yhteiskunta-ja-tyoelamaosaaminen ">
+                        <p onclick="tehtavat(event) "><i class="fas fa-plus i-vihrea "></i>Yhteiskunta ja työelämäosaaminen</p>
+                        <div class="piilossa ">
+                            <p class="taydennetaan ">Täydennetään myöhemmin.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vapaasti-valittavat-tutkinnon-osat piilossa ">
+
+                    <div class="vapaasti-valittavat-osat ">
+                        <p onclick="tehtavat(event) "><i class="fas fa-plus i-vihrea "></i>Vapaasti valittavat tutkinnonosat</p>
+                        <div class="piilossa ">
+                            <p class="taydennetaan ">Täydennetään myöhemmin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <footer id="footer">
+        <p> &#169; Noa Julkunen 2021</p>
+    </footer>
+    <div class="ylos " onclick="ylos() " style="display:none; "><i class="fas fa-arrow-up "></i></div>
+
+    <script src="js/index.js"></script>
+    <script src="js/tehtavat.js"></script>
+</body>
+
+</html>

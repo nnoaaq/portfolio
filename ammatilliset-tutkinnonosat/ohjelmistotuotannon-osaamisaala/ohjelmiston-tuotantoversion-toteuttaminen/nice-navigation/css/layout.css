@@ -1,0 +1,72 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 62.5%;
+    background: url(../images/shell-bg.jpg);
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: inherit;
+    background-attachment: local;
+}
+nav {
+    font-size: 1.6em;
+    height: 700px;
+    width: 160px;
+    margin-top: 52px;
+    float: left;
+    padding: 0px;
+}
+h1 {
+    font-size: 2.4em;
+    padding: 40px;
+    text-align: right;
+    background-color:rgb(170, 203, 237,0.7);
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #64747F;
+}
+article {
+    font-size: 1.3em;
+    color: white;
+    border: 1px solid #FFCC99;
+    background-color: rgba(0,0,255,0.3);
+    margin-top: 26px;
+    margin-left: 161px;
+    margin-right: 26px;
+    margin-bottom: 26px;
+}
+nav a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: rgba(0,0,0,0.2);
+    margin-bottom: 2px;
+}
+nav a:hover {
+    color: #441111;
+    background-color: rgba(0,0,255,0.2);
+}
+h2 {
+    font-size: 2.0em;
+    padding: 30px;
+}
+p {
+    font-size: 1.6em;
+    padding-bottom: 10px;
+}
+pre {
+    font-family: Consolas, 'Courier New', Courier, monospace;
+    font-size: 1.6em;
+}
+ul {
+    font-size: 1.6em;
+    padding-bottom: 10px;
+    list-style: circle;
+    margin-left: 30px;
+}
+.nav-lista {
+    list-style: none;
+    margin-left: 0;
+}

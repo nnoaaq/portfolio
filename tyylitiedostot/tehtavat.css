@@ -1,0 +1,210 @@
+.ammatilliset-tutkinnon-osat>*>*,
+.yhteiset-tutkinnon-osat>*,
+.vapaasti-valittavat-osat {
+    border: 1px solid white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.ammatilliset-tutkinnon-osat i,
+.yhteiset-tutkinnon-osat i,
+.vapaasti-valittavat-tutkinnon-osat i {
+    padding: 10px;
+}
+
+.i-vihrea {
+    color: green;
+}
+
+.i-punainen {
+    color: red;
+}
+
+.piilossa {
+    max-height: 0;
+    overflow: hidden;
+    transition: transform 0.5s ease-out;
+    transform: scaleY(0);
+}
+
+@keyframes korkeusPois {
+    from {
+        max-height: 100%
+    }
+    to {
+        max-height: 0%
+    }
+}
+
+@keyframes korkeus {
+    from {
+        max-height: 0%;
+    }
+    to {
+        max-height: 100%;
+    }
+}
+
+.nakyvissa {
+    transform: scaleY(1);
+    max-height: 100%;
+    transition: transform 0.5s ease-out;
+}
+
+
+/* BUTTONIT */
+
+.buttonit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+    flex-wrap: nowrap;
+    height: auto;
+}
+
+.buttonit>* i {
+    padding-right: 10px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.buttonit>* {
+    position: relative;
+    flex-grow: 1;
+    padding: 15px;
+    background: #192138;
+    color: inherit;
+    text-transform: uppercase;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.musta {
+    color: black;
+}
+
+
+/* OPPIMISTEHTÄVÄT MUOTOILU*/
+
+.oppimistehtavat,
+.oppimistehtavia {
+    margin: 25px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.oppimistehtavat li,
+.oppimistehtavia li {
+    color: inherit;
+    list-style: none;
+}
+
+.oppimistehtavat li a,
+.oppimistehtavia li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.oppimistehtavat li a:hover,
+.oppimistehtavia li a:hover {
+    text-decoration: underline;
+}
+
+#hakupalkki {
+    width: 90%;
+    max-width: 400px;
+}
+
+.figure {
+    width: 100%;
+    max-height: 100%;
+}
+
+.figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.kuvat-piilossa {
+    display: none;
+}
+
+.taydennetaan {
+    padding: 10px;
+}
+
+@media only screen and (min-width:1200px) {
+    #tehtavat {
+        min-height: 400px;
+    }
+    .buttonit {
+        position: relative;
+        width: 100%;
+        background-color: #151515;
+    }
+    .buttonit>* {
+        height: 75px;
+        flex-grow: 1;
+        padding: 15px;
+        background: #192138;
+        text-transform: uppercase;
+        cursor: pointer;
+        flex-direction: row;
+        justify-content: center;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(5px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-transition-property: color;
+        transition-property: color;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+    }
+    .buttonit>*:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: 50%;
+        transform-origin: 50%;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    .buttonit>*:hover {
+        color: black;
+    }
+    .buttonit>*:hover:before,
+    .buttonit>*:active:before {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    #tehtavat {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:455px) {
+    button {
+        font-size: 10px;
+    }
+    .buttonit {
+        flex-wrap: wrap;
+    }
+}
