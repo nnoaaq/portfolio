@@ -76,6 +76,7 @@ function tutkinnonOsat(tutkinnonOsa, e) {
         muutettava_div.style.animation = "korkeus 2s";
     }
 
+    document.querySelector("#tehtava").classList.add("nolla");
     muutettava_div.classList.toggle("piilossa");
     muutettava_div.classList.toggle("nakyvissa");
 
