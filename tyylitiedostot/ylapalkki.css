@@ -26,6 +26,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    max-width: 46%;
 }
 
 .ylapalkki-pikalinkit {
@@ -48,6 +49,7 @@
 
 .hampurilainen {
     max-height: 100%;
+    margin-right: 50px;
 }
 
 .viiva1,
