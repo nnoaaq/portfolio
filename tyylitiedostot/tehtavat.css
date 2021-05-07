@@ -226,7 +226,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: white;
+        background: linear-gradient(to right, #192138, orange);
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
         -webkit-transform-origin: 50%;
