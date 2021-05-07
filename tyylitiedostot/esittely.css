@@ -12,6 +12,12 @@
     background-size: cover;
 }
 
+#aloitus {
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+}
+
 .viiva {
     background-color: white;
     height: 65px;

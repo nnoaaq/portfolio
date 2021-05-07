@@ -1,3 +1,9 @@
+#tietoja {
+    min-height: 100%;
+    width: 70%;
+    margin: auto;
+}
+
 @media only screen and (max-width:1200px) {
     .info {
         display: flex;

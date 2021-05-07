@@ -15,6 +15,11 @@
 
 .laheta {
     background-color: orange;
+    max-height: 75px;
+}
+
+.laheta:focus {
+    background: linear-gradient(to left, rgb(61, 40, 0), orange);
 }
 
 body {
@@ -40,6 +45,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100%;
 }
 
 .lomake label {
@@ -66,6 +72,14 @@ body {
     color: inherit;
     margin-top: 5px;
     padding: 20px;
+}
+
+#lomake {
+    width: 70%;
+    padding-top: 60px;
+    position: sticky;
+    top: 60px;
+    height: 100vh;
 }
 
 #ilmoitus {
@@ -141,6 +155,12 @@ body {
 
 .ilmoitus-nakyy {
     max-height: 100% !important;
+}
+
+@media only screen and (max-width:1000px) {
+    #lomake {
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width:850px) {

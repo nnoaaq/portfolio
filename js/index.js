@@ -116,7 +116,7 @@ function observerFunktio(entries) {
         const aktiivinen = document.querySelector(`[data-page=${luokka_nimi}]`);
         const taustaindex = entry.target.getAttribute("data-index");
         const taustavarit = [
-            "#192138",
+            "#283e82",
             "rgb(255, 165, 0)",
             "#ff2257",
             "rgb(243, 243, 169"

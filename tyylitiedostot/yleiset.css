@@ -121,52 +121,6 @@
         align-items: center;
     }
     
-    #aloitus {
-        height: 100vh;
-        width: 100%;
-        margin: auto;
-    }
-    
-    #tietoja {
-        min-height: 100%;
-        width: 70%;
-        margin: auto;
-    }
-    
-    #lomake {
-        width: 70%;
-        padding-top: 60px;
-        position: sticky;
-        top: 60px;
-        height: 100%;
-    }
-    
-    #tehtava {
-        min-height: 100vh;
-        height: 100%;
-        width: 100%;
-        margin: auto;
-        padding-top: 50px;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        background-image: url(../kuvat/etusivu_sinertava2.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-bottom: 15px;
-    }
-    
-    .tehtavia {
-        position: relative;
-        top: 0px;
-        left: 0;
-        width: 100%;
-    }
-    
     .piilotettu {
         display: none;
     }
@@ -202,12 +156,5 @@
         }
         header {
             width: 100vw !important;
-        }
-        #lomake {
-            width: 100%;
-        }
-        #tehtava {
-            min-height: 100%;
-            height: 100%;
         }
     }
