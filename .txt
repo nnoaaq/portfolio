@@ -1,0 +1,42 @@
+function saa(hakutermi) {
+    let naytettavat = [];
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + hakutermi + '&appid=' + avain + '&units=metric')
+
+    .then(response => response.json())
+        .then(data => {
+
+
+            let x_koordinaatti = data["coord"]["lon"];
+            let y_koordinaatti = data["coord"]["lat"];
+            fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + y_koordinaatti + '&lon=' + x_koordinaatti + '&exclude=hourly,&appid=' + avain + '&units=metric')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+
+                    let i = -1;
+                    let paivat = data["daily"];
+                    for (let paiva_objekti of paivat) {
+                        i++;
+                        let paivamaara = aika(paiva_objekti.dt)
+                            // console.log(paivamaara);
+                        let pilvisyys = data["daily"][i]["clouds"];
+                        let lampotila = data["daily"][i]["temp"]["day"];
+                        let kuvake = data["daily"][i]["weather"]["0"]["icon"];
+                        naytettavat.push({
+                            "pilvisyys": pilvisyys,
+                            "paivamaara": paivamaara,
+                            "lampotila": lampotila,
+                            "kuvake": kuvake
+                        });
+
+                    }
+                    let ennustukset = [];
+                    for (let naytettava of naytettavat) {
+                        let ennustus_html = `<div class="ennustus-paiva"><p class="paivamaara">Paivamaara: ${naytettava.paivamaara}</p> <p class="lampotila">Lämpötila : ${naytettava.lampotila}</p> <p class="pilvisyys">Pilvisyys : ${naytettava.pilvisyys} %</p><figure><img src="http://openweathermap.org/img/wn/${naytettava.kuvake}@2x.png" class="saa-kuva"></figure></div>`;
+                        ennustukset.push(ennustus_html);
+                    }
+                    ennustus.innerHTML = ennustukset.join(" ");
+                })
+        })
+
+}
