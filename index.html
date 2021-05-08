@@ -41,7 +41,7 @@
                 </li>
 
                 <li>
-                    <a data-page="tehtava" data-kohde="#tehtava" class="tehtava-linkki" onclick="hampurilainen()" href="#tehtava">Tehtävät</a>
+                    <a data-page="tehtava" data-kohde="#tehtava" class="tehtava-linkki" onclick="hampurilainen()" href="#tehtava">Tehtävät & Sää</a>
                 </li>
                 <li>
                     <a data-page="lomake" data-kohde="#lomake" class="lomake-linkki" onclick="hampurilainen()" href="#lomake">Ota yhteyttä</a>
@@ -56,6 +56,11 @@
             <div class="viiva3"></div>
         </div>
     </header>
+    <div id="sijainti">
+        Haluatko käyttää sijaintiasi säätietojen hakemiseen?
+        <button onclick="paikannus()">Haluan</button>
+        <button onclick="sulje()">Ei kiitos</button>
+    </div>
     <div id="sisalto">
 
         <section id="aloitus" class="aloitus" data-index="3">
@@ -308,12 +313,21 @@
                 </div>
             </div>
             <div class="saa">
+                <p class="paikannus-nimi"></p>
+
+                <div class="paikannus-saa">
+
+                </div>
                 <div class="saa-div">
+                    <h3>Säätietojen hakeminen</h3>
                     <label class="label" for="kaupunki">Kirjoita hakutermi</label>
                     <textarea name="viesti-otsikko" id="kaupunki" placeholder="Syötä hakutermi" cols="30" rows="10"></textarea>
                     <button id="button-kaupunki">Hae</button>
                 </div>
+                <p class="kohde"></p>
                 <div class="ennustus"></div>
+                <p class="tarjoaja">Datan tarjoaa <a target="_blank" href="https://openweathermap.org">OpenWeather </a>&#8482;.</p>
+
             </div>
         </section>
         <section id="lomake" class="lomake" data-index="1">
