@@ -78,6 +78,7 @@
         max-height: 500px;
         overflow: hidden;
         border: 0px solid gray;
+        width: 100%;
     }
     .kortti-otsikko {
         word-wrap: break-word;

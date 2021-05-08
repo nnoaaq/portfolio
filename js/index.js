@@ -23,11 +23,18 @@ window.addEventListener("load", () => {
             header.classList.remove("piilotettu");
             kirjoitusVasen();
             kirjoitusOikea();
+            console.log("LOAD");
+            var tag = document.createElement("script");
+            tag.src = "/js/tehtavat.js";
+            document.getElementsByTagName("head")[0].appendChild(tag);
         }, 1000);
     })
     // .latausvaihe piiloon kun lataus valmis
 
+document.addEventListener("DOMContentLoaded", () => {
 
+    console.log("DOM");
+});
 
 
 
