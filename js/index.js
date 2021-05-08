@@ -23,20 +23,12 @@ window.addEventListener("load", () => {
             header.classList.remove("piilotettu");
             kirjoitusVasen();
             kirjoitusOikea();
-            console.log("LOAD");
-            var tag = document.createElement("script");
-            tag.src = "/js/tehtavat.js";
-            document.getElementsByTagName("head")[0].appendChild(tag);
-        }, 1000);
+            var js_tiedosto = document.createElement("script");
+            js_tiedosto.src = "js/tehtavat.js";
+            document.getElementsByTagName("head")[0].appendChild(js_tiedosto);
+        }, 800);
     })
     // .latausvaihe piiloon kun lataus valmis
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    console.log("DOM");
-});
-
-
 
 function ylos() {
     window.scrollTo({

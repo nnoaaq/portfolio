@@ -3,7 +3,6 @@ function lahetys() {
     let valmiit = [];
     for (let lomake of lomakkeet) {
         if (lomake.textLength === 0 || lomake.textLength === undefined) {
-            console.log(lomake.value);
             lomake.classList.add("taydennettava");
             ilmoitus("Täytä punaisella olevat kohdat ja lähetä lomake", "red")
             lomake.addEventListener("change", () => {

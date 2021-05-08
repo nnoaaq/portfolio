@@ -119,6 +119,7 @@
         transform: translateY(-120px);
         background-color: #383838;
         color: rgb(255, 255, 255);
+        overflow: hidden;
     }
     .kortti:hover .kortti-teksti {
         transform: translateY(50px);

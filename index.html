@@ -57,7 +57,7 @@
         </div>
     </header>
     <div id="sijainti">
-        Haluatko käyttää sijaintiasi säätietojen hakemiseen?
+        Sivulla on mahdollista hakea saatietoja, haluatko käyttää sijaintiasi säätietojen hakemiseen?
         <button onclick="paikannus()">Haluan</button>
         <button onclick="sulje()">Ei kiitos</button>
     </div>
@@ -320,8 +320,8 @@
                 </div>
                 <div class="saa-div">
                     <h3>Säätietojen hakeminen</h3>
-                    <label class="label" for="kaupunki">Kirjoita hakutermi</label>
-                    <textarea name="viesti-otsikko" id="kaupunki" placeholder="Syötä hakutermi" cols="30" rows="10"></textarea>
+                    <label class="label" for="kaupunki">Kaupungin nimi</label>
+                    <textarea name="viesti-otsikko" id="kaupunki" placeholder="Syötä kaupungin nimi hakeaksesi säätiedot" cols="30" rows="10"></textarea>
                     <button id="button-kaupunki">Hae</button>
                 </div>
                 <p class="kohde"></p>
@@ -372,9 +372,9 @@
     <div class="ylos " onclick="ylos() " style="display:none; "><a href="#esittely"><i class="fas fa-arrow-up "></i></a></div>
 
 
-    <script src="js/index.js"></script>
-    <script src="js/lomake.js"></script>
-    <script src="js/saa.js"></script>
+    <script async src="js/index.js"></script>
+    <script defer src="js/lomake.js"></script>
+    <script defer src="js/saa.js"></script>
 </body>
 
 </html>
