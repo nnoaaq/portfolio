@@ -1,5 +1,8 @@
 function lahetys() {
-    let lomakkeet = document.querySelectorAll(".lomake .kentta");
+    let lomakkeet = document.querySelectorAll(".kentta");
+    for (let lomake of lomakkeet) {
+        console.log(lomake.value);
+    }
     let valmiit = [];
     for (let lomake of lomakkeet) {
         if (lomake.textLength === 0 || lomake.textLength === undefined) {
