@@ -1,8 +1,6 @@
 function lahetys() {
     let lomakkeet = document.querySelectorAll(".kentta");
-    for (let lomake of lomakkeet) {
-        console.log(lomake.value);
-    }
+
     let valmiit = [];
     for (let lomake of lomakkeet) {
         if (lomake.textLength === 0 || lomake.textLength === undefined) {
@@ -15,7 +13,6 @@ function lahetys() {
                 ilmoitusPois();
             });
         } else if (lomake.value.length > 1) {
-            console.log(lomake.value);
             lomake.classList.remove("taydennettava");
             valmiit.push(lomake);
         }
