@@ -99,6 +99,12 @@ function paikannus() {
     document.getElementById("sijainti").innerHTML = "Hyväksy selaimen paikannuspyyntö";
     document.getElementById("sijainti").style.textAlign = "center";
     document.querySelector("#tehtava").classList.add("nolla");
+    setTimeout(function() {
+        document.getElementById("sijainti").innerHTML = "Jos et nähnyt paikannuspyyntöä, tarkista laitteen asetuksista saako selain paikantaa laitteen.";
+        document.getElementById("sijainti").style.background = "red";
+
+
+    }, 10000)
 
 }
 
@@ -162,5 +168,6 @@ async function onnistui(sijainti) {
 }
 
 function virhe(err) {
-    console.warn(`ERROR(${err.code}): ${err.message}`);
+    sulje();
+    saa_ilmoitus(`Hylkäsit paikannuspyynnön`, "red")
 }
