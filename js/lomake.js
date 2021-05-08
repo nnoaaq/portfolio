@@ -22,7 +22,6 @@ function lahetys() {
         let viesti_sisalto = valmiit[1].value;
         let viesti_email = valmiit[2].value;
 
-        console.log(varmistaEmail(viesti_email));
         if (varmistaEmail(viesti_email) == true) {
             let xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
