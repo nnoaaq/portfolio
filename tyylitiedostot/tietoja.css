@@ -39,6 +39,7 @@
         align-items: center;
     }
     .kortti-teksti {
+        width: 100%;
         padding: 10px;
     }
     .kortti-otsikko p {

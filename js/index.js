@@ -76,6 +76,7 @@ function tutkinnonOsat(tutkinnonOsa, e) {
     }
 
     document.querySelector("#tehtava").classList.add("nolla");
+    document.querySelector(".saa").classList.add("nolla");
     muutettava_div.classList.toggle("piilossa");
     muutettava_div.classList.toggle("nakyvissa");
 

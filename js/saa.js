@@ -109,12 +109,23 @@ function sulje() {
 
 
 async function onnistui(sijainti) {
-    let paiva = [];
-    let tiedot = [];
-    document.getElementById("sijainti").style.display = "none";
     let koordinaatit = sijainti.coords;
     let x = koordinaatit.latitude;
     let y = koordinaatit.longitude;
+    let paiva = [];
+    let tiedot = [];
+    document.getElementById("sijainti").style.display = "none";
+    let sijainti_vastaus = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + x + '&lon=' + y + '&appid=' + avain + '&units=metric');
+    if (sijainti_vastaus.ok) {
+        let sijainti_json = await sijainti_vastaus.json();
+        let nimi = sijainti_json["name"];
+        document.querySelector(".paikannus-nimi").textContent = "Sää tänään sijainnissasi: " + nimi + ":";
+
+    } else {
+        saa_ilmoitus(sijainti_vastaus.status, "red");
+
+    }
+
     let paiva_vastaus = await fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + x + '&lon=' + y + '&exclude=minutely&appid=' + avain + '&units=metric')
     if (paiva_vastaus.ok) {
         let paiva_json = await paiva_vastaus.json();
@@ -139,7 +150,6 @@ async function onnistui(sijainti) {
                 }
                 document.querySelector(".paikannus-saa").innerHTML = tiedot.join(" ");
                 document.querySelector(".paikannus-saa").classList.add("korkeus");
-                document.querySelector(".paikannus-nimi").textContent = "Sää tänään sijainnissasi:";
 
                 break;
             }
@@ -147,7 +157,7 @@ async function onnistui(sijainti) {
         }
 
     } else {
-        console.log(paiva_vastaus.status);
+        saa_ilmoitus(paiva_vastaus.status, "red");
     }
 }
 
