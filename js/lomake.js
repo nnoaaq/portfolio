@@ -20,22 +20,38 @@ function lahetys() {
     if (valmiit.length === 3) {
         let viesti_otsikko = valmiit[0].value;
         let viesti_sisalto = valmiit[1].value;
-        let viesti_email = valmiit[2].value
-        let xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                ilmoitus(this.responseText, "green")
+        let viesti_email = valmiit[2].value;
+
+        console.log(varmistaEmail(viesti_email));
+        if (varmistaEmail(viesti_email) == true) {
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    ilmoitus(this.responseText, "green")
+                }
+            };
+            xhttp.open("POST", "lomake.php", true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send(`otsikko=${viesti_otsikko}&sisalto=${viesti_sisalto}&email=${viesti_email}`);
+            ilmoitus(this.responseText, "green");
+            for (let lomake of lomakkeet) {
+                lomake.value = "";
+                lomake.placeholder = "Viesti lähetetty onnistuneesti.";
+                valmiit = [];
             }
-        };
-        xhttp.open("POST", "lomake.php", true);
-        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.send(`otsikko=${viesti_otsikko}&sisalto=${viesti_sisalto}&email=${viesti_email}`);
-        ilmoitus(this.responseText, "green");
-        for (let lomake of lomakkeet) {
-            lomake.value = "";
-            lomake.placeholder = "Viesti lähetetty onnistuneesti.";
-            valmiit = [];
+        } else {
+            ilmoitus("Varmista sähköpostiosoite.", "red");
         }
+    }
+
+}
+
+function varmistaEmail(varmistettava) {
+    let malli = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (varmistettava.match(malli)) {
+        return true;
+    } else {
+        return false;
     }
 }
 
