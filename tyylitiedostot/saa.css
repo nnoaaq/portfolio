@@ -114,6 +114,12 @@
     color: white;
 }
 
+.tunti-saa,
+.ennustus-paiva {
+    min-width: 140px;
+    min-height: 200px;
+}
+
 .paikannus-saa {
     display: flex;
     flex-direction: row;

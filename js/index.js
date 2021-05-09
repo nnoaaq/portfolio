@@ -18,6 +18,7 @@ window.addEventListener("load", () => {
             document.body.classList.remove("rajoitettu-korkeus");
             let header = document.querySelector("header");
             let ylos = document.querySelector(".ylos");
+            document.getElementById("sijainti").style.display = "block";
             ylos.style.display = "block";
             header.classList.add("header");
             header.classList.remove("piilotettu");
