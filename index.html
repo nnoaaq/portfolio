@@ -32,19 +32,19 @@
     <header>
         <div class="ylapalkki-nimi">
             <p class="nimetty" onclick="ylos()">
-                <a href="#esittely" data-page="aloitus">Etusivu</a> </p>
+                <a onclick="liiku('aloitus')" data-page="aloitus">Etusivu</a> </p>
         </div>
         <div class="ylapalkki-pikalinkit">
             <ul class="pikalinkit" id="pikalinkit">
                 <li>
-                    <a data-page="tietoja" data-kohde="#tietoja" class="tietoja-linkki" onclick="hampurilainen()" href="#tietoja">Tietoja</a>
+                    <a data-page="tietoja" data-kohde="#tietoja" class="tietoja-linkki" onclick="hampurilainen();liiku('tietoja')">Tietoja</a>
                 </li>
 
                 <li>
-                    <a data-page="tehtava" data-kohde="#tehtava" class="tehtava-linkki" onclick="hampurilainen()" href="#tehtava">Tehtävät & Sää</a>
+                    <a data-page="tehtava" data-kohde="#tehtava" class="tehtava-linkki" onclick="hampurilainen();liiku('tehtava')">Tehtävät & Sää</a>
                 </li>
                 <li>
-                    <a data-page="lomake" data-kohde="#lomake" class="lomake-linkki" onclick="hampurilainen()" href="#lomake">Ota yhteyttä</a>
+                    <a data-page="lomake" data-kohde="#lomake" class="lomake-linkki" onclick="hampurilainen();liiku('lomake')">Ota yhteyttä</a>
                 </li>
                 <div class="kupla" style="display: none;"></div>
             </ul>
@@ -56,11 +56,6 @@
             <div class="viiva3"></div>
         </div>
     </header>
-    <div id="sijainti" style="display: none;">
-        Sivulla on <a href="#tehtava" style="color: black; text-decoration: underline;">mahdollista hakea</a> saatietoja, haluatko käyttää sijaintiasi säätietojen hakemiseen?
-        <button onclick="paikannus()">Haluan</button>
-        <button onclick="sulje()">Ei kiitos</button>
-    </div>
     <div id="sisalto">
 
         <section id="aloitus" class="aloitus" data-index="3">
@@ -71,7 +66,7 @@
 
                     </h2>
                 </div>
-                <a class="button-tehtaviin" href="#tehtava">Tehtäviin</a>
+                <a class="button-tehtaviin" onclick="liiku('tehtava')">Alaspäin<i class="fas fa-chevron-circle-down"></i></a>
             </div>
         </section>
         <section id="tietoja" class="tietoja" data-index="2">
@@ -133,7 +128,7 @@
                     <div class="kortti-sisalto kortti-teksti ">
                         <div class="info-piilossa ">
                             <p class="kysymys">Miten minuun saa yhteyden?</p>
-                            <p>Minulle voi lähettää sähköpostia käyttämällä <a style="text-decoration: underline;" href="#lomake">lomaketta</a></p>
+                            <p>Minulle voi lähettää sähköpostia käyttämällä <a style="text-decoration: underline;" class="hover" onclick="liiku('lomake')">lomaketta</a></p>
                         </div>
                     </div>
                 </div>
@@ -313,31 +308,29 @@
                 </div>
             </div>
             <div class="saa">
+            </div>
+            <div class="saa-div">
+                <h3>Säätietojen hakeminen</h3>
                 <p class="paikannus-nimi"></p>
-
-                <div class="paikannus-saa">
-
-                </div>
-                <div class="saa-div">
-                    <h3>Säätietojen hakeminen</h3>
-                    <i onclick="paikannus()" class="fas fa-search-location "></i>
-                    <label class="label " for="kaupunki ">Kaupungin nimi</label>
-                    <textarea name="viesti-otsikko " id="kaupunki " placeholder="Syötä kaupungin nimi hakeaksesi säätiedot " cols="30 " rows="10 "></textarea>
-                    <button id="button-kaupunki ">Hae</button>
-                </div>
+                <div class="paikannus-saa"></div>
                 <p class="kohde "></p>
                 <div class="ennustus "></div>
                 <p class="tarjoaja ">Datan tarjoaa <a target="_blank " href="https://openweathermap.org ">OpenWeather </a>&#8482;.</p>
+                <label class="label " for="kaupunki ">Kaupungin nimi</label>
+                <textarea name="viesti-otsikko" id="kaupunki" placeholder="Syötä kaupungin nimi hakeaksesi säätiedot" cols="30" rows="10"></textarea>
+                <h4 onclick="paikannus()">Suorita haku paikannuksen avulla <i class="fas fa-search-location "></i></h4>
 
+
+                <button id="button-kaupunki">Hae</button>
             </div>
         </section>
-        <section id="lomake " class="lomake " data-index="1 ">
-            <form method="POST " id="lomake-sisalto " name="lomake ">
-                <div class="lomake ">
+        <section id="lomake" class="lomake" data-index="1">
+            <form method="POST" id="lomake-sisalto" name="lomake ">
+                <div class="lomake">
                     <h3>Ota minuun yhteyttä</h3>
                     <div>
-                        <label for="viesti-otsikko ">viestin otsikko</label>
-                        <textarea name="viesti-otsikko " id="viesti-otsikko " class="kentta " placeholder="Syötä viestin otsikko " cols="30 " rows="10 "></textarea>
+                        <label for="viesti-otsikko">viestin otsikko</label>
+                        <textarea name="viesti-otsikko" id="viesti-otsikko" class="kentta " placeholder="Syötä viestin otsikko " cols="30" rows="10"></textarea>
                     </div>
                     <div>
                         <label for="viesti-sisalto">viestin sisältö</label>
@@ -348,16 +341,16 @@
                         <textarea name="viesti-email" id="viesti-email" class="kentta" placeholder="Syötä sähkopostiosoitteesi" cols="30" rows="10"></textarea>
                     </div>
                     <div>
-                        <button class="laheta " type="button " onclick="lahetys() ">Lähetä</button>
+                        <button class="laheta" type="button" onclick="lahetys() ">Lähetä</button>
                     </div>
-                    <p id="vastaus "></p>
+                    <p id="vastaus"></p>
                 </div>
             </form>
 
 
-            <div id="ilmoitus ">
-                <div onclick="ilmoitusPois() " class="sulje ">
-                    <i class="fas fa-times "></i>
+            <div id="ilmoitus">
+                <div onclick="ilmoitusPois()" class="sulje">
+                    <i class="fas fa-times"></i>
                 </div>
                 <div>
                     <p></p>
@@ -366,16 +359,16 @@
         </section>
 
     </div>
-    <footer id="footer ">
+    <footer id="footer">
         <p> &#169; Noa Julkunen 2021</p>
     </footer>
 
-    <div class="ylos " onclick="ylos() " style="display:none; "><a href="#esittely "><i class="fas fa-arrow-up "></i></a></div>
+    <div class="ylos" onclick="ylos();liiku('aloitus')" style="display:none;"><a><i class="fas fa-arrow-up"></i></a></div>
 
 
-    <script async src="js/index.js "></script>
-    <script defer src="js/lomake.js "></script>
-    <script defer src="js/saa.js "></script>
+    <script async src="js/index.js"></script>
+    <script defer src="js/lomake.js"></script>
+    <script defer src="js/saa.js"></script>
 </body>
 
 </html>

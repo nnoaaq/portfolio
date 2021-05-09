@@ -1,7 +1,6 @@
 .saa {
     width: 100%;
     height: auto;
-    padding: 15% 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -10,6 +9,7 @@
 }
 
 .saa-div {
+    padding: 15px 0 20% 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -41,13 +41,14 @@
 }
 
 #button-kaupunki {
-    background: linear-gradient(to right, orange, #ff2257);
+    background: rgb(20, 90, 20);
     background-size: contain;
     font-size: 20px;
 }
 
-#button-kaupunki:focus {
-    background: linear-gradient(to left, orange, #ff2257);
+#button-kaupunki:focus,
+#button-kaupunki:hover {
+    background: rgb(5, 76, 5);
 }
 
 .ennustus {
@@ -129,31 +130,19 @@
     height: 0;
 }
 
-
-/* width */
-
  ::-webkit-scrollbar {
     width: 20px;
 }
-
-
-/* Track */
 
  ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 5px;
 }
 
-
-/* Handle */
-
  ::-webkit-scrollbar-thumb {
     background: #ff2257;
     border-radius: 5px;
 }
-
-
-/* Handle on hover */
 
  ::-webkit-scrollbar-thumb:hover {
     background: #b30000;
@@ -174,17 +163,36 @@
     height: 100%;
 }
 
+.hakeminen {
+    display: flex;
+}
+
+.hakeminen i {
+    padding-left: 15px;
+}
+
+.hakeminen i:hover {
+    color: green;
+    cursor: pointer;
+}
+
+h4:hover {
+    color: green;
+    cursor: pointer;
+}
+
 @media only screen and (min-width:1000px) {
     .saa-div {
         width: 70%;
+        margin: 0 auto;
     }
-    .ennustus {
-        width: 70%;
-        margin: 0px auto;
+    #button-kaupunki {
+        width: 100%;
     }
     .kohde,
     .paikannus-saa,
-    .paikannus-nimi {
-        width: 70%;
+    .paikannus-nimi,
+    .ennustus {
+        width: 100%;
     }
 }

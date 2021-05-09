@@ -18,12 +18,10 @@ window.addEventListener("load", () => {
             document.body.classList.remove("rajoitettu-korkeus");
             let header = document.querySelector("header");
             let ylos = document.querySelector(".ylos");
-            document.getElementById("sijainti").style.display = "block";
             ylos.style.display = "block";
             header.classList.add("header");
             header.classList.remove("piilotettu");
             kirjoitusVasen();
-            kirjoitusOikea();
             var js_tiedosto = document.createElement("script");
             js_tiedosto.src = "js/tehtavat.js";
             document.getElementsByTagName("head")[0].appendChild(js_tiedosto);
@@ -169,4 +167,9 @@ function hampurilainen() {
     viiva1.classList.toggle("vinossa_2");
     viiva2.classList.toggle("vinossa_1");
     viiva3.classList.toggle("vinossa_3");
+}
+
+function liiku(id) {
+    let maaranpaa = document.getElementById(id);
+    maaranpaa.scrollIntoView();
 }

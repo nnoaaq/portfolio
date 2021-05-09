@@ -42,6 +42,11 @@
     justify-content: flex-end;
 }
 
+.pikalinkit li a:hover,
+.hover {
+    cursor: pointer;
+}
+
 .pikalinkit>* {
     padding: 15px;
     list-style: none;

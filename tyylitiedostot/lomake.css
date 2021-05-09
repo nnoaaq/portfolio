@@ -18,8 +18,9 @@
     max-height: 75px;
 }
 
-.laheta:focus {
-    background: linear-gradient(to left, #192138, orange);
+.laheta:focus,
+.laheta:hover {
+    background: #145a14;
 }
 
 body {
@@ -80,13 +81,14 @@ body {
     position: sticky;
     top: 60px;
     height: 100vh;
+    margin: 0 auto;
 }
 
 #ilmoitus {
     max-height: 0;
     overflow: hidden;
     color: inherit;
-    top: 6%;
+    top: 5%;
     left: 0;
     position: fixed;
     width: 100%;

@@ -7,17 +7,71 @@ saa_button.addEventListener("click", () => {
 let avain = "a7623f446de16b909d02e43badefd642";
 let status;
 
-async function saa(hakutermi) {
-    document.querySelector("#tehtava").classList.add("nolla");
+async function saa(hakutermi, x, y) {
+    if (typeof hakutermi !== 'undefined' && typeof x == 'undefined' && typeof y == 'undefined') {
+        document.querySelector("#tehtava").classList.add("nolla");
+        saa_ilmoitus("Kerätään säätietoja", "green");
+        kirjoitusOikea();
+        let naytettavat = [];
+        let vastaus = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + hakutermi + '&appid=' + avain + '&units=metric');
+        if (vastaus.ok) {
+            let json = await vastaus.json();
+            let x_koordinaatti = json["coord"]["lat"];
+            let y_koordinaatti = json["coord"]["lon"];
+            let x_y_koordinaatit = {
 
-    let naytettavat = [];
-    let vastaus = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + hakutermi + '&appid=' + avain + '&units=metric');
-    if (vastaus.ok) {
-        let json = await vastaus.json();
-        let x_koordinaatti = json["coord"]["lat"];
-        let y_koordinaatti = json["coord"]["lon"];
+                "coords": {
+                    "latitude": x_koordinaatti,
+                    "longitude": y_koordinaatti
+                }
 
-        let vastaus_tiedot = await fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + x_koordinaatti + '&lon=' + y_koordinaatti + '&exclude=hourly,&appid=' + avain + '&units=metric')
+            };
+            onnistui(x_y_koordinaatit);
+            let vastaus_tiedot = await fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + x_koordinaatti + '&lon=' + y_koordinaatti + '&exclude=hourly,&appid=' + avain + '&units=metric')
+            if (vastaus_tiedot.ok) {
+                let tiedot_json = await vastaus_tiedot.json();
+                let i = -1;
+                let paivat = tiedot_json["daily"];
+
+                for (let paiva_objekti of paivat) {
+                    i++;
+                    let paivamaara = aika(paiva_objekti.dt, "paiva")
+                    let tuuli = tiedot_json["daily"][i]["wind_speed"];
+                    let tuuli_deg = tiedot_json["daily"][i]["wind_deg"];
+                    let lampotila = tiedot_json["daily"][i]["temp"]["day"];
+                    let kuvake = tiedot_json["daily"][i]["weather"]["0"]["icon"];
+                    naytettavat.push({
+                        "tuuli": tuuli,
+                        "tuuli_deg": tuuli_deg,
+                        "paivamaara": paivamaara,
+                        "lampotila": lampotila,
+                        "kuvake": kuvake
+                    });
+
+                }
+                let ennustukset = [];
+                for (let naytettava of naytettavat) {
+                    let ennustus_html = `<div class="ennustus-paiva"><p class="paivamaara">${naytettava.paivamaara}</p> <p class="lampotila">${naytettava.lampotila} &#x2103;</p> <p class="tuuli">${naytettava.tuuli} m/s <span class="suunta"><i style="transform: rotate(${naytettava.tuuli_deg}deg)"class="fas fa-arrow-up"></i></span></p><figure><img src="http://openweathermap.org/img/wn/${naytettava.kuvake}@2x.png" class="saa-kuva"></figure></div>`;
+                    ennustukset.push(ennustus_html);
+                }
+                saa_input.value = "";
+                ennustus.innerHTML = ennustukset.join(" ");
+                ennustus.classList.add("korkeus");
+
+            } else {
+                ennustus.innerHTML = "Virhe " + vastaus.status + " : kaupingilla ei löytynyt tietoja."
+            }
+        } else {
+            if (vastaus.status == 404) {
+                saa_ilmoitus(`Virhe ${vastaus.status}: hakutermillä ei löytynyt kaupunkia.`, "red");
+            } else if (vastaus.status == 400) {
+                saa_ilmoitus(`Virhe ${vastaus.status}: hakutermi on annettava.`, "red");
+            }
+        }
+    } else if (typeof hakutermi == 'undefined') {
+        let naytettavat = [];
+        let vastaus_tiedot = await fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + x + '&lon=' + y + '&exclude=hourly,&appid=' + avain + '&units=metric')
+
         if (vastaus_tiedot.ok) {
             let tiedot_json = await vastaus_tiedot.json();
             let i = -1;
@@ -44,24 +98,20 @@ async function saa(hakutermi) {
                 let ennustus_html = `<div class="ennustus-paiva"><p class="paivamaara">${naytettava.paivamaara}</p> <p class="lampotila">${naytettava.lampotila} &#x2103;</p> <p class="tuuli">${naytettava.tuuli} m/s <span class="suunta"><i style="transform: rotate(${naytettava.tuuli_deg}deg)"class="fas fa-arrow-up"></i></span></p><figure><img src="http://openweathermap.org/img/wn/${naytettava.kuvake}@2x.png" class="saa-kuva"></figure></div>`;
                 ennustukset.push(ennustus_html);
             }
-            document.querySelector(".kohde").textContent = "Lähipäivien sää sijainnissa: " + saa_input.value[0].toUpperCase() + saa_input.value.substring(1);
             saa_input.value = "";
             ennustus.innerHTML = ennustukset.join(" ");
             ennustus.classList.add("korkeus");
-
-        } else {
-            ennustus.innerHTML = "Virhe " + vastaus.status + " : kaupingilla ei löytynyt tietoja."
         }
-    } else {
-        if (vastaus.status == 404) {
-            saa_ilmoitus(`Virhe ${vastaus.status}: hakutermillä ei löytynyt kaupunkia.`, "red");
-        } else if (vastaus.status == 400) {
-            saa_ilmoitus(`Virhe ${vastaus.status}: hakutermi on annettava.`, "red");
+        let nimi_vastaus = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + x + '&lon=' + y + '&appid=' + avain + '&units=metric');
+        if (nimi_vastaus.ok) {
+            let nimi_json = await nimi_vastaus.json();
+            let nimi = nimi_json["name"];
+            document.querySelector(".kohde").textContent = "Lähipäivien sää sijainnissa " + nimi;
+            document.getElementById("ilmoitus").classList.remove("ilmoitus-nakyy");
         }
     }
+
 }
-
-
 
 function aika(aika_muuttamaton, muoto) {
     let kuukaudet = ['Tammikuuta', 'Helmikuuta', 'Maaliskuuta', 'Huhtikuuta', 'Toukokuuta', 'Kesäkuuta', 'Heinäkuuta', 'Elokuuta', 'Syyskuuta', 'Lokakuuta', 'Marraskuuta', 'Joulukuuta'];
@@ -88,24 +138,20 @@ function saa_ilmoitus(teksti, vari) {
     document.getElementById("ilmoitus").classList.add("ilmoitus-nakyy");
     document.getElementById("ilmoitus").style.backgroundColor = vari;
     document.querySelector("#ilmoitus div p").innerHTML = teksti;
-    setTimeout(function() {
-        document.getElementById("ilmoitus").classList.remove("ilmoitus-nakyy");
-    }, 6000);
+
 }
 
 
 function paikannus() {
     navigator.geolocation.getCurrentPosition(onnistui, virhe);
-    document.getElementById("sijainti").innerHTML = "Hyväksy selaimen paikannuspyyntö";
-    document.getElementById("sijainti").style.textAlign = "center";
-    document.querySelector("#tehtava").classList.add("nolla");
+    saa_ilmoitus("Hyväksy paikannuspyyntö", "green");
+    console.log(document.querySelector(".kohde").innerHTML.length);
     setTimeout(function() {
-        document.getElementById("sijainti").innerHTML = "Jos et nähnyt paikannuspyyntöä, tarkista laitteen asetuksista saako selain paikantaa laitteen.";
-        document.getElementById("sijainti").style.background = "red";
+        if (document.querySelector(".kohde").innerHTML.length === 0) {
+            saa_ilmoitus("Jos et nähnyt paikannuspyyntöä, tarkista laitteen asetukset.", "red");
 
-
+        }
     }, 10000)
-
 }
 
 function sulje() {
@@ -120,12 +166,12 @@ async function onnistui(sijainti) {
     let y = koordinaatit.longitude;
     let paiva = [];
     let tiedot = [];
-    document.getElementById("sijainti").style.display = "none";
+    saa(undefined, x, y);
     let sijainti_vastaus = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + x + '&lon=' + y + '&appid=' + avain + '&units=metric');
     if (sijainti_vastaus.ok) {
         let sijainti_json = await sijainti_vastaus.json();
         let nimi = sijainti_json["name"];
-        document.querySelector(".paikannus-nimi").textContent = "Sää tänään sijainnissasi: " + nimi + ":";
+        document.querySelector(".paikannus-nimi").textContent = "Sää tänään sijainnissa " + nimi + ":";
 
     } else {
         saa_ilmoitus(sijainti_vastaus.status, "red");

@@ -53,6 +53,14 @@
     border: 1px solid #2379dc;
     padding: 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-tehtaviin:hover {
+    cursor: pointer;
 }
 
 @media only screen and (min-width:1200px) {
@@ -61,10 +69,6 @@
         padding: 15px;
         background: transparent;
         text-transform: uppercase;
-        cursor: pointer;
-        flex-direction: row;
-        justify-content: center;
-        display: inline-block;
         vertical-align: middle;
         -webkit-transform: perspective(1px) translateZ(0);
         transform: perspective(5px) translateZ(0);
