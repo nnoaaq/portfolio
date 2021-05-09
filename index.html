@@ -320,43 +320,44 @@
                 </div>
                 <div class="saa-div">
                     <h3>Säätietojen hakeminen</h3>
-                    <label class="label" for="kaupunki">Kaupungin nimi</label>
-                    <textarea name="viesti-otsikko" id="kaupunki" placeholder="Syötä kaupungin nimi hakeaksesi säätiedot" cols="30" rows="10"></textarea>
-                    <button id="button-kaupunki">Hae</button>
+                    <i onclick="paikannus()" class="fas fa-search-location "></i>
+                    <label class="label " for="kaupunki ">Kaupungin nimi</label>
+                    <textarea name="viesti-otsikko " id="kaupunki " placeholder="Syötä kaupungin nimi hakeaksesi säätiedot " cols="30 " rows="10 "></textarea>
+                    <button id="button-kaupunki ">Hae</button>
                 </div>
-                <p class="kohde"></p>
-                <div class="ennustus"></div>
-                <p class="tarjoaja">Datan tarjoaa <a target="_blank" href="https://openweathermap.org">OpenWeather </a>&#8482;.</p>
+                <p class="kohde "></p>
+                <div class="ennustus "></div>
+                <p class="tarjoaja ">Datan tarjoaa <a target="_blank " href="https://openweathermap.org ">OpenWeather </a>&#8482;.</p>
 
             </div>
         </section>
-        <section id="lomake" class="lomake" data-index="1">
-            <form method="POST" id="lomake-sisalto" name="lomake">
-                <div class="lomake">
+        <section id="lomake " class="lomake " data-index="1 ">
+            <form method="POST " id="lomake-sisalto " name="lomake ">
+                <div class="lomake ">
                     <h3>Ota minuun yhteyttä</h3>
                     <div>
-                        <label for="viesti-otsikko">viestin otsikko</label>
-                        <textarea name="viesti-otsikko" id="viesti-otsikko" class="kentta" placeholder="Syötä viestin otsikko" cols="30" rows="10"></textarea>
+                        <label for="viesti-otsikko ">viestin otsikko</label>
+                        <textarea name="viesti-otsikko " id="viesti-otsikko " class="kentta " placeholder="Syötä viestin otsikko " cols="30 " rows="10 "></textarea>
                     </div>
                     <div>
-                        <label for="viesti-sisalto">viestin sisalto</label>
-                        <textarea name="viesti-sisalto" id="viesti-sisalto" class="kentta" placeholder="Syötä viestin sisältö" cols="30" rows="10"></textarea>
+                        <label for="viesti-sisalto ">viestin sisalto</label>
+                        <textarea name="viesti-sisalto " id="viesti-sisalto " class="kentta " placeholder="Syötä viestin sisältö " cols="30 " rows="10 "></textarea>
                     </div>
                     <div>
-                        <label for="viesti-email">sahkopostiosoitteesi</label>
-                        <textarea name="viesti-email" id="viesti-email" class="kentta" placeholder="Syötä sähkopostiosoitteesi" cols="30" rows="10"></textarea>
+                        <label for="viesti-email ">sahkopostiosoitteesi</label>
+                        <textarea name="viesti-email " id="viesti-email " class="kentta " placeholder="Syötä sähkopostiosoitteesi " cols="30 " rows="10 "></textarea>
                     </div>
                     <div>
-                        <button class="laheta" type="button" onclick="lahetys()">Lähetä</button>
+                        <button class="laheta " type="button " onclick="lahetys() ">Lähetä</button>
                     </div>
-                    <p id="vastaus"></p>
+                    <p id="vastaus "></p>
                 </div>
             </form>
 
 
-            <div id="ilmoitus">
-                <div onclick="ilmoitusPois()" class="sulje">
-                    <i class="fas fa-times"></i>
+            <div id="ilmoitus ">
+                <div onclick="ilmoitusPois() " class="sulje ">
+                    <i class="fas fa-times "></i>
                 </div>
                 <div>
                     <p></p>
@@ -365,16 +366,16 @@
         </section>
 
     </div>
-    <footer id="footer">
+    <footer id="footer ">
         <p> &#169; Noa Julkunen 2021</p>
     </footer>
 
-    <div class="ylos " onclick="ylos() " style="display:none; "><a href="#esittely"><i class="fas fa-arrow-up "></i></a></div>
+    <div class="ylos " onclick="ylos() " style="display:none; "><a href="#esittely "><i class="fas fa-arrow-up "></i></a></div>
 
 
-    <script async src="js/index.js"></script>
-    <script defer src="js/lomake.js"></script>
-    <script defer src="js/saa.js"></script>
+    <script async src="js/index.js "></script>
+    <script defer src="js/lomake.js "></script>
+    <script defer src="js/saa.js "></script>
 </body>
 
 </html>
