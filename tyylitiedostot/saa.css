@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-color: #151515;
+    background-color: transparent;
 }
 
 .saa-div {
@@ -71,14 +71,21 @@
 
 .paivamaara {
     color: orange;
+    font-size: 20px;
 }
 
 .lampotila {
-    color: red;
+    color: darkgreen;
+    font-size: 20px;
+}
+
+.lampotila-min {
+    color: darkred;
+    font-size: 16px;
 }
 
 .pilvisyys {
-    color: green;
+    color: darkblue;
 }
 
 .virhe {

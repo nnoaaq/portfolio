@@ -174,3 +174,48 @@ function liiku(id) {
     let maaranpaa = document.getElementById(id);
     maaranpaa.scrollIntoView();
 }
+let labelit = document.getElementsByTagName("label");
+let buttonit = document.querySelectorAll(".buttonit >*");
+
+if (localStorage.getItem("teema") === "valkoinen") {
+    document.querySelector(".pallo").classList.add("pallo-liikkuu");
+    document.body.classList.toggle("valkoinen-teema");
+    document.querySelector("#footer").classList.toggle("valkoinen-teema");
+    for (let label of labelit) {
+        label.classList.toggle("valkoinen-teema");
+    }
+    for (let button of buttonit) {
+        button.classList.toggle("valkoinen-button");
+    }
+
+} else if (localStorage.getItem("teema") === "oletus") {
+    document.querySelector(".pallo").classList.remove("pallo-liikkuu");
+    document.body.classList.remove("valkoinen-teema");
+    document.querySelector("#footer").classList.remove("valkoinen-teema");
+    for (let label of labelit) {
+        label.classList.remove("valkoinen-teema");
+    }
+    for (let button of buttonit) {
+        button.classList.remove("valkoinen-button");
+    }
+
+}
+document.querySelector(".vaihtaminen-alue").addEventListener("click", () => {
+    document.querySelector(".pallo").classList.toggle("pallo-liikkuu");
+    document.body.classList.toggle("valkoinen-teema");
+    document.querySelector("#footer").classList.toggle("valkoinen-teema");
+    for (let label of labelit) {
+        label.classList.toggle("valkoinen-teema");
+    }
+    for (let button of buttonit) {
+        button.classList.toggle("valkoinen-button");
+    }
+    if (localStorage.getItem("teema") === "oletus") {
+        localStorage.clear();
+        localStorage.setItem("teema", "valkoinen");
+    } else if (localStorage.getItem("teema") === "valkoinen") {
+        localStorage.clear();
+        localStorage.setItem("teema", "oletus");
+    }
+
+})

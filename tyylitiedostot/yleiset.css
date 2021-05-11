@@ -158,3 +158,65 @@
             width: 100vw !important;
         }
     }
+    
+    .teema {
+        position: absolute;
+        top: 6%;
+        left: 5px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .vaihtaminen {
+        position: absolute;
+        top: 10%;
+        left: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .teema>* {
+        padding: 10px;
+        color: white;
+    }
+    
+    .vaihtaminen:hover {
+        cursor: pointer;
+    }
+    
+    .vaihto {
+        font-size: 20px;
+    }
+    
+    .vaihtaminen-alue {
+        width: 50px;
+        height: 25px;
+        border-radius: 50px;
+        border: 1px solid white;
+    }
+    
+    .pallo-liikkuu {
+        margin-left: 50%;
+        transition: 0.7s all;
+    }
+    
+    .pallo {
+        transition: 0.7s all;
+        width: 50%;
+        height: 100%;
+        background: #ac1c49;
+        border-radius: 50px;
+    }
+    
+    .valkoinen-teema {
+        color: black !important;
+        background-color: rgb(99, 99, 99) !important;
+    }
+    
+    .valkoinen-button {
+        background: rgb(40, 62, 130) !important;
+    }
