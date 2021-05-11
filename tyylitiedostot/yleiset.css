@@ -45,6 +45,10 @@
         background-color: #151515;
     }
     
+    .latausvaihe p {
+        color: white;
+    }
+    
     .pallot {
         display: flex;
         flex-direction: row;
@@ -177,6 +181,8 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        height: 0px;
+        overflow: hidden;
     }
     
     .teema>* {
