@@ -44,7 +44,7 @@ async function saa(hakutermi, x, y) {
                         "tuuli": tuuli,
                         "tuuli_deg": tuuli_deg,
                         "paivamaara": paivamaara,
-                        "lampotila": lampotila,
+                        "lampotila": Math.round(lampotila),
                         "kuvake": kuvake
                     });
 
@@ -76,26 +76,27 @@ async function saa(hakutermi, x, y) {
             let tiedot_json = await vastaus_tiedot.json();
             let i = -1;
             let paivat = tiedot_json["daily"];
-
             for (let paiva_objekti of paivat) {
                 i++;
                 let paivamaara = aika(paiva_objekti.dt, "paiva")
                 let tuuli = tiedot_json["daily"][i]["wind_speed"];
                 let tuuli_deg = tiedot_json["daily"][i]["wind_deg"];
-                let lampotila = tiedot_json["daily"][i]["temp"]["day"];
+                let lampotila_max = tiedot_json["daily"][i]["temp"]["max"];
+                let lampotila_min = tiedot_json["daily"][i]["temp"]["min"];
                 let kuvake = tiedot_json["daily"][i]["weather"]["0"]["icon"];
                 naytettavat.push({
                     "tuuli": tuuli,
                     "tuuli_deg": tuuli_deg,
                     "paivamaara": paivamaara,
-                    "lampotila": lampotila,
+                    "lampotila_max": Math.round(lampotila_max),
+                    "lampotila_min": Math.round(lampotila_min),
                     "kuvake": kuvake
                 });
 
             }
             let ennustukset = [];
             for (let naytettava of naytettavat) {
-                let ennustus_html = `<div class="ennustus-paiva"><p class="paivamaara">${naytettava.paivamaara}</p> <p class="lampotila">${naytettava.lampotila} &#x2103;</p> <p class="tuuli">${naytettava.tuuli} m/s <span class="suunta"><i style="transform: rotate(${naytettava.tuuli_deg}deg)"class="fas fa-arrow-up"></i></span></p><figure><img src="http://openweathermap.org/img/wn/${naytettava.kuvake}@2x.png" class="saa-kuva"></figure></div>`;
+                let ennustus_html = `<div class="ennustus-paiva"><p class="paivamaara">${naytettava.paivamaara}</p> <p class="lampotila" style="color:green;"></i><strong>${naytettava.lampotila_max}</strong> &#x2103;</p><p class="lampotila">${naytettava.lampotila_min} &#x2103;</p> <p class="tuuli">${naytettava.tuuli} m/s <span class="suunta"><i style="transform: rotate(${naytettava.tuuli_deg}deg)"class="fas fa-arrow-up"></i></span></p><figure><img src="http://openweathermap.org/img/wn/${naytettava.kuvake}@2x.png" class="saa-kuva"></figure></div>`;
                 ennustukset.push(ennustus_html);
             }
             saa_input.value = "";
@@ -123,8 +124,11 @@ function aika(aika_muuttamaton, muoto) {
     let minuutti = "0" + paivays.getMinutes();
     let sekuntti = "0" + paivays.getSeconds();
     let kuukausi_numero = kuukaudet.indexOf(kuukausi) + 1;
+    let viikonpaivat = ["Su", "Ma", "Ti", "Ke", "To", "Pe", "La"];
+    let i = 0;
     if (muoto === "paiva") {
-        let luettava_aika = `${paiva}.${kuukausi_numero} <i class="fas fa-calendar-alt"></i>`;
+        let luettava_aika = `${viikonpaivat[paivays.getDay()]}, ${paiva}.${kuukausi_numero} <i class="fas fa-calendar-alt"></i>`;
+        i++;
         return luettava_aika;
 
     } else {
@@ -145,7 +149,6 @@ function saa_ilmoitus(teksti, vari) {
 function paikannus() {
     navigator.geolocation.getCurrentPosition(onnistui, virhe);
     saa_ilmoitus("Hyväksy paikannuspyyntö", "green");
-    console.log(document.querySelector(".kohde").innerHTML.length);
     setTimeout(function() {
         if (document.querySelector(".kohde").innerHTML.length === 0) {
             saa_ilmoitus("Jos et nähnyt paikannuspyyntöä, tarkista laitteen asetukset.", "red");
@@ -190,7 +193,7 @@ async function onnistui(sijainti) {
             let kuvake = tunnnit["weather"]["0"]["icon"];
             paiva.push({
                 "aika": tunti,
-                "lampotila": lampotila,
+                "lampotila": Math.round(lampotila),
                 "tuuli_nopeus": tuuli_nopeus,
                 "tuuli_deg": tuuli_deg,
                 "kuvake": kuvake

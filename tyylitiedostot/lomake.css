@@ -23,12 +23,6 @@
     background: #145a14;
 }
 
-body {
-    background: #151515;
-    color: white;
-    font-family: 'consolas';
-}
-
 .lomake {
     display: flex;
     justify-content: flex-start;
