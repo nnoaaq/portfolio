@@ -21,6 +21,7 @@ window.addEventListener("load", () => {
             ylos.style.display = "block";
             header.classList.add("header");
             header.classList.remove("piilotettu");
+            document.querySelector(".vaihtaminen").style.height = "auto";
             kirjoitusVasen();
             kirjoitusOikea();
             var js_tiedosto = document.createElement("script");
