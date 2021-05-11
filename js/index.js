@@ -217,5 +217,7 @@ document.querySelector(".vaihtaminen-alue").addEventListener("click", () => {
         localStorage.clear();
         localStorage.setItem("teema", "oletus");
     }
-
+    if (localStorage.length == 0) {
+        localStorage.setItem("teema", "valkoinen");
+    }
 })
