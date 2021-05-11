@@ -22,6 +22,7 @@ window.addEventListener("load", () => {
             header.classList.add("header");
             header.classList.remove("piilotettu");
             kirjoitusVasen();
+            kirjoitusOikea();
             var js_tiedosto = document.createElement("script");
             js_tiedosto.src = "js/tehtavat.js";
             document.getElementsByTagName("head")[0].appendChild(js_tiedosto);
