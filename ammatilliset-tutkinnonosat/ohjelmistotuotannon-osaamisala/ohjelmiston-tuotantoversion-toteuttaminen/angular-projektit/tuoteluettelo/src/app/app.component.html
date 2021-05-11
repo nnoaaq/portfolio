@@ -2,9 +2,11 @@
     <div class="vasen">
         <label for="haku">Search:</label>
         <input type="text" name="haku" (keyup)="haku($event)">
-        <label for="sort">Sort by</label>
-        <button (click)="newest()">Newest</button>
-        <button (click)="alphabetical()">Alphabetical</button>
+
+        <select name="" id="" (change)="suodatin($event)">
+    <option   value="newest">Newest</option>
+    <option  value="alphabetical">Alphabetical</option>
+</select>
 
 
     </div>
@@ -16,7 +18,7 @@
                 </figure>
             </div>
             <div class="teksti">
-                <a href="#" class="nimi"> {{ puhelin.name }} </a>
+                <a routerLink="/puhelin/{{ puhelin.id }}" (click)="yksilo($event)" class="nimi"> {{ puhelin.name }} </a>
                 <p> {{ puhelin.snippet }} </p>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import puhelinData from 'src/assets/phones/phones.json'
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import puhelinData from 'src/assets/phones/phones.json'
 })
 export class AppComponent {
   title = 'tuoteluettelo';
-  faCoffee = faCoffee;
+  suodatusIkoni = faChevronDown;
   suodatus = '';
   puhelimet = puhelinData;
   suodatetut = [];
@@ -18,7 +18,6 @@ export class AppComponent {
     this.puhelimet = this.suodata(puhelinData, arvo);
   }
   newest() {
-    console.log(this.puhelimet);
     this.puhelimet = this.puhelimet.slice(0).sort(function (a, b) {
       return a.age - b.age;
     });
@@ -32,7 +31,16 @@ export class AppComponent {
       return x < y ? -1 : x > y ? 1 : 0;
     });
   }
-
+  suodatin(e) {
+    if (e.target.value === "alphabetical") {
+      this.alphabetical();
+    } else if (e.target.value === "newest") {
+      this.newest();
+   }
+  }
+  yksilo(e) {
+    console.log(e);
+  }
   suodata(suodatettava, termi) {
     if (termi) {
       for (let puhelin of suodatettava) {

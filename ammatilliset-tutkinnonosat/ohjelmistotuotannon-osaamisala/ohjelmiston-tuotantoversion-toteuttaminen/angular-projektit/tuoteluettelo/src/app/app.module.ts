@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PuhelinComponent } from './puhelin/puhelin.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PuhelinComponent
   ],
   imports: [
     BrowserModule,
