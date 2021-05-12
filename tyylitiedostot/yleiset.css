@@ -226,3 +226,25 @@
     .valkoinen-button {
         background: rgb(40, 62, 130) !important;
     }
+    
+    .aalto {
+        width: 100%;
+        height: 100px;
+        overflow: hidden;
+        position: absolute;
+        top: 95%;
+        left: 0px;
+    }
+    
+    .aaltoliike {
+        position: relative;
+        width: 100vw;
+        height: 100px;
+        background-image: url(/kuvat/aalto-ylos-iso-1.svg);
+        background-size: contain;
+        background-repeat: repeat;
+    }
+    
+    .aalto-harmaa {
+        background-image: url(/kuvat/aalto-ylos-iso-1-harmaa.svg);
+    }
