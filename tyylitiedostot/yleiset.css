@@ -232,7 +232,7 @@
         height: 100px;
         overflow: hidden;
         position: absolute;
-        top: 95%;
+        bottom: -50px;
         left: 0px;
     }
     
