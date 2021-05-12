@@ -182,6 +182,7 @@ if (localStorage.getItem("teema") === "valkoinen") {
     document.querySelector(".pallo").classList.add("pallo-liikkuu");
     document.body.classList.toggle("valkoinen-teema");
     document.querySelector("#footer").classList.toggle("valkoinen-teema");
+    document.querySelector(".aaltoliike").classList.toggle("aalto-harmaa");
     for (let label of labelit) {
         label.classList.toggle("valkoinen-teema");
     }
@@ -193,6 +194,7 @@ if (localStorage.getItem("teema") === "valkoinen") {
     document.querySelector(".pallo").classList.remove("pallo-liikkuu");
     document.body.classList.remove("valkoinen-teema");
     document.querySelector("#footer").classList.remove("valkoinen-teema");
+    document.querySelector(".aaltoliike").classList.remove("aalto-harmaa");
     for (let label of labelit) {
         label.classList.remove("valkoinen-teema");
     }
@@ -205,6 +207,7 @@ document.querySelector(".vaihtaminen-alue").addEventListener("click", () => {
     document.querySelector(".pallo").classList.toggle("pallo-liikkuu");
     document.body.classList.toggle("valkoinen-teema");
     document.querySelector("#footer").classList.toggle("valkoinen-teema");
+    document.querySelector(".aaltoliike").classList.toggle("aalto-harmaa");
     for (let label of labelit) {
         label.classList.toggle("valkoinen-teema");
     }
