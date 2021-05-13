@@ -43,7 +43,7 @@
 }
 
 .pikalinkit li a:hover,
-.hover {
+.pikalinkit li a:focus .hover {
     cursor: pointer;
 }
 
