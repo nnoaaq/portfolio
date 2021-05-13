@@ -13,7 +13,7 @@ export class Puhelin1Component implements OnInit {
   nimi = "";
   description = ""; 
   kuvat :any[];
-  saatavuus = "";
+  saatavuus = [];
   kyllaIkoni = faCheck;
   eiIkoni = faTimes;
   isokuva = "";
@@ -36,11 +36,11 @@ export class Puhelin1Component implements OnInit {
       this.jsonData = data;
     });
  
-    console.log(this.jsonData.connectivity.infrared);
+    console.log(this.jsonData.availability);
     this.nimi = this.jsonData.id;
     this.description = this.jsonData.description;
     this.kuvat = this.jsonData.images;
-    this.saatavuus = this.jsonData.availability;
+    this.saatavuus.push(this.jsonData.availability);
     this.isokuva = this.jsonData.images[0];
     this.type = this.jsonData.battery.type;
     this.talktime = this.jsonData.battery.talkTime;
