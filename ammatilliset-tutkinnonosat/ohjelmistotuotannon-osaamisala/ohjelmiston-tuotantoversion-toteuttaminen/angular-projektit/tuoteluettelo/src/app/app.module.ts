@@ -23,8 +23,6 @@ import { Puhelin1Component } from './puhelin1/puhelin1.component';
         {path: '', component: PuhelimetComponent},
         {path: 'puhelin1/:puhelin.id', component: Puhelin1Component},
       ]),
-    
-  
   ],
   providers: [],
   bootstrap: [AppComponent]

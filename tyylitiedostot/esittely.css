@@ -61,7 +61,8 @@
     align-items: center;
 }
 
-.button-tehtaviin:hover {
+.button-tehtaviin:hover,
+.button-tehtaviin:focus {
     cursor: pointer;
 }
 

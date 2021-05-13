@@ -117,7 +117,8 @@
     border: 1px solid white;
 }
 
-#sijainti button:hover {
+#sijainti button:hover,
+#sijainti button:focus {
     background-color: black;
     color: white;
 }
@@ -183,7 +184,8 @@
     cursor: pointer;
 }
 
-h4:hover {
+h4:hover,
+h4:focus {
     color: green;
     cursor: pointer;
 }
