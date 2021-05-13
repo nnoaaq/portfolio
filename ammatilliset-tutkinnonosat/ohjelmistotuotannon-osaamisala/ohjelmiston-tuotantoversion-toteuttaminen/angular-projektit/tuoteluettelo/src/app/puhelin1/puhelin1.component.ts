@@ -36,7 +36,6 @@ export class Puhelin1Component implements OnInit {
       this.jsonData = data;
     });
  
-    console.log(this.jsonData.availability);
     this.nimi = this.jsonData.id;
     this.description = this.jsonData.description;
     this.kuvat = this.jsonData.images;
