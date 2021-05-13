@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tuoteluettelo": {
+    "routing-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tuoteluettelo",
+            "outputPath": "dist/routing-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "tuoteluettelo:build"
+            "browserTarget": "routing-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "tuoteluettelo:build:production"
+              "browserTarget": "routing-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tuoteluettelo:build"
+            "browserTarget": "routing-app:build"
           }
         },
         "test": {
@@ -109,20 +109,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "tuoteluettelo:serve"
+            "devServerTarget": "routing-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "tuoteluettelo:serve:production"
+              "devServerTarget": "routing-app:serve:production"
             }
           }
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {}
         }
       }
     }
   },
-  "defaultProject": "tuoteluettelo"
+  "defaultProject": "routing-app"
 }

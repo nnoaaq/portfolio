@@ -460,5 +460,11 @@
         "nimi": "Angular – Tour of Heroes",
         "url": "https://angular-tour-of-heroes-2cf3d.web.app/dashboard",
         "kuva": "https://public.bc.fi/s1900877/portfolio/kuvat/angular-tour-of-heroes.png"
+    },
+    {
+        "numero": 80,
+        "nimi": "Soveltava tehtävä: Tuoteluettelo Angularin avulla",
+        "url": "https://tuoteluettelo-badfe.web.app/",
+        "kuva": "https://public.bc.fi/s1900877/portfolio/kuvat/tuoteluettelo.png"
     }
 ]

@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
+
+.oikea,
+.vasen {
+    display: flex;
+    flex-direction: column;
+}
+
+.vasen {
+    padding: 10px;
+}
+
+.uloin {
+    border: 1px solid grey;
+    margin: 10px;
+    display: flex;
+}
+
+select {
+    border: 1px solid black;
+}
+
+.kuva {
+    width: 100%;
+    max-width: 15%;
+}
+
+.kuva figure {
+    padding: 10px;
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+.kuva figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.teksti {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nimi {
+    color: blue;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.suodatin {
+    border: 1px solid black;
+}
+
+.suodatin:hover .suodatus {
+    height: 100%;
+}
+
+.suodatus {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+}
+
+.suodatus button {
+    background: transparent;
+}

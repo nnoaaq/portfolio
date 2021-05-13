@@ -1,14 +1,13 @@
-import { Component, Input } from '@angular/core';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { Component, OnInit } from '@angular/core';
 import puhelinData from 'src/assets/phones/phones.json';
- @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+
+@Component({
+  selector: 'app-puhelimet',
+  templateUrl: './puhelimet.component.html',
+  styleUrls: ['./puhelimet.component.css']
 })
-export class AppComponent {
+export class PuhelimetComponent implements OnInit {
   title = 'tuoteluettelo';
-  suodatusIkoni = faChevronDown;
   suodatus = '';
   puhelimet = puhelinData;
   suodatetut = [];
@@ -56,4 +55,9 @@ return this.suodatetut.sort();
       return puhelinData;
     }
   }
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }

@@ -1,0 +1,60 @@
+<main>
+    <div class="yla-osa">
+        <div class="oikea">
+            <p class="nimi">{{ nimi }}</p>
+            <p> {{ description }} </p>
+            <div class="kuvat">
+                <figure *ngFor="let kuva of kuvat">
+                    <img src="../assets/{{ kuva }}" alt="">
+                </figure>
+            </div>
+        </div>
+        <div class="vasen">
+            <img src="../assets/{{ isokuva }}" alt="">
+        </div>
+    </div>
+    <div class="ala-osa">
+        <div class="saatavuus" *ngFor="let tuoteSaatavuus of saatavuus">
+            <p><strong>Availability and Networks</strong></p>
+            <p> {{ tuoteSaatavuus }} </p>
+        </div>
+        <div class="akku">
+            <p class="akku"> <strong>Type</strong>
+                <span> {{ type }} </span>
+            </p>
+            <p class="akku"> <strong>Talk time</strong> <span>{{ talktime }}</span></p>
+            <p class="akku"> <strong>Standby time (max)</strong> <span>{{ standbyTime }}</span></p>
+        </div>
+        <div class="muisti">
+            <p><strong>Storage and memory</strong></p>
+            <p><strong>RAM</strong></p>
+            <p> {{ ram }} </p>
+            <p><strong>Internal storage</strong></p>
+            <p> {{ flash }} </p>
+        </div>
+        <div class="yhteydet">
+            <p><strong>Connectivity</strong></p>
+            <p><strong>Network support</strong></p>
+            <p><strong>WiFi</strong></p>
+            <p> {{ wifi }} </p>
+            <p><strong>Bluetooth</strong></p>
+            <p> {{ bluetooth }} </p>
+            <p><strong>Infrared</strong></p>
+            <p *ngIf="infrared">
+                <fa-icon [icon]="kyllaIkoni"></fa-icon>
+
+            </p>
+            <p *ngIf="!infrared">
+                <fa-icon [icon]="eiIkoni"></fa-icon>
+            </p>
+            <p><strong>GPS</strong></p>
+            <p *ngIf="gps">
+                <fa-icon [icon]="kyllaIkoni"></fa-icon>
+
+            </p>
+            <p *ngIf="!gps">
+                <fa-icon [icon]="eiIkoni"></fa-icon>
+            </p>
+        </div>
+    </div>
+</main>

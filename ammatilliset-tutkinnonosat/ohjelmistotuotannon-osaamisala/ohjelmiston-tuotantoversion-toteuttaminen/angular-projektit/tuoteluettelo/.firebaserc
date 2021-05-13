@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tuoteluettelo-badfe": {
+      "hosting": {
+        "tuoteluettelo": [
+          "tuoteluettelo-badfe"
+        ]
+      }
+    }
+  }
+}
