@@ -1,0 +1,26 @@
+<body>
+    <div class="vasen">
+        <label for="haku">Search:</label>
+        <input type="text" name="haku" (keyup)="haku($event)">
+
+        <select name="" id="" (change)="suodatin($event)">
+  <option   value="newest">Newest</option>
+  <option  value="alphabetical">Alphabetical</option>
+</select>
+
+
+    </div>
+    <div class="oikea">
+        <div *ngFor="let puhelin of puhelimet" class="uloin">
+            <div class="kuva">
+                <figure>
+                    <img src="../assets/{{ puhelin.imageUrl }}" alt="">
+                </figure>
+            </div>
+            <div class="teksti">
+                <a class="nimi" [routerLink]="['/puhelin1',puhelin.id]"> {{ puhelin.name }} </a>
+                <p> {{ puhelin.snippet }} </p>
+            </div>
+        </div>
+    </div>
+</body>
