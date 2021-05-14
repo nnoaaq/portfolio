@@ -69,6 +69,7 @@
         width: 100%;
         flex-wrap: nowrap;
         padding: 15px;
+        align-items: center;
         height: 100vh;
     }
     .info>* {
