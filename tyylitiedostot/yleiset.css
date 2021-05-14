@@ -202,7 +202,7 @@
         width: 50px;
         height: 25px;
         border-radius: 50px;
-        border: 1px solid white;
+        border: 2px solid white;
     }
     
     .pallo-liikkuu {
@@ -220,11 +220,27 @@
     
     .valkoinen-teema {
         color: black !important;
-        background-color: rgb(99, 99, 99) !important;
+        background-color: rgb(208, 208, 208) !important;
     }
     
     .valkoinen-button {
-        background: rgb(125, 152, 233) !important;
+        background: #03415e!important;
+    }
+    
+    .valkoinen-kysymys {
+        color: rgb(0, 0, 0) !important;
+    }
+    
+    .valkoinen-span {
+        color: red;
+    }
+    
+    .hover:hover {
+        cursor: pointer;
+    }
+    
+    .valkoinen-vastaus {
+        color: rgb(121, 96, 96) !important;
     }
     
     .aalto {
