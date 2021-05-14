@@ -177,7 +177,9 @@ function liiku(id) {
 }
 let labelit = document.getElementsByTagName("label");
 let buttonit = document.querySelectorAll(".buttonit >*");
-
+let kysymykset = document.querySelectorAll(".kysymys");
+let vastaukset = document.querySelectorAll(".vastaus");
+let spanit = document.getElementsByTagName("span");
 if (localStorage.getItem("teema") === "valkoinen") {
     document.querySelector(".pallo").classList.add("pallo-liikkuu");
     document.body.classList.toggle("valkoinen-teema");
@@ -189,17 +191,36 @@ if (localStorage.getItem("teema") === "valkoinen") {
     for (let button of buttonit) {
         button.classList.toggle("valkoinen-button");
     }
+    for (let vastaus of vastaukset) {
+        vastaus.classList.toggle("valkoinen-vastaus");
+    }
+    for (let kysymys of kysymykset) {
+        kysymys.classList.toggle("valkoinen-kysymys");
+    }
+    for (let span of spanit) {
+        span.classList.toggle("valkoinen-span");
+    }
 
 } else if (localStorage.getItem("teema") === "oletus") {
     document.querySelector(".pallo").classList.remove("pallo-liikkuu");
     document.body.classList.remove("valkoinen-teema");
     document.querySelector("#footer").classList.remove("valkoinen-teema");
     document.querySelector(".aaltoliike").classList.remove("aalto-harmaa");
+
     for (let label of labelit) {
         label.classList.remove("valkoinen-teema");
     }
     for (let button of buttonit) {
         button.classList.remove("valkoinen-button");
+    }
+    for (let vastaus of vastaukset) {
+        vastaus.classList.remove("valkoinen-vastaus");
+    }
+    for (let kysymys of kysymykset) {
+        kysymys.classList.remove("valkoinen-kysymys");
+    }
+    for (let span of spanit) {
+        span.classList.remove("valkoinen-span");
     }
 
 }
@@ -213,6 +234,15 @@ document.querySelector(".vaihtaminen-alue").addEventListener("click", () => {
     }
     for (let button of buttonit) {
         button.classList.toggle("valkoinen-button");
+    }
+    for (let vastaus of vastaukset) {
+        vastaus.classList.toggle("valkoinen-vastaus");
+    }
+    for (let kysymys of kysymykset) {
+        kysymys.classList.toggle("valkoinen-kysymys");
+    }
+    for (let span of spanit) {
+        span.classList.toggle("valkoinen-span");
     }
     if (localStorage.getItem("teema") === "oletus") {
         localStorage.clear();

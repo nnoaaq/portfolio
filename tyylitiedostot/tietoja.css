@@ -13,7 +13,7 @@
         justify-content: flex-start;
     }
     span {
-        color: yellow;
+        color: orange;
     }
     .kortti {
         border: 1px solid white;
@@ -32,7 +32,7 @@
         width: 100%;
     }
     .kortti-otsikko {
-        background-color: #ff2257;
+        background-color: #741329;
         height: auto;
         width: 100%;
         max-width: 20%;
@@ -58,7 +58,7 @@
 }
 
 .kysymys {
-    color: yellow;
+    color: orange;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -91,7 +91,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: #ff2257;
+        background-color: #741329;
         text-align: center;
         padding: 10px;
         transition: 0.5s all ease-in-out;
