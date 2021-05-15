@@ -42,6 +42,15 @@
     justify-content: flex-end;
 }
 
+.pikalinkit li {
+    display: flex;
+    flex-direction: row;
+}
+
+.pikalinkit li a {
+    padding: 0px 10px;
+}
+
 .pikalinkit li a:hover,
 .pikalinkit li a:focus .hover {
     cursor: pointer;
