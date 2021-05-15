@@ -185,14 +185,11 @@
 
 .nolla {
     padding-top: 50px !important;
+    padding-bottom: 50px !important;
     transition: 1s all;
 }
 
 @media only screen and (min-width:1200px) {
-    #tehtava {
-        padding-top: 20%;
-        transition: 1s all;
-    }
     .buttonit {
         position: relative;
         width: 100%;

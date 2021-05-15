@@ -26,6 +26,8 @@ async function saa(hakutermi, x, y) {
                 }
 
             };
+            document.querySelector(".saa-div").classList.add("nolla");
+
             onnistui(x_y_koordinaatit);
             let vastaus_tiedot = await fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + x_koordinaatti + '&lon=' + y_koordinaatti + '&exclude=hourly,&appid=' + avain + '&units=metric')
             if (vastaus_tiedot.ok) {
@@ -175,6 +177,7 @@ async function onnistui(sijainti) {
         let sijainti_json = await sijainti_vastaus.json();
         let nimi = sijainti_json["name"];
         document.querySelector(".paikannus-nimi").textContent = "Sää tänään sijainnissa " + nimi + ":";
+        document.querySelector(".saa-div").classList.add("nolla");
 
     } else {
         saa_ilmoitus(sijainti_vastaus.status, "red");
