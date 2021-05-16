@@ -129,10 +129,10 @@ document.querySelector(".teema").addEventListener("click", () => {
     document.querySelector(".teema").classList.toggle("teema-valkoinen");
     if (localStorage.length == 0) {
         localStorage.setItem("teema", "valkoinen");
-        document.body.classList.remove("valkoinen");
-        document.querySelector(".teema-pallo").classList.remove("teema-pallo-valkoinen");
-        document.querySelector(".teema").classList.remove("teema-valkoinen");
-        document.querySelector(".aaltoliike").classList.remove("aaltoliike-valkoinen");
+        document.body.classList.add("valkoinen");
+        document.querySelector(".teema-pallo").classList.add("teema-pallo-valkoinen");
+        document.querySelector(".teema").classList.add("teema-valkoinen");
+        document.querySelector(".aaltoliike").classList.add("aaltoliike-valkoinen");
 
     } else if (localStorage.getItem("teema") === "valkoinen") {
         document.body.classList.add("valkoinen");
