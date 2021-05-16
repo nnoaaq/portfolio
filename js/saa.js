@@ -9,9 +9,7 @@ let status;
 
 async function saa(hakutermi, x, y) {
     if (typeof hakutermi !== 'undefined' && typeof x == 'undefined' && typeof y == 'undefined') {
-        document.querySelector("#tehtava").classList.add("nolla");
         saa_ilmoitus("Kerätään säätietoja", "green");
-        kirjoitusOikea();
         let naytettavat = [];
         let vastaus = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + hakutermi + '&appid=' + avain + '&units=metric');
         if (vastaus.ok) {
@@ -109,7 +107,7 @@ async function saa(hakutermi, x, y) {
         if (nimi_vastaus.ok) {
             let nimi_json = await nimi_vastaus.json();
             let nimi = nimi_json["name"];
-            document.querySelector(".kohde").textContent = "Lähipäivien sää sijainnissa " + nimi;
+            document.querySelector(".kohde").textContent = "Lähipäivien sää sijainnissa " + nimi + ":";
             document.getElementById("ilmoitus").classList.remove("ilmoitus-nakyy");
         }
     }
