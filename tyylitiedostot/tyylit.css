@@ -9,7 +9,7 @@
 
 body {
     background: var(--tausta);
-    color: white;
+    color: palevioletred;
     max-width: 100vw;
     overflow-x: hidden;
     --tausta: #2e2e2e;
@@ -618,7 +618,8 @@ main {
     margin: 10px auto;
     padding: 20px;
     background: transparent;
-    color: inherit;
+    color: black;
+    font-weight: bold;
     height: 65px;
     resize: none;
 }
@@ -890,7 +891,8 @@ h4:focus {
     max-width: 100%;
     background: orange;
     border: 1px solid yellow;
-    color: inherit;
+    color: black;
+    font-weight: bold;
     margin-top: 5px;
     padding: 20px;
 }
@@ -1048,7 +1050,7 @@ h4:focus {
     --korostus: rgb(231, 136, 12);
     --hover-tausta: #2e2e2e;
     --hover-fontti: white;
-    color: black;
+    color: rgb(66, 1, 23);
 }
 
 .aaltoliike-valkoinen {
