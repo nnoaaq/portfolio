@@ -17,6 +17,8 @@ body {
     --hover-tausta: white;
     --hover-fontti: black;
     --korostus: orange;
+    font-family: 'Architects Daughter', cursive;
+    letter-spacing: 2px;
 }
 
 .hidden {
@@ -596,7 +598,8 @@ main {
 }
 
 .label {
-    transform: translate(7%, 105%);
+    transform: translate(7%, 86%);
+    padding: 0 10px;
     background-color: var(--tausta);
     text-align: center;
     width: max-content;
