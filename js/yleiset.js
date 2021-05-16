@@ -26,7 +26,11 @@ window.addEventListener("load", () => {
         }, 800);
     })
     // lataus valmis
-
+window.addEventListener("scroll", () => {
+    if (document.querySelector(".aaltoliike").style.display = "none") {
+        document.querySelector(".aaltoliike").style.display = "block";
+    }
+})
 
 function hampurilainen() {
     let navigaatio = document.querySelector(".navigaatio");
@@ -125,6 +129,11 @@ document.querySelector(".teema").addEventListener("click", () => {
     document.querySelector(".teema").classList.toggle("teema-valkoinen");
     if (localStorage.length == 0) {
         localStorage.setItem("teema", "valkoinen");
+        document.body.classList.remove("valkoinen");
+        document.querySelector(".teema-pallo").classList.remove("teema-pallo-valkoinen");
+        document.querySelector(".teema").classList.remove("teema-valkoinen");
+        document.querySelector(".aaltoliike").classList.remove("aaltoliike-valkoinen");
+
     } else if (localStorage.getItem("teema") === "valkoinen") {
         document.body.classList.add("valkoinen");
         document.querySelector(".aaltoliike").classList.add("aaltoliike-valkoinen");

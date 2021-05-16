@@ -190,7 +190,7 @@ header {
     max-height: 900px;
     transition: 1s all;
     position: fixed;
-    top: 9.5%;
+    top: 8.5%;
     left: 0;
     width: 100vw;
     z-index: 5;
@@ -276,7 +276,8 @@ h2 {
 /* sisällön muotoilut */
 
 .aaltoliike {
-    margin-top: 100px;
+    display: none;
+    margin-top: 120px;
     height: 150px;
     background-color: transparent;
     background-image: url(https://public.bc.fi/s1900877/kuvat/aalto-ylos-iso-1.svg);
@@ -298,6 +299,7 @@ h2 {
 main {
     position: relative;
     margin-top: 100px;
+    transform: translateY(200px);
 }
 
 
@@ -952,10 +954,10 @@ h4:focus {
     margin-top: 20px;
     width: 100%;
     background-color: var(--tausta);
-    padding: 20px;
+    padding: 5px;
     z-index: 5;
-    position: fixed;
     bottom: 0%;
+    transform: translateY(150px);
 }
 
 .ylos a {
