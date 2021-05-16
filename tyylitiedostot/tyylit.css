@@ -14,6 +14,9 @@ body {
     overflow-x: hidden;
     --tausta: #2e2e2e;
     --border: white;
+    --hover-tausta: white;
+    --hover-fontti: black;
+    --korostus: orange;
 }
 
 .hidden {
@@ -123,6 +126,10 @@ body {
     order: -1;
 }
 
+.ylapalkki-keski:hover {
+    cursor: pointer;
+}
+
 h1 {
     font-family: 'Indie Flower', cursive;
     padding-left: 10px;
@@ -190,7 +197,7 @@ header {
     max-height: 900px;
     transition: 1s all;
     position: fixed;
-    top: 8.5%;
+    top: 9%;
     left: 0;
     width: 100vw;
     z-index: 5;
@@ -209,6 +216,7 @@ header {
 
 .navigaatio li:hover,
 .navigaatio li:focus {
+    cursor: pointer;
     text-decoration: underline;
 }
 
@@ -299,7 +307,6 @@ h2 {
 main {
     position: relative;
     margin-top: 100px;
-    transform: translateY(200px);
 }
 
 
@@ -329,6 +336,12 @@ main {
     flex-direction: row-reverse;
     justify-content: flex-end;
     padding: 10px;
+    align-items: center;
+}
+
+.kortti-otsikko:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .kortti-otsikko i,
@@ -339,6 +352,7 @@ main {
 .kortti-otsikko i {
     border-right: 1px solid var(--border);
     width: 45px;
+    color: var(--korostus);
 }
 
 .kortti-teksti {
@@ -346,12 +360,12 @@ main {
     overflow: hidden;
     border-bottom: 1px solid var(--border);
     order: -1;
+    padding: 0 5px;
 }
 
 .kortti-teksti-nakyy {
     max-height: 999px;
-    transition: 1s all;
-    padding: 5px;
+    transition: 3s all;
 }
 
 
@@ -360,7 +374,7 @@ main {
 .ammatilliset-tutkinnon-osat>*>*,
 .yhteiset-tutkinnon-osat>*,
 .vapaasti-valittavat-osat {
-    border: 1px solid white;
+    border: 1px solid var(--border);
     padding: 5px;
     cursor: pointer;
 }
@@ -442,6 +456,14 @@ main {
     flex-direction: row;
     justify-content: center;
     font-size: 15px;
+}
+
+.buttonit>*:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background: var(--hover-tausta);
+    transition: 1s all;
+    color: var(--hover-fontti);
 }
 
 .musta {
@@ -580,8 +602,10 @@ main {
     width: max-content;
 }
 
-.tarjoaja {
+.tarjoaja,
+.tarjoaja a {
     font-size: 10px;
+    color: inherit;
 }
 
 #kaupunki,
@@ -605,6 +629,7 @@ main {
 #button-kaupunki:focus,
 #button-kaupunki:hover {
     background: rgb(5, 76, 5);
+    cursor: pointer;
 }
 
 .ennustus {
@@ -818,6 +843,7 @@ h4:focus {
 .laheta:focus,
 .laheta:hover {
     background: #145a14;
+    cursor: pointer;
 }
 
 .lomake {
@@ -977,6 +1003,10 @@ h4:focus {
 
 /* teeman vaihto */
 
+.teema:hover {
+    cursor: pointer;
+}
+
 .teema {
     margin-top: 5px;
     box-shadow: 0px 0px 1px orange;
@@ -1012,6 +1042,9 @@ h4:focus {
 .valkoinen {
     --tausta: white;
     --border: black;
+    --korostus: rgb(231, 136, 12);
+    --hover-tausta: #2e2e2e;
+    --hover-fontti: white;
     color: black;
 }
 
