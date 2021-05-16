@@ -13,7 +13,7 @@ hakupalkki.addEventListener('keyup', (e) => {
 });
 const haeTehtavat = async() => {
     try {
-        const lista = await fetch('tehtavat.json');
+        const lista = await fetch('../tehtavat.json');
         kaikkiTehtavat = await lista.json();
         naytaTehtavat(kaikkiTehtavat);
     } catch (err) {

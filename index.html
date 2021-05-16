@@ -5,149 +5,148 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Tyylitiedostot, jokaiselle sivun osalle oma tiedosto!-->
-    <link rel="stylesheet" href="tyylitiedostot/yleiset.css">
-    <link rel="stylesheet" href="tyylitiedostot/esittely.css">
-    <link rel="stylesheet" href="tyylitiedostot/tietoja.css">
-    <link rel="stylesheet" href="tyylitiedostot/lomake.css">
-    <link rel="stylesheet" href="tyylitiedostot/tehtavat.css">
-    <link rel="stylesheet" href="tyylitiedostot/ylapalkki.css">
-    <link rel="stylesheet" href="tyylitiedostot/alapalkki.css">
-    <link rel="stylesheet" href="tyylitiedostot/saa.css">
     <script src="https://kit.fontawesome.com/d186af660e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="tyylitiedostot/tyylit.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans&display=swap" rel="stylesheet">
     <title>Portfolio | Noa Julkunen</title>
 </head>
 
 <body class="rajoitettu-korkeus">
-    <div class="latausvaihe ">
+    <div class="latausvaihe">
         <div class="pallot ">
             <div class="pallo1 "></div>
             <div class="pallo2 "></div>
             <div class="pallo3 "></div>
             <div class="pallo4 "></div>
-
         </div>
         <p>Sivua ladataan.</p>
     </div>
-    <header>
-        <div class="ylapalkki-nimi">
-            <p class="nimetty" onclick="ylos()">
-                <a onclick="liiku('aloitus')" data-page="aloitus">Etusivu</a> </p>
-        </div>
-        <div class="ylapalkki-pikalinkit">
-            <ul class="pikalinkit" id="pikalinkit">
-                <li>
-                    <a data-page="tietoja" data-kohde="#tietoja" class="tietoja-linkki" onclick="hampurilainen();liiku('tietoja')">Tietoja</a>
+    <header class="hidden">
+        <div class="ylapalkki-vasen">
+            <ul>
+                <li onclick="liiku('kortit')">
+                    <a>Tietoja</a>
                 </li>
-
-                <li>
-                    <a data-page="tehtava" data-kohde="#tehtava" class="tehtava-linkki" onclick="hampurilainen();liiku('tehtava')">Tehtävät & Sää</a>
+                <li onclick="liiku('tehtavat')">
+                    <a>Tehtävät</a>
                 </li>
-                <li>
-                    <a data-page="lomake" data-kohde="#lomake" class="lomake-linkki" onclick="hampurilainen();liiku('lomake')">Ota yhteyttä</a>
-                </li>
-                <div class="kupla" style="display: none;"></div>
             </ul>
-
         </div>
+        <div class="ylapalkki-keski">
+            <h1 onclick="ylos()">Noa Julkunen</h1>
+        </div>
+        <div class="ylapalkki-oikea">
+            <ul>
+                <li onclick="liiku('saatiedot')">
+                    <a>Sää</a>
+                </li>
+                <li onclick="liiku('lomake')">
+                    <a>Ota yhteyttä</a>
+                </li>
+            </ul>
+        </div>
+
         <div onclick="hampurilainen()" class="hampurilainen">
             <div class="viiva1"></div>
             <div class="viiva2"></div>
             <div class="viiva3"></div>
         </div>
     </header>
-
-
-
-    <div id="sisalto">
-        <div class="aalto">
-            <div class="aaltoliike">
-
+    <ul class="navigaatio">
+        <li onclick="hampurilainen();liiku('kortit')">
+            <a>Tietoja</a>
+        </li>
+        <li onclick="hampurilainen();liiku('tehtavat')">
+            <a>Tehtävät</a>
+        </li>
+        <li onclick="hampurilainen();liiku('saatiedot')">
+            <a>Sää</a>
+        </li>
+        <li onclick="hampurilainen();liiku('lomake')">
+            <a>Ota yhteyttä</a>
+        </li>
+    </ul>
+    <div class="aloitus">
+        <div class="esittely-teksti">
+            <h2 class="yla"></h2>
+            <h2 class="ala"></h2>
+            <div class='vierita'>
+                <div class="animaatio-pallo"></div>
             </div>
         </div>
-        <section id="aloitus" class="aloitus" data-index="3">
-            <div class="esittely">
-                <div class="esittely-teksti">
-                    <h2 class="yla"></h2>
-                    <h2 class="ala">
-                    </h2>
+    </div>
+    <div class="aalto">
+        <div class="aaltoliike"></div>
+    </div>
+    <main>
+
+        <div class="kortit">
+            <div class="kortti ">
+                <div class="kortti-sisalto kortti-otsikko ">
+                    <p>Kuka olen?</p>
+                    <i class="fas fa-user "></i>
                 </div>
-                <a class="button-tehtaviin" onclick="liiku('tehtava')">Alaspäin<i class="fas fa-chevron-circle-down"></i></a> </div>
-
-
-
-        </section>
-        <section id="tietoja" class="tietoja" data-index="2">
-
-
-
-            <div class="info">
-                <div class="kortti ">
-                    <div class="kortti-sisalto kortti-otsikko ">
-                        <p>Kuka olen?</p>
-                        <i class="fas fa-user "></i>
-                    </div>
-                    <div class="kortti-sisalto kortti-teksti ">
-                        <div class="info-piilossa ">
-                            <p class="kysymys">Kuka olen?</p>
-                            <p class="vastaus">Olen Noa, 17 vuotias tieto- ja viestintätekniikan opiskelija ammattikoulussa</p>
-                        </div>
+                <div class="kortti-sisalto kortti-teksti ">
+                    <div class="info-piilossa ">
+                        <p class="kysymys">Kuka olen?</p>
+                        <p class="vastaus">Olen Noa, 17 vuotias tieto- ja viestintätekniikan opiskelija ammattikoulussa</p>
                     </div>
                 </div>
-                <div class="kortti ">
-                    <div class="kortti-sisalto kortti-otsikko ">
-                        <p>Mitä tällä sivulla on?</p>
-                        <i class="fas fa-sitemap "></i>
-                    </div>
-                    <div class="kortti-sisalto kortti-teksti ">
-                        <div class="info-piilossa ">
-                            <p class="kysymys">Mitä tällä sivulla on?</p>
-                            <p class="vastaus">Olen koonnut tälle sivulle tehtyjä tehtäviäni datanomi- opintojeni varrelta</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="kortti ">
-                    <div class="kortti-sisalto kortti-otsikko ">
-                        <p>Missä ja mitä opiskelen?</p>
-                        <i class="fas fa-school "></i>
-                    </div>
-                    <div class="kortti-sisalto kortti-teksti ">
-                        <div class="info-piilossa ">
-                            <p class="kysymys">Missä ja mitä opiskelen?</p>
-                            <p class="vastaus">Opiskelen Helsinki Business Collegessa WEB - ohjelmointia</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="kortti ">
-                    <div class="kortti-sisalto kortti-otsikko ">
-                        <p>Mitä ohjelmointikieliä osaan?</p>
-                        <i class="fas fa-file-code "></i>
-                    </div>
-                    <div class="kortti-sisalto kortti-teksti ">
-                        <div class="info-piilossa ">
-                            <p class="kysymys">Mitä ohjelmointikieliä osaan?</p>
-                            <p class="vastaus">Osaan luoda nettisivujen rakenteen <span>HTML</span> avulla, ulkoasun <span>CSS</span> avulla ja toiminnallisuuden <span>JavaScriptin</span> avulla. </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="kortti ">
-                    <div class="kortti-sisalto kortti-otsikko ">
-                        <p>Miten minuun saa yhteyden?</p>
-                        <i class="fas fa-envelope"></i> </div>
-                    <div class="kortti-sisalto kortti-teksti ">
-                        <div class="info-piilossa ">
-                            <p class="kysymys">Miten minuun saa yhteyden?</p>
-                            <p class="vastaus">Minulle voi lähettää sähköpostia käyttämällä <a style="text-decoration: underline;" class="hover" onclick="liiku('lomake')">lomaketta</a></p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </section>
+            <div class="kortti ">
+                <div class="kortti-sisalto kortti-otsikko ">
+                    <p>Mitä tällä sivulla on?</p>
+                    <i class="fas fa-sitemap "></i>
+                </div>
+                <div class="kortti-sisalto kortti-teksti ">
+                    <div class="info-piilossa ">
+                        <p class="kysymys">Mitä tällä sivulla on?</p>
+                        <p class="vastaus">Olen koonnut tälle sivulle tehtyjä tehtäviäni datanomi- opintojeni varrelta</p>
+                    </div>
+                </div>
+            </div>
 
-        <section id="tehtava" class="tehtava" data-index="0">
+            <div class="kortti ">
+                <div class="kortti-sisalto kortti-otsikko ">
+                    <p>Missä ja mitä opiskelen?</p>
+                    <i class="fas fa-school "></i>
+                </div>
+                <div class="kortti-sisalto kortti-teksti ">
+                    <div class="info-piilossa ">
+                        <p class="kysymys">Missä ja mitä opiskelen?</p>
+                        <p class="vastaus">Opiskelen Helsinki Business Collegessa WEB - ohjelmointia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kortti ">
+                <div class="kortti-sisalto kortti-otsikko ">
+                    <p>Mitä ohjelmointikieliä osaan?</p>
+                    <i class="fas fa-file-code "></i>
+                </div>
+                <div class="kortti-sisalto kortti-teksti ">
+                    <div class="info-piilossa ">
+                        <p class="kysymys">Mitä ohjelmointikieliä osaan?</p>
+                        <p class="vastaus">Osaan luoda nettisivujen rakenteen <span>HTML</span> avulla, ulkoasun <span>CSS</span> avulla ja toiminnallisuuden <span>JavaScriptin</span> avulla. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kortti ">
+                <div class="kortti-sisalto kortti-otsikko ">
+                    <p>Miten minuun saa yhteyden?</p>
+                    <i class="fas fa-envelope"></i> </div>
+                <div class="kortti-sisalto kortti-teksti ">
+                    <div class="info-piilossa ">
+                        <p class="kysymys">Miten minuun saa yhteyden?</p>
+                        <p class="vastaus">Minulle voi lähettää sähköpostia käyttämällä <a style="text-decoration: underline;" class="hover" onclick="liiku('lomake')">lomaketta</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tehtavat">
+            <h3>Tutustu tuotoksiini</h3>
             <div class="buttonit ">
                 <button class="ammatilliset " onclick="tutkinnonOsat( 'ammatilliset-tutkinnon-osat',event) "><i class="fas fa-plus i-vihrea"></i>ammatilliset tutkinnon osat</button>
                 <button class="yhteiset " onclick="tutkinnonOsat( 'yhteiset-tutkinnon-osat',event) "><i class="fas fa-plus i-vihrea "></i>yhteiset tutkinnon osat</button>
@@ -350,6 +349,9 @@
                     </div>
                 </div>
             </div>
+
+        </div>
+        <div class="saatiedot">
             <div class="saa">
             </div>
             <div class="saa-div">
@@ -362,12 +364,10 @@
                 <label class="label " for="kaupunki ">Kaupungin nimi</label>
                 <textarea name="viesti-otsikko" id="kaupunki" placeholder="Syötä kaupungin nimi hakeaksesi säätiedot" cols="30" rows="10"></textarea>
                 <h4 onclick="paikannus()">Suorita haku paikannuksen avulla <i class="fas fa-search-location "></i></h4>
-
-
                 <button id="button-kaupunki">Hae</button>
             </div>
-        </section>
-        <section id="lomake" class="lomake" data-index="1">
+        </div>
+        <div class="lomake">
             <form method="POST" id="lomake-sisalto" name="lomake ">
                 <div class="lomake">
                     <h3>Ota minuun yhteyttä</h3>
@@ -389,34 +389,24 @@
                     <p id="vastaus"></p>
                 </div>
             </form>
-
-
-            <div id="ilmoitus">
-                <div onclick="ilmoitusPois()" class="sulje">
-                    <i class="fas fa-times"></i>
-                </div>
-                <div>
-                    <p></p>
-                </div>
-            </div>
-        </section>
-
+        </div>
+    </main>
+    <div id="ilmoitus">
+        <div onclick="ilmoitusPois()" class="sulje">
+            <i class="fas fa-times"></i>
+        </div>
+        <div>
+            <p></p>
+        </div>
     </div>
-    <footer id="footer">
+    <footer class="footer hidden">
         <p> &#169; Noa Julkunen 2021</p>
     </footer>
 
-    <div class="ylos" onclick="ylos();liiku('aloitus')" style="display:none;"><a><i class="fas fa-arrow-up"></i></a></div>
-
-    <div class="vaihtaminen">
-        <div class="vaihtaminen-alue">
-            <div class="pallo"></div>
-        </div>
-    </div>
-
-    <script async src="js/index.js"></script>
-    <script defer src="js/lomake.js"></script>
-    <script defer src="js/saa.js"></script>
+    <div class="ylos hidden" onclick="ylos();liiku('aloitus')" style="display:none;"><a><i class="fas fa-arrow-up"></i></a></div>
+    <script src="js/yleiset.js"></script>
+    <script src="js/saa.js"></script>
+    <script src="js/lomake.js"></script>
 </body>
 
 </html>
