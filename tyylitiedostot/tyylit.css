@@ -336,6 +336,7 @@ main {
     max-height: 0;
     overflow: hidden;
     border-bottom: 1px solid white;
+    order: -1;
 }
 
 .kortti-teksti-nakyy {
@@ -965,7 +966,12 @@ h4:focus {
     z-index: 6;
 }
 
-@media only screen and (min-width:1300px) {
+.ylapalkki-keski {
+    width: 500px;
+    order: -1;
+}
+
+@media only screen and (min-width:1100px) {
     .kortit,
     .tehtavat,
     .saatiedot,
@@ -1037,6 +1043,7 @@ h4:focus {
         color: rgb(255, 255, 255);
         overflow: hidden;
         max-height: 100%;
+        order: 1;
     }
     .kortti:hover .kortti-teksti {
         transform: translateY(100px);
@@ -1050,7 +1057,8 @@ h4:focus {
         width: 100%;
     }
     .ylapalkki-keski {
-        width: 450px;
+        width: 500px;
+        order: 2;
     }
     .ylapalkki-vasen ul,
     .ylapalkki-oikea ul {
@@ -1059,6 +1067,12 @@ h4:focus {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
+    }
+    .ylapalkki-vasen {
+        order: 1;
+    }
+    .ylapalkki-oikea {
+        order: 3;
     }
     .ylapalkki-vasen ul {
         justify-content: flex-end;
