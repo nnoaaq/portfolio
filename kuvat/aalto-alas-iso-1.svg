@@ -3,9 +3,9 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 2500 1080" style="enable-background:new 0 0 2500 1080;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#2E2E2E;}
+	.st0{fill:#151515;}
 </style>
 <g>
-	<path class="st0" d="M0,265v815h2500V265c-625,0-625,350-1250,350S625,265,0,265z"/>
+	<path class="st0" d="M0,636V0h2500v636c-625,0-625-273.1-1250-273.1S625,636,0,636z"/>
 </g>
 </svg>
