@@ -614,7 +614,7 @@ main {
     margin: 10px auto;
     padding: 20px;
     background: transparent;
-    color: black;
+    color: var(--fontti);
     font-weight: bold;
     height: 65px;
     resize: none;
