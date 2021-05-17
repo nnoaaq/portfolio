@@ -121,17 +121,7 @@ function aika(aika_muuttamaton, muoto) {
     let sekuntti = "0" + paivays.getSeconds();
     let kuukausi_numero = kuukaudet.indexOf(kuukausi) + 1;
     let viikonpaivat = ["Su", "Ma", "Ti", "Ke", "To", "Pe", "La"];
-    let i = 0;
-    if (muoto === "paiva") {
-        let luettava_aika = `${viikonpaivat[paivays.getDay()]}, ${paiva}.${kuukausi_numero} <i class="fas fa-calendar-alt"></i>`;
-        i++;
-        return luettava_aika;
-
-    } else {
-        let luettava_aika = `${tunti}:${minuutti} <i class='fas fa-clock'></i> `;
-        return luettava_aika;
-
-    }
+    ddd
 }
 
 function saa_ilmoitus(teksti, vari) {
