@@ -193,8 +193,6 @@ async function onnistui(sijainti) {
     let paiva_vastaus = await fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + x + '&lon=' + y + '&exclude=minutely&appid=' + avain + '&units=metric')
     if (paiva_vastaus.ok) {
         let paiva_json = await paiva_vastaus.json();
-        console.log(paiva_json);
-
         let tunneittain = paiva_json["hourly"];
         for (let tunnnit of tunneittain) {
             let tunti = aika(tunnnit["dt"]);
@@ -211,7 +209,7 @@ async function onnistui(sijainti) {
             })
             if (paiva.length == 10) {
                 for (let yksi of paiva) {
-                    let yksi_html = `<div class="tunti-saa"><p class="paivamaara">${yksi.aika}</p><p class="lampotila">${yksi.lampotila} &#x2103;</p><p class="tuuli">${yksi.tuuli_nopeus} m/s <span class="suunta"><i style="transform: rotate(${yksi.tuuli_deg}deg)"class="fas fa-arrow-up"></i></span></p><figure><img src="http://openweathermap.org/img/wn/${yksi.kuvake}@2x.png" class="saa-kuva"></figure></div>`;
+                    let yksi_html = `<div class="tunti-saa"><p class="paivamaara">${yksi.aika}</p><p class="lampotila">${yksi.lampotila} &#x2103;</p><p class="tuuli">${yksi.tuuli_nopeus} m/s <span class="suunta"><i style="transform: rotate(${yksi.tuuli_deg}deg)"class="fas fa-arrow-up"></i></span></p><figure><img src="https://public.bc.fi/s1900877/portfolio/kuvat/${yksi.kuvake}@2x.png" class="saa-kuva"></figure></div>`;
                     tiedot.push(yksi_html);
                 }
                 document.querySelector(".paikannus-saa").innerHTML = tiedot.join(" ");
