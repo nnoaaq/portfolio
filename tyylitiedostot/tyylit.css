@@ -166,6 +166,10 @@ header {
     max-height: 100%;
 }
 
+.hampurilainen:hover {
+    cursor: pointer;
+}
+
 .viiva1,
 .viiva2,
 .viiva3 {
@@ -201,7 +205,7 @@ header {
     max-height: 900px;
     transition: 1s all;
     position: fixed;
-    top: 9%;
+    top: 9.5%;
     left: 0;
     width: 100vw;
     z-index: 5;
@@ -295,6 +299,7 @@ h2 {
 /* sisällön muotoilut */
 
 .aaltoliike {
+    display: none;
     z-index: 15;
     margin-top: 16vh;
     height: 150px;
@@ -441,7 +446,7 @@ main {
 
 .buttonit {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     height: auto;
     flex-wrap: nowrap;
@@ -714,24 +719,6 @@ main {
     width: 100%;
     overflow-x: scroll;
     height: 0;
-}
-
- ::-webkit-scrollbar {
-    width: 20px;
-}
-
- ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 5px;
-}
-
- ::-webkit-scrollbar-thumb {
-    background: #ff2257;
-    border-radius: 5px;
-}
-
- ::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
 }
 
 .tunti-saa {
@@ -1022,13 +1009,15 @@ label {
     height: 35px;
     position: absolute;
     top: 12%;
-    box-shadow: 5px 10px 155px orange;
-    background: white;
+    box-shadow: 5px 10px 120px black;
+    background: rgb(52, 49, 49);
+    animation-name: oletus;
+    animation-duration: 2.6s;
 }
 
 .teema-pallo {
     width: 25px;
-    background: rgb(52, 49, 49);
+    background: white;
     height: 25px;
     border-radius: 45px;
     transition: 1s all;
@@ -1039,12 +1028,38 @@ label {
 .teema-pallo-valkoinen {
     margin-left: 50%;
     transition: 1s all;
-    background: white;
+    background: rgb(52, 49, 49);
     box-shadow: 5px 10px 55px white;
 }
 
 .teema-valkoinen {
-    background: rgb(52, 49, 49);
+    background: white;
+    animation-name: valkoinen;
+    animation-duration: 1.6s;
+}
+
+@keyframes valkoinen {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(350deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes oletus {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(350deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -1063,6 +1078,12 @@ label {
 
 .aaltoliike-valkoinen {
     background-image: url(https://public.bc.fi/s1900877/kuvat/aalto-ylos-iso-1-harmaa.svg);
+}
+
+@media only screen and (min-width:650px) {
+    .buttonit {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (min-width:1100px) {
@@ -1171,8 +1192,11 @@ label {
         width: 100%;
     }
     .ylapalkki-keski {
-        width: 45vw;
+        width: 50vw;
         order: 2;
+    }
+    h1 {
+        text-align: center;
     }
     .ylapalkki-vasen ul,
     .ylapalkki-oikea ul {

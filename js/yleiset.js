@@ -17,6 +17,7 @@ window.addEventListener("load", () => {
             header.classList.remove("piilotettu");
             kirjoitusVasen();
             kirjoitusOikea();
+            document.querySelector(".aaltoliike").style.display = "block";
             document.querySelector("header").classList.remove("hidden");
             document.querySelector("footer").classList.remove("hidden");
             document.querySelector(".ylos").classList.remove("hidden");
