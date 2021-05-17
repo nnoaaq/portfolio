@@ -2,8 +2,8 @@ let vasen = 0;
 let oikea = 0;
 let kirjoitettava_teksti_vasen = "Portfolio";
 let kirjoitettava_teksti_oikea = "Noa Julkunen";
-let nopeus_vasen = 100;
-let nopeus_oikea = 150;
+let nopeus_vasen = 250;
+let nopeus_oikea = 300;
 window.addEventListener("load", () => {
         setTimeout(function() {
             const latausvaihe = document.querySelector(".latausvaihe");

@@ -205,7 +205,7 @@ header {
     max-height: 900px;
     transition: 1s all;
     position: fixed;
-    top: 9.5%;
+    top: 8.5%;
     left: 0;
     width: 100vw;
     z-index: 5;
@@ -382,6 +382,7 @@ main {
     border-bottom: 1px solid var(--border);
     order: -1;
     padding: 0 5px;
+    transition: 0.7s all;
 }
 
 .kortti-teksti-nakyy {
