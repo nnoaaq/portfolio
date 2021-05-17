@@ -1010,14 +1010,14 @@ label {
 .teema {
     margin-top: 5px;
     border-radius: 55px;
-    width: 85px;
+    width: 65px;
     height: 35px;
     position: absolute;
     top: 12%;
     box-shadow: 5px 10px 120px black;
     background: rgb(52, 49, 49);
     animation-name: oletus;
-    animation-duration: 2.6s;
+    animation-duration: 1.6s;
 }
 
 .teema-pallo {
@@ -1040,7 +1040,7 @@ label {
 .teema-valkoinen {
     background: white;
     animation-name: valkoinen;
-    animation-duration: 1.6s;
+    animation-duration: 1s;
 }
 
 @keyframes valkoinen {
@@ -1060,10 +1060,10 @@ label {
         transform: rotate(0deg);
     }
     50% {
-        transform: rotate(350deg);
+        transform: rotate(-350deg);
     }
     100% {
-        transform: rotate(360deg);
+        transform: rotate(-360deg);
     }
 }
 
