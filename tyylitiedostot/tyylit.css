@@ -49,6 +49,7 @@ body {
     align-items: center;
     transform: scale(1);
     height: 100vh;
+    z-index: 52;
     z-index: 1000;
     background-color: #151515;
 }
@@ -276,7 +277,6 @@ h2 {
 .vierita {
     width: 40px;
     height: 70px;
-    box-shadow: 0 0 0 1px #fff;
     border-radius: 25px;
     margin: 0 auto;
 }
@@ -295,6 +295,7 @@ h2 {
 /* sisällön muotoilut */
 
 .aaltoliike {
+    z-index: 15;
     margin-top: 15vh;
     height: 150px;
     background-color: transparent;
