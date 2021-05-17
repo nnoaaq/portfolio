@@ -295,7 +295,6 @@ h2 {
 /* sisällön muotoilut */
 
 .aaltoliike {
-    display: none;
     margin-top: 120px;
     height: 150px;
     background-color: transparent;
@@ -328,7 +327,7 @@ main {
 }
 
 .vastaus {
-    color: var(--fontti);
+    color: white;
 }
 
 .kortit {
@@ -362,6 +361,7 @@ main {
 .kortti-otsikko i,
 .kortti-otsikko p {
     padding: 10px;
+    color: white;
 }
 
 .kortti-otsikko i {
@@ -788,6 +788,7 @@ h4:focus {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    color: var(--fontti);
 }
 
 .ilmoitus {
@@ -1015,21 +1016,22 @@ label {
 
 .teema {
     margin-top: 5px;
-    box-shadow: 0px 0px 1px orange;
-    border-radius: 50px;
+    border-radius: 55px;
     width: 55px;
-    height: 30px;
+    height: 15px;
     position: absolute;
-    top: 10%;
+    top: 12%;
     background: white;
 }
 
 .teema-pallo {
-    width: 30px;
+    width: 35px;
     background: rgb(52, 49, 49);
-    height: 30px;
-    border-radius: 20px;
+    height: 32px;
+    border-radius: 45px;
+    transform: translateY(-7px);
     transition: 1s all;
+    margin-left: -1px;
 }
 
 .teema-pallo-valkoinen {
@@ -1060,6 +1062,10 @@ label {
 }
 
 @media only screen and (min-width:1100px) {
+    .hover:hover {
+        cursor: pointer;
+        color: orange;
+    }
     .buttonit>*:hover {
         cursor: pointer;
         text-decoration: underline;

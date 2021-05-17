@@ -26,11 +26,7 @@ window.addEventListener("load", () => {
         }, 800);
     })
     // lataus valmis
-window.addEventListener("scroll", () => {
-    if (document.querySelector(".aaltoliike").style.display = "none") {
-        document.querySelector(".aaltoliike").style.display = "block";
-    }
-})
+
 
 function hampurilainen() {
     let navigaatio = document.querySelector(".navigaatio");
