@@ -170,11 +170,20 @@ async function onnistui(sijainti) {
     if (sijainti_vastaus.ok) {
         let sijainti_json = await sijainti_vastaus.json();
         let nimi = sijainti_json["name"];
-        document.querySelector(".paikannus-nimi").textContent = "Sää tänään sijainnissa: " + nimi;
+        document.querySelector(".paikannus-nimi").textContent = sijaintiNimi("Sää tänään sijainnissa: ", nimi, document.querySelector("#kaupunki").value);
         document.querySelector(".saa-div").classList.add("nolla");
-        document.querySelector(".kohde").textContent = "Lähipäivien sää sijainnissa: " + nimi + ", " + document.querySelector("#kaupunki").value;
+        document.querySelector(".kohde").textContent = sijaintiNimi("Lähipäivien sää sijainnissa: ", nimi, document.querySelector("#kaupunki").value);
         saa_input.value = "";
 
+        function sijaintiNimi(teksti, nimi, hakutermi) {
+            if (nimi.toLowerCase() === hakutermi.toLowerCase()) {
+                return `${teksti}${nimi}`;
+            } else if (!hakutermi) {
+                return `${teksti}${nimi}`;
+            } else {
+                return `${teksti} ${hakutermi}`;
+            }
+        }
 
     } else {
         saa_ilmoitus(sijainti_vastaus.status, "red");

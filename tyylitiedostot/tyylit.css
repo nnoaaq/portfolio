@@ -1027,9 +1027,9 @@ label {
 .teema-pallo {
     width: 35px;
     background: rgb(52, 49, 49);
-    height: 32px;
+    height: 22px;
     border-radius: 45px;
-    transform: translateY(-7px);
+    transform: translateY(-3.5px);
     transition: 1s all;
     margin-left: -1px;
 }
