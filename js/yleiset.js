@@ -123,31 +123,32 @@ function kirjoitusOikea() {
 document.querySelector(".teema").addEventListener("click", () => {
     document.querySelector(".teema-pallo").classList.toggle("teema-pallo-valkoinen");
     document.querySelector(".teema").classList.toggle("teema-valkoinen");
-    if (localStorage.length == 0) {
+
+    if (!localStorage.getItem("teema")) {
+        localStorage.setItem("teema", "valkoinen");
+        console.log("TYHJÄ");
+        document.body.classList.add("valkoinen");
+        document.querySelector(".aaltoliike").classList.add("aaltoliike-valkoinen");
+    } else if (localStorage.getItem("teema") === "oletus") {
+        console.log("OLETUS");
+        localStorage.clear();
         localStorage.setItem("teema", "valkoinen");
         document.body.classList.add("valkoinen");
-        document.querySelector(".teema-pallo").classList.add("teema-pallo-valkoinen");
-        document.querySelector(".teema").classList.add("teema-valkoinen");
         document.querySelector(".aaltoliike").classList.add("aaltoliike-valkoinen");
-
     } else if (localStorage.getItem("teema") === "valkoinen") {
-        document.body.classList.add("valkoinen");
-        document.querySelector(".aaltoliike").classList.add("aaltoliike-valkoinen");
+        console.log("VALKOINEN")
         localStorage.clear();
         localStorage.setItem("teema", "oletus");
-    } else if (localStorage.getItem("teema") === "oletus") {
         document.body.classList.remove("valkoinen");
         document.querySelector(".aaltoliike").classList.remove("aaltoliike-valkoinen");
-        localStorage.clear();
-        localStorage.setItem("teema", "valkoinen");
     }
 });
-if (localStorage.getItem("teema") === "oletus") {
+if (localStorage.getItem("teema") === "valkoinen") {
     document.body.classList.add("valkoinen");
     document.querySelector(".teema-pallo").classList.add("teema-pallo-valkoinen");
     document.querySelector(".teema").classList.add("teema-valkoinen");
     document.querySelector(".aaltoliike").classList.add("aaltoliike-valkoinen");
-} else if (localStorage.getItem("teema") === "valkoinen") {
+} else if (localStorage.getItem("teema") === "oletus") {
     document.body.classList.remove("valkoinen");
     document.querySelector(".teema-pallo").classList.remove("teema-pallo-valkoinen");
     document.querySelector(".teema").classList.remove("teema-valkoinen");
