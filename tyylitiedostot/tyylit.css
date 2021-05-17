@@ -1018,27 +1018,29 @@ label {
 .teema {
     margin-top: 5px;
     border-radius: 55px;
-    width: 55px;
-    height: 15px;
+    width: 85px;
+    height: 35px;
     position: absolute;
     top: 12%;
+    box-shadow: 5px 10px 155px orange;
     background: white;
 }
 
 .teema-pallo {
-    width: 35px;
+    width: 25px;
     background: rgb(52, 49, 49);
-    height: 22px;
+    height: 25px;
     border-radius: 45px;
-    transform: translateY(-3.5px);
     transition: 1s all;
-    margin-left: -1px;
+    margin-left: 10px;
+    margin-top: 6%;
 }
 
 .teema-pallo-valkoinen {
     margin-left: 50%;
     transition: 1s all;
     background: white;
+    box-shadow: 5px 10px 55px white;
 }
 
 .teema-valkoinen {
@@ -1056,6 +1058,7 @@ label {
     --hover-tausta: #2e2e2e;
     --hover-fontti: white;
     color: rgb(66, 1, 23);
+    transition: 2s all;
 }
 
 .aaltoliike-valkoinen {
