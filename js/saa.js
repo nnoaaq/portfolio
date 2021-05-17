@@ -121,7 +121,7 @@ function aika(aika_muuttamaton, muoto) {
     let sekuntti = "0" + paivays.getSeconds();
     let kuukausi_numero = kuukaudet.indexOf(kuukausi) + 1;
     let viikonpaivat = ["Su", "Ma", "Ti", "Ke", "To", "Pe", "La"];
-    ddd
+
 }
 
 function saa_ilmoitus(teksti, vari) {
