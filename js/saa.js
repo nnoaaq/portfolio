@@ -94,7 +94,7 @@ async function saa(hakutermi, x, y) {
             let ennustukset = [];
             for (let naytettava of naytettavat) {
                 let ennustus_html = `<div class="ennustus-paiva"><p class="paivamaara">${naytettava.paivamaara}</p> <p class="lampotila" style="color: darkgreen;
-                font-size: 20px;"></i><strong>${naytettava.lampotila_max}</strong> &#x2103;</p><p class="lampotila-min">${naytettava.lampotila_min} &#x2103;</p> <p class="tuuli">${naytettava.tuuli} m/s <span class="suunta"><i style="transform: rotate(${naytettava.tuuli_deg}deg)"class="fas fa-arrow-up"></i></span></p><figure><img src="http://openweathermap.org/img/wn/${naytettava.kuvake}@2x.png" class="saa-kuva"></figure></div>`;
+                font-size: 20px;"></i><strong>${naytettava.lampotila_max}</strong> &#x2103;</p><p class="lampotila-min">${naytettava.lampotila_min} &#x2103;</p> <p class="tuuli">${naytettava.tuuli} m/s <span class="suunta"><i style="transform: rotate(${naytettava.tuuli_deg}deg)"class="fas fa-arrow-up"></i></span></p><figure><img src="https://public.bc.fi/s1900877/portfolio/kuvat/${naytettava.kuvake}@2x.png" class="saa-kuva"></figure></div>`;
                 ennustukset.push(ennustus_html);
             }
             ennustus.innerHTML = ennustukset.join(" ");
