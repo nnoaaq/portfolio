@@ -126,17 +126,14 @@ document.querySelector(".teema").addEventListener("click", () => {
 
     if (!localStorage.getItem("teema")) {
         localStorage.setItem("teema", "valkoinen");
-        console.log("TYHJÄ");
         document.body.classList.add("valkoinen");
         document.querySelector(".aaltoliike").classList.add("aaltoliike-valkoinen");
     } else if (localStorage.getItem("teema") === "oletus") {
-        console.log("OLETUS");
         localStorage.clear();
         localStorage.setItem("teema", "valkoinen");
         document.body.classList.add("valkoinen");
         document.querySelector(".aaltoliike").classList.add("aaltoliike-valkoinen");
     } else if (localStorage.getItem("teema") === "valkoinen") {
-        console.log("VALKOINEN")
         localStorage.clear();
         localStorage.setItem("teema", "oletus");
         document.body.classList.remove("valkoinen");
