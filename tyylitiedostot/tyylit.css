@@ -32,7 +32,7 @@ body {
 .rajoitettu-korkeus {
     max-height: 0vh;
     overflow: hidden;
-    z-index: 55;
+    z-index: 999;
 }
 
  :root {
@@ -240,10 +240,12 @@ header {
     transition: 1s;
     scroll-behavior: smooth;
     height: 100vh;
-    background-image: url(https://public.bc.fi/s1900877/kuvat/etusivu_sinertava.jpg);
+    background-image: url(../kuvat/etusivu2.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    z-index: 99;
+    border: 1px solid #121933;
 }
 
 h2 {
@@ -308,9 +310,11 @@ h2 {
     background-size: contain;
     background-repeat: repeat;
     padding: 0;
+    z-index: 255;
 }
 
 .aalto {
+    z-index: 926;
     margin-top: 4vh;
     position: absolute;
     width: 100vw;
@@ -1013,11 +1017,12 @@ label {
     width: 65px;
     height: 35px;
     position: absolute;
-    top: 12%;
+    top: 1%;
     box-shadow: 5px 10px 120px black;
     background: rgb(52, 49, 49);
     animation-name: oletus;
     animation-duration: 1.6s;
+    z-index: 100;
 }
 
 .teema-pallo {
@@ -1078,7 +1083,6 @@ label {
     --hover-tausta: #2e2e2e;
     --hover-fontti: white;
     color: rgb(66, 1, 23);
-    transition: 2s all;
 }
 
 .aaltoliike-valkoinen {
@@ -1087,7 +1091,7 @@ label {
 
 @media only screen and (min-width:650px) {
     .buttonit {
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 
