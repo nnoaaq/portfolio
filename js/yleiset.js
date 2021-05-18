@@ -135,12 +135,14 @@ document.querySelector(".teema").addEventListener("click", () => {
         document.body.classList.add("valkoinen");
         document.querySelector(".aaltoliike").classList.add("aaltoliike-valkoinen");
         document.querySelector(".aalto-alas").classList.add("aalto-alas-harmaa");
+        document.querySelector(".aalto-alas-alempi").classList.add("aalto-alas-harmaa");
     } else if (localStorage.getItem("teema") === "valkoinen") {
         localStorage.clear();
         localStorage.setItem("teema", "oletus");
         document.body.classList.remove("valkoinen");
         document.querySelector(".aaltoliike").classList.remove("aaltoliike-valkoinen");
         document.querySelector(".aalto-alas").classList.remove("aalto-alas-harmaa");
+        document.querySelector(".aalto-alas-alempi").classList.remove("aalto-alas-harmaa");
     }
 });
 if (localStorage.getItem("teema") === "valkoinen") {
@@ -149,11 +151,13 @@ if (localStorage.getItem("teema") === "valkoinen") {
     document.querySelector(".teema").classList.add("teema-valkoinen");
     document.querySelector(".aaltoliike").classList.add("aaltoliike-valkoinen");
     document.querySelector(".aalto-alas").classList.add("aalto-alas-harmaa");
+    document.querySelector(".aalto-alas-alempi").classList.add("aalto-alas-harmaa");
 } else if (localStorage.getItem("teema") === "oletus") {
     document.body.classList.remove("valkoinen");
     document.querySelector(".teema-pallo").classList.remove("teema-pallo-valkoinen");
     document.querySelector(".teema").classList.remove("teema-valkoinen");
     document.querySelector(".aaltoliike").classList.remove("aaltoliike-valkoinen");
     document.querySelector(".aalto-alas").classList.remove("aalto-alas-harmaa");
+    document.querySelector(".aalto-alas-alempi").classList.remove("aalto-alas-harmaa");
 }
 //teema

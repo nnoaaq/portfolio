@@ -240,7 +240,7 @@ header {
     transition: 1s;
     scroll-behavior: smooth;
     height: 100vh;
-    background-image: url(../kuvat/etusivu2.png);
+    background-image: url(../kuvat/etusivu2.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -329,12 +329,17 @@ main {
     margin-top: 100px;
 }
 
-.aalto-alas {
+.aalto-alas,
+.aalto-alas-alempi {
     width: 100vw;
     height: 100px;
     background-image: url(../kuvat/aalto-alas.svg);
     background-size: contain;
     background-repeat: repeat;
+}
+
+.aalto-alas-alempi {
+    transform: rotate(180deg);
 }
 
 .aalto-alas-harmaa {
