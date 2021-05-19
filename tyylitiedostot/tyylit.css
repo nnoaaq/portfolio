@@ -8,11 +8,12 @@
 }
 
 body {
-    background: var(--tausta);
     color: palevioletred;
     max-width: 100vw;
+    background-color: #202020;
     overflow-x: hidden;
     --tausta: #2e2e2e;
+    --tausta-tummempi: #202020;
     --border: white;
     --fontti: white;
     --hover-tausta: white;
@@ -248,7 +249,7 @@ header {
     border: 1px solid #121933;
 }
 
-.aloitus-aurinkoinen {
+.aloitus-valkoinen {
     background-image: url(../kuvat/taustakuva_vaalea.svg);
 }
 
@@ -257,6 +258,16 @@ h2 {
     color: orange;
     text-transform: uppercase;
     text-align: center;
+}
+
+.esittely-teksti {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .yla,
@@ -310,7 +321,7 @@ h2 {
     margin-top: 16vh;
     height: 150px;
     background-color: transparent;
-    background-image: url(https://public.bc.fi/s1900877/kuvat/aalto-ylos-iso-1.svg);
+    background-image: url(/kuvat/aalto-ylos-iso-1.svg);
     background-size: contain;
     background-repeat: repeat;
     padding: 0;
@@ -340,9 +351,10 @@ main {
     background-image: url(../kuvat/aalto-alas.svg);
     background-size: contain;
     background-repeat: repeat;
+    margin-top: -10vh;
 }
 
-.aalto-alas-alempi {
+.aalto-alas {
     transform: rotate(180deg);
 }
 
@@ -362,9 +374,9 @@ main {
 }
 
 .kortit {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     transform: translateY(-15%);
-    background: var(--tausta);
+    background: var(--tausta-tummempi);
     width: 100%;
 }
 
@@ -528,8 +540,9 @@ main {
 /* OPPIMISTEHTÄVÄT MUOTOILU*/
 
 .tehtavat {
-    width: 95%;
+    padding: 0 2.5vw;
     margin: 0 auto;
+    background: var(--tausta);
 }
 
 .oppimistehtavat,
@@ -601,8 +614,8 @@ main {
 /* sään muotoilu */
 
 .saatiedot {
-    width: 95%;
-    margin: 0 auto;
+    background: var(--tausta);
+    padding: 2.5vw;
 }
 
 .saa {
@@ -870,6 +883,7 @@ label {
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
+    background: var(--tausta-tummempi);
 }
 
 .lomake h3 {
@@ -892,7 +906,7 @@ label {
     padding: 10px 0px;
     transform: translate(10%, 50%);
     width: max-content;
-    background: var(--tausta);
+    background: var(--tausta-tummempi);
     padding: 5px;
 }
 
@@ -990,10 +1004,6 @@ label {
     padding-top: 75px;
 }
 
-.kortit {
-    margin-top: 15vh;
-}
-
 
 /* footter muotoilut */
 
@@ -1002,13 +1012,12 @@ label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
     width: 100%;
     background-color: var(--tausta);
     padding: 5px;
     z-index: 5;
+    height: 50px;
     bottom: 0%;
-    transform: translateY(150px);
 }
 
 .ylos a {
@@ -1098,16 +1107,18 @@ label {
 
 .valkoinen {
     --tausta: white;
+    --tausta-tummempi: #717171;
     --border: black;
     --fontti: black;
     --korostus: rgb(231, 136, 12);
     --hover-tausta: #2e2e2e;
     --hover-fontti: white;
     color: rgb(66, 1, 23);
+    background-color: #707070;
 }
 
 .aaltoliike-valkoinen {
-    background-image: url(https://public.bc.fi/s1900877/kuvat/aalto-ylos-iso-1-harmaa.svg);
+    background-image: url(/kuvat/aalto-ylos-iso-1-harmaa.svg);
 }
 
 @media only screen and (min-width:650px) {
@@ -1121,6 +1132,10 @@ label {
     .kortti-otsikko p {
         padding: 10px;
         color: white;
+    }
+    .aalto-alas,
+    .aalto-alas-alempi {
+        margin-top: -15vh;
     }
     .vastaus {
         color: white;
@@ -1140,14 +1155,13 @@ label {
     .tehtavat,
     .saatiedot,
     .lomake {
-        width: 70%;
+        padding: 0 5vw;
         margin: 0 auto;
     }
     .kortit {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        width: 90%;
         flex-wrap: nowrap;
         padding: 15px;
         align-items: center;
