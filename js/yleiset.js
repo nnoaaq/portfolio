@@ -129,6 +129,7 @@ document.querySelector(".teema").addEventListener("click", () => {
         localStorage.setItem("teema", "valkoinen");
         document.body.classList.add("valkoinen");
         document.querySelector(".aaltoliike").classList.add("aaltoliike-valkoinen");
+        document.querySelector(".aloitus").classList.add("aloitus-aurinkoinen");
     } else if (localStorage.getItem("teema") === "oletus") {
         localStorage.clear();
         localStorage.setItem("teema", "valkoinen");

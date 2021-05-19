@@ -240,7 +240,7 @@ header {
     transition: 1s;
     scroll-behavior: smooth;
     height: 100vh;
-    background-image: url(../kuvat/etusivu_tumma.svg);
+    background-image: url(../kuvat/taustakuva.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -249,7 +249,7 @@ header {
 }
 
 .aloitus-aurinkoinen {
-    background-image: url(../kuvat/etusivu_aurinkoinen.svg);
+    background-image: url(../kuvat/taustakuva_vaalea.svg);
 }
 
 h2 {
