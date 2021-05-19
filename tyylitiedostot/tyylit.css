@@ -321,7 +321,7 @@ h2 {
     margin-top: 16vh;
     height: 150px;
     background-color: transparent;
-    background-image: url(/kuvat/aalto-ylos-iso-1.svg);
+    background-image: url(../kuvat/aalto-ylos-iso-1.svg);
     background-size: contain;
     background-repeat: repeat;
     padding: 0;
@@ -1118,7 +1118,7 @@ label {
 }
 
 .aaltoliike-valkoinen {
-    background-image: url(/kuvat/aalto-ylos-iso-1-harmaa.svg);
+    background-image: url(../kuvat/aalto-ylos-iso-1-harmaa.svg);
 }
 
 @media only screen and (min-width:650px) {
