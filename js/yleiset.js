@@ -94,14 +94,7 @@ function ylos() {
     maaranpaa.scrollIntoView();
 }
 // ylos
-function kuvat() {
 
-    let kuvat = document.querySelectorAll(".figure img");
-    for (let kuva of kuvat) {
-        kuva.classList.toggle("kuvat-piilossa");
-    }
-}
-// kuvat
 
 function kirjoitusVasen() {
     if (vasen < kirjoitettava_teksti_vasen.length) {

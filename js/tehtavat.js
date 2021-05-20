@@ -21,6 +21,7 @@ const haeTehtavat = async() => {
     }
 };
 
+
 const naytaTehtavat = (tehtava) => {
 
     const tehtavaHtml = tehtava
@@ -28,9 +29,7 @@ const naytaTehtavat = (tehtava) => {
             return `
             <li>
                 <a class="oppitehtava" href="${tehtava.url}" target="_blank">${tehtava.numero}. ${tehtava.nimi}</a>
-<figure class="figure">
-      <img class="kuvat-piilossa" src="${tehtava.kuva}">
-      </figure>
+
             </li>
         `;
         })
