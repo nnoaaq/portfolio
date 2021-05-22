@@ -154,7 +154,7 @@ header {
     width: 100vw;
     background: #2e2e2e;
     color: white;
-    z-index: 6;
+    z-index: 0;
 }
 
 .ylapalkki-vasen,
@@ -209,7 +209,6 @@ header {
     top: 8.5%;
     left: 0;
     width: 100vw;
-    z-index: 5;
 }
 
 .navigaatio li {
@@ -245,7 +244,6 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    z-index: 59;
     border: 1px solid #121933;
 }
 
@@ -317,7 +315,6 @@ h2 {
 
 .aaltoliike {
     display: none;
-    z-index: 15;
     margin-top: 16vh;
     height: 150px;
     background-color: transparent;
@@ -325,11 +322,9 @@ h2 {
     background-size: contain;
     background-repeat: repeat;
     padding: 0;
-    z-index: 255;
 }
 
 .aalto {
-    z-index: 926;
     margin-top: 4vh;
     position: absolute;
     width: 100vw;
@@ -1059,7 +1054,7 @@ span {
     background: rgb(52, 49, 49);
     animation-name: oletus;
     animation-duration: 0.6s;
-    z-index: 100;
+    transition: 0.5 all;
 }
 
 .teema-pallo {
@@ -1124,6 +1119,7 @@ span {
 
 .aaltoliike-valkoinen {
     background-image: url(../kuvat/aalto-ylos-iso-1-harmaa.svg);
+    z-index: 5;
 }
 
 @media only screen and (min-width:650px) {
@@ -1133,6 +1129,13 @@ span {
 }
 
 @media only screen and (min-width:1100px) {
+    .alhaalla {
+        position: fixed;
+        top: 95%;
+        margin-top: -10px;
+        left: 0%;
+        transition: 1s all;
+    }
     .kortti-otsikko i,
     .kortti-otsikko p {
         padding: 10px;
