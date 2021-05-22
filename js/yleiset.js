@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
             document.querySelector("header").classList.remove("hidden");
             document.querySelector("footer").classList.remove("hidden");
             document.querySelector(".ylos").classList.remove("hidden");
-            var js_tiedosto = document.createElement("script");
+            let js_tiedosto = document.createElement("script");
             js_tiedosto.src = "js/tehtavat.js";
             document.getElementsByTagName("head")[0].appendChild(js_tiedosto);
         }, 80);
@@ -159,3 +159,12 @@ if (localStorage.getItem("teema") === "valkoinen") {
     document.querySelector(".aloitus").classList.remove("aloitus-valkoinen");
 }
 //teema
+
+
+window.onscroll = function() {
+    let scrolli = document.body.scrollTop || document.documentElement.scrollTop;
+    let korkeus = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollattu = (scrolli / korkeus) * 100;
+    document.querySelector(".edistyminen").style.width = scrollattu + "%";
+};
+// scroll
