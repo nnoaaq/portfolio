@@ -159,3 +159,14 @@ if (localStorage.getItem("teema") === "valkoinen") {
     document.querySelector(".aloitus").classList.remove("aloitus-valkoinen");
 }
 //teema
+
+
+window.addEventListener("scroll", () => {
+    document.querySelector("header").style.zIndex = "1";
+    document.querySelector(".teema").classList.add("alhaalla");
+    if (window.pageYOffset <= 300) {
+        document.querySelector("header").style.zIndex = "0";
+        document.querySelector(".teema").classList.remove("alhaalla");
+
+    }
+})
