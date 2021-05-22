@@ -649,6 +649,7 @@ main {
 .tarjoaja a {
     font-size: 10px;
     color: var(--fontti);
+    padding-left: 10px;
 }
 
 #kaupunki,
@@ -1005,6 +1006,10 @@ label {
 .saatiedot,
 .lomake {
     padding-top: 75px;
+}
+
+span {
+    text-decoration: underline dashed;
 }
 
 
