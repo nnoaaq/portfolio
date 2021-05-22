@@ -660,7 +660,6 @@ main {
     padding: 20px;
     background: transparent;
     color: var(--fontti);
-    font-weight: bold;
     height: 65px;
     resize: none;
 }
@@ -1138,6 +1137,7 @@ span {
     .kortti-otsikko p {
         padding: 10px;
         color: white;
+        width: 100%;
     }
     .aalto-alas,
     .aalto-alas-alempi {
