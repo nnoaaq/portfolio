@@ -159,12 +159,3 @@ if (localStorage.getItem("teema") === "valkoinen") {
     document.querySelector(".aloitus").classList.remove("aloitus-valkoinen");
 }
 //teema
-
-
-window.onscroll = function() {
-    let scrolli = document.body.scrollTop || document.documentElement.scrollTop;
-    let korkeus = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrollattu = (scrolli / korkeus) * 100;
-    document.querySelector(".edistyminen").style.width = scrollattu + "%";
-};
-// scroll
