@@ -419,12 +419,11 @@ main {
     border-bottom: 1px solid var(--border);
     order: -1;
     padding: 0 5px;
-    transition: 0.7s all;
 }
 
 .kortti-teksti-nakyy {
     max-height: 999px;
-    transition: 3s all;
+    transition: 1s all;
 }
 
 
@@ -697,7 +696,7 @@ main {
 
 .paivamaara {
     color: orange;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .lampotila {
@@ -791,6 +790,10 @@ main {
 .hakeminen i:focus {
     color: green;
     cursor: pointer;
+}
+
+h4 {
+    color: var(--fontti);
 }
 
 h4:hover,
