@@ -16,6 +16,7 @@ window.addEventListener("load", () => {
             header.classList.remove("piilotettu");
             kirjoitusVasen();
             kirjoitusOikea();
+            ylos_painike.style.display = "block";
             document.querySelector(".aaltoliike").style.display = "block";
             document.querySelector("header").classList.remove("hidden");
             document.querySelector("footer").classList.remove("hidden");
@@ -163,14 +164,13 @@ if (localStorage.getItem("teema") === "valkoinen") {
 window.addEventListener("scroll", () => {
     document.querySelector("header").style.zIndex = "1";
     document.querySelector(".teema").classList.add("alhaalla");
-    document.querySelector(".navigaatio").style.zIndex = "5";
+    document.querySelector("header").style.height = "75px";
     ylos_painike.style.display = "block";
     if (window.pageYOffset <= 400) {
         document.querySelector("header").style.zIndex = "0";
-        document.querySelector(".navigaatio").style.zIndex = "0";
         document.querySelector(".teema").classList.remove("alhaalla");
         ylos_painike.style.display = "none";
-        document.querySelector(".navigaatio").style.zIndex = "0";
+        document.querySelector("header").style.height = "0px";
     }
 })
 
