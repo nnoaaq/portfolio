@@ -157,7 +157,6 @@ header {
     z-index: 0;
 }
 
-.ylapalkki-vasen,
 .ylapalkki-oikea {
     height: 0;
     overflow: hidden;
@@ -208,7 +207,7 @@ header {
     max-height: 900px;
     transition: 1s all;
     position: fixed;
-    top: 8.5%;
+    top: 7vh;
     left: 0;
     width: 100vw;
     z-index: 5;
@@ -1255,9 +1254,6 @@ span {
     .ylapalkki-oikea {
         height: 100%;
         width: 100%;
-    }
-    .ylapalkki-keski {
-        width: 50vw;
     }
     .ylapalkki-vasen ul,
     .ylapalkki-oikea ul {
