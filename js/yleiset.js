@@ -4,14 +4,13 @@ let kirjoitettava_teksti_vasen = "Portfolio";
 let kirjoitettava_teksti_oikea = "Noa Julkunen";
 let nopeus_vasen = 250;
 let nopeus_oikea = 300;
+let ylos_painike = document.querySelector(".ylos");
 window.addEventListener("load", () => {
         setTimeout(function() {
             const latausvaihe = document.querySelector(".latausvaihe");
             latausvaihe.classList.add("lataus-valmis");
             document.body.classList.remove("rajoitettu-korkeus");
             let header = document.querySelector("header");
-            let ylos = document.querySelector(".ylos");
-            ylos.style.display = "block";
             header.classList.add("header");
             document.querySelector(".teema").style.display = "block";
             header.classList.remove("piilotettu");
@@ -164,9 +163,15 @@ if (localStorage.getItem("teema") === "valkoinen") {
 window.addEventListener("scroll", () => {
     document.querySelector("header").style.zIndex = "1";
     document.querySelector(".teema").classList.add("alhaalla");
-    if (window.pageYOffset <= 300) {
+    document.querySelector(".navigaatio").style.zIndex = "5";
+    ylos_painike.style.display = "block";
+    if (window.pageYOffset <= 400) {
         document.querySelector("header").style.zIndex = "0";
+        document.querySelector(".navigaatio").style.zIndex = "0";
         document.querySelector(".teema").classList.remove("alhaalla");
-
+        ylos_painike.style.display = "none";
+        document.querySelector(".navigaatio").style.zIndex = "0";
     }
 })
+
+//scroll

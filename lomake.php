@@ -7,9 +7,6 @@ if(!$lahetetty) {
 } else {
     echo "Lähetetty onnistuneesti";
 } 
-
-
-
 ?>
 
 
