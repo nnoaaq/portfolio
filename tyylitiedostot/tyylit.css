@@ -209,6 +209,7 @@ header {
     top: 8.5%;
     left: 0;
     width: 100vw;
+    z-index: 5;
 }
 
 .navigaatio li {
