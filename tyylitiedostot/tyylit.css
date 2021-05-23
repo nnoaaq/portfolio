@@ -415,7 +415,6 @@ main {
     max-height: 0;
     overflow: hidden;
     border-bottom: 1px solid var(--border);
-    order: -1;
     padding: 0 5px;
 }
 
@@ -1131,6 +1130,9 @@ span {
 }
 
 @media only screen and (min-width:1100px) {
+    header {
+        padding: 0 7vh;
+    }
     .alhaalla {
         position: fixed;
         top: 95%;
@@ -1233,13 +1235,21 @@ span {
         color: rgb(255, 255, 255);
         overflow: hidden;
         max-height: 100%;
-        order: 1;
     }
     .kortti:hover .kortti-teksti {
         transform: translateY(100px);
     }
     .hampurilainen {
         display: none;
+    }
+    .ylapalkki-oikea {
+        display: flex;
+        justify-content: flex-end;
+        transform: translateX(11vh);
+    }
+    .ylapalkki-vasen {
+        display: flex;
+        align-items: center;
     }
     .ylapalkki-vasen,
     .ylapalkki-oikea {
@@ -1248,10 +1258,6 @@ span {
     }
     .ylapalkki-keski {
         width: 50vw;
-        order: 2;
-    }
-    h1 {
-        text-align: center;
     }
     .ylapalkki-vasen ul,
     .ylapalkki-oikea ul {
@@ -1260,12 +1266,6 @@ span {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-    }
-    .ylapalkki-vasen {
-        order: 1;
-    }
-    .ylapalkki-oikea {
-        order: 3;
     }
     .ylapalkki-vasen ul {
         justify-content: flex-end;
