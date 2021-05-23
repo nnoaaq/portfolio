@@ -221,7 +221,7 @@ header {
 }
 
 .navigaatio li a {
-    color: inherit;
+    color: var(--fontti);
     text-decoration: none;
 }
 
