@@ -165,6 +165,8 @@ header {
 
 .hampurilainen {
     max-height: 100%;
+    position: absolute;
+    right: 5px;
 }
 
 .hampurilainen:hover {
@@ -1055,7 +1057,6 @@ span {
     background: rgb(52, 49, 49);
     animation-name: oletus;
     animation-duration: 0.6s;
-    transition: 0.5 all;
 }
 
 .teema-pallo {
