@@ -1171,6 +1171,9 @@ span {
         padding: 0 5vw;
         margin: 0 auto;
     }
+    .tehtavat {
+        padding-top: 11vh;
+    }
     .kortit {
         display: flex;
         flex-direction: row;
