@@ -2,6 +2,7 @@ let vasen = 0;
 let kirjoitettava_teksti_vasen = "Olen Noa Julkunen, web-ohjelmoinnin opiskelija ja tämä on minun portfolioni.";
 let nopeus_vasen = 90;
 let ylos_painike = document.querySelector(".ylos");
+
 window.addEventListener("load", () => {
         setTimeout(function() {
             const latausvaihe = document.querySelector(".latausvaihe");
@@ -27,6 +28,10 @@ window.addEventListener("load", () => {
 function hampurilainen() {
     let navigaatio = document.querySelector(".navigaatio");
     navigaatio.classList.toggle("navigaatio-nakyy");
+    let viivat = document.querySelectorAll(".hampurilainen > *");
+    for (let viiva of viivat) {
+        viiva.classList.toggle("hampurilainen-valkoinen");
+    }
     let viiva1 = document.querySelector(".viiva1");
     let viiva2 = document.querySelector(".viiva2");
     let viiva3 = document.querySelector(".viiva3");
@@ -100,7 +105,7 @@ function kirjoitusVasen() {
 }
 
 
-// kirjoitukset
+// kirjoitus
 
 
 document.querySelector(".teema").addEventListener("click", () => {
