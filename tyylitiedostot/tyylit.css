@@ -19,7 +19,6 @@ body {
     --hover-tausta: white;
     --hover-fontti: black;
     --korostus: orange;
-    font-family: 'Architects Daughter', cursive;
     letter-spacing: 2px;
 }
 
@@ -138,6 +137,7 @@ body {
 h1 {
     font-family: 'Indie Flower', cursive;
     padding-left: 10px;
+    width: 100vh;
     text-decoration: underline dashed rgb(177, 119, 11);
 }
 
@@ -207,7 +207,7 @@ header {
     max-height: 900px;
     transition: 1s all;
     position: fixed;
-    top: 7vh;
+    top: 75px;
     left: 0;
     width: 100vw;
     z-index: 5;
@@ -232,6 +232,24 @@ header {
 
 
 /* aloituksen muotoilu */
+
+.valkoinen-lataus-1 {
+    background-image: url(../kuvat/taustakuva_vaalea.svg);
+    height: 0;
+    overflow: hidden;
+}
+
+.valkoinen-lataus-2 {
+    background-image: url(../kuvat/aalto-alas-harmaa.svg);
+    height: 0;
+    overflow: hidden;
+}
+
+.valkoinen-lataus-3 {
+    background-image: url(../kuvat/aalto-ylos-iso-1-harmaa.svg);
+    height: 0;
+    overflow: hidden;
+}
 
 .aloitus {
     display: flex;
@@ -271,7 +289,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -283,9 +301,8 @@ h2 {
 
 .yla {
     z-index: 2;
-    height: 50%;
     padding: 0 5vh;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 7vh;
@@ -297,16 +314,13 @@ h2 {
 }
 
 .vierita {
-    position: absolute;
-    top: 55%;
-    left: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
     height: 70px;
     border-radius: 25px;
-    margin: 0 auto;
+    margin: 0 0 0 15px;
 }
 
 .animaatio-pallo {
@@ -1145,9 +1159,6 @@ span {
     .buttonit {
         flex-direction: row;
     }
-    .yla {
-        margin-right: 20vh;
-    }
 }
 
 @media only screen and (min-width:1100px) {
@@ -1208,7 +1219,8 @@ span {
         padding: 0 5vw;
         margin: 0 auto;
     }
-    .tehtavat {
+    .tehtavat,
+    .saa {
         padding-top: 11vh;
     }
     .kortit {
