@@ -156,6 +156,7 @@ window.addEventListener("scroll", () => {
     document.querySelector("header").style.height = "75px";
     ylos_painike.style.display = "block";
     document.querySelector(".ylos").classList.remove("hidden");
+    document.querySelector(".ohjeet").style.display = "none";
     if (window.pageYOffset <= 400) {
         document.querySelector("header").style.zIndex = "0";
         document.querySelector(".teema").classList.remove("alhaalla");
@@ -167,7 +168,7 @@ window.addEventListener("scroll", () => {
 //scroll
 
 const piirtoalusta = document.querySelector(".piirtoalusta");
-const ctx = piirtoalusta.getContext("2d");
+const piirros = piirtoalusta.getContext("2d");
 let sijainnit = {
     x: 0,
     y: 0
@@ -199,19 +200,19 @@ function lopeta() {
 }
 
 function piirra(event) {
-    ctx.beginPath();
-    ctx.lineWidth = 35;
-    ctx.lineCap = "round";
-    ctx.strokeStyle = "#741329";
-    ctx.moveTo(sijainnit.x, sijainnit.y);
+    piirros.beginPath();
+    piirros.lineWidth = 35;
+    piirros.lineCap = "round";
+    piirros.strokeStyle = "#741329";
+    piirros.moveTo(sijainnit.x, sijainnit.y);
     sijoitus(event);
-    ctx.lineTo(sijainnit.x, sijainnit.y);
-    ctx.stroke();
+    piirros.lineTo(sijainnit.x, sijainnit.y);
+    piirros.stroke();
 }
 //piirto
 
 document.querySelector(".ohjeet").addEventListener("mouseover", () => {
-    ilmoitus("Paina vasen painike pohjaan ja liikuta hiirtä piirtääksesi", "green");
+    ilmoitus("Paina hiiren vasen painike pohjaan ja liikuta hiirtä piirtääksesi", "green");
 })
 
 function ilmoitus(teksti, vari) {
