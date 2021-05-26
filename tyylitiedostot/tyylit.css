@@ -267,19 +267,23 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    position: relative;
 }
 
-.yla,
-.ala {
+.yla {
+    padding: 0 5vh;
+    text-align: left;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 75px;
+    font-size: 7vh;
     font-family: 'Amatic SC', cursive;
 }
 
 .vierita {
-    position: relative;
+    position: absolute;
+    top: 68%;
+    left: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1127,6 +1131,9 @@ span {
     .buttonit {
         flex-direction: row;
     }
+    .yla {
+        margin-right: 20vh;
+    }
 }
 
 @media only screen and (min-width:1100px) {
@@ -1285,5 +1292,8 @@ span {
     .ylapalkki-keski h1:hover {
         text-decoration: underline;
         cursor: pointer;
+    }
+    .yla {
+        width: 50%;
     }
 }

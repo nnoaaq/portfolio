@@ -1,9 +1,6 @@
 let vasen = 0;
-let oikea = 0;
-let kirjoitettava_teksti_vasen = "Portfolio";
-let kirjoitettava_teksti_oikea = "Noa Julkunen";
-let nopeus_vasen = 250;
-let nopeus_oikea = 300;
+let kirjoitettava_teksti_vasen = "Olen Noa Julkunen, tuleva web-ohjelmoija ja tämä on minun portfolioni";
+let nopeus_vasen = 90;
 let ylos_painike = document.querySelector(".ylos");
 window.addEventListener("load", () => {
         setTimeout(function() {
@@ -15,7 +12,7 @@ window.addEventListener("load", () => {
             document.querySelector(".teema").style.display = "block";
             header.classList.remove("piilotettu");
             kirjoitusVasen();
-            kirjoitusOikea();
+
             ylos_painike.style.display = "block";
             document.querySelector(".aaltoliike").style.display = "block";
             document.querySelector("header").classList.remove("hidden");
@@ -104,13 +101,7 @@ function kirjoitusVasen() {
     }
 }
 
-function kirjoitusOikea() {
-    if (oikea < kirjoitettava_teksti_oikea.length) {
-        document.querySelector(".ala").innerHTML += kirjoitettava_teksti_oikea.charAt(oikea);
-        oikea++;
-        setTimeout(kirjoitusOikea, nopeus_oikea);
-    }
-}
+
 // kirjoitukset
 
 
