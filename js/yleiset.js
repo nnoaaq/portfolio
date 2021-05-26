@@ -12,12 +12,10 @@ window.addEventListener("load", () => {
             document.querySelector(".teema").style.display = "block";
             header.classList.remove("piilotettu");
             kirjoitusVasen();
-
             ylos_painike.style.display = "block";
             document.querySelector(".aaltoliike").style.display = "block";
             document.querySelector("header").classList.remove("hidden");
             document.querySelector("footer").classList.remove("hidden");
-            document.querySelector(".ylos").classList.remove("hidden");
             let js_tiedosto = document.createElement("script");
             js_tiedosto.src = "js/tehtavat.js";
             document.getElementsByTagName("head")[0].appendChild(js_tiedosto);
@@ -157,6 +155,7 @@ window.addEventListener("scroll", () => {
     document.querySelector(".teema").classList.add("alhaalla");
     document.querySelector("header").style.height = "75px";
     ylos_painike.style.display = "block";
+    document.querySelector(".ylos").classList.remove("hidden");
     if (window.pageYOffset <= 400) {
         document.querySelector("header").style.zIndex = "0";
         document.querySelector(".teema").classList.remove("alhaalla");
@@ -166,3 +165,59 @@ window.addEventListener("scroll", () => {
 })
 
 //scroll
+
+const piirtoalusta = document.querySelector(".piirtoalusta");
+const ctx = piirtoalusta.getContext("2d");
+let sijainnit = {
+    x: 0,
+    y: 0
+};
+
+document.addEventListener("mousedown", aloita);
+document.addEventListener("mouseup", lopeta);
+window.addEventListener("resize", koko);
+
+koko();
+
+function koko() {
+    piirtoalusta.width = window.innerWidth;
+    piirtoalusta.height = window.innerHeight;
+}
+
+function sijoitus(event) {
+    sijainnit.x = event.clientX - piirtoalusta.offsetLeft;
+    sijainnit.y = event.clientY - piirtoalusta.offsetTop;
+}
+
+function aloita(event) {
+    document.addEventListener("mousemove", piirra);
+    sijoitus(event);
+}
+
+function lopeta() {
+    document.removeEventListener("mousemove", piirra);
+}
+
+function piirra(event) {
+    ctx.beginPath();
+    ctx.lineWidth = 35;
+    ctx.lineCap = "round";
+    ctx.strokeStyle = "#741329";
+    ctx.moveTo(sijainnit.x, sijainnit.y);
+    sijoitus(event);
+    ctx.lineTo(sijainnit.x, sijainnit.y);
+    ctx.stroke();
+}
+//piirto
+
+document.querySelector(".ohjeet").addEventListener("mouseover", () => {
+    ilmoitus("Paina vasen painike pohjaan ja liikuta hiirtä piirtääksesi", "green");
+})
+
+function ilmoitus(teksti, vari) {
+    document.getElementById("ilmoitus").classList.add("ilmoitus-nakyy");
+    document.getElementById("ilmoitus").style.backgroundColor = vari;
+    document.querySelector("#ilmoitus div p").innerHTML = teksti;
+
+}
+//ohje
