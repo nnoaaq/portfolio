@@ -1,5 +1,5 @@
 let vasen = 0;
-let kirjoitettava_teksti_vasen = "Olen Noa Julkunen, tuleva web-ohjelmoija ja tämä on minun portfolioni";
+let kirjoitettava_teksti_vasen = "Olen Noa Julkunen, web-ohjelmoinnin opiskelija ja tämä on minun portfolioni.";
 let nopeus_vasen = 90;
 let ylos_painike = document.querySelector(".ylos");
 window.addEventListener("load", () => {
@@ -151,7 +151,7 @@ if (localStorage.getItem("teema") === "valkoinen") {
 
 
 window.addEventListener("scroll", () => {
-    document.querySelector("header").style.zIndex = "1";
+    document.querySelector("header").style.zIndex = "5";
     document.querySelector(".teema").classList.add("alhaalla");
     document.querySelector("header").style.height = "75px";
     ylos_painike.style.display = "block";
@@ -216,7 +216,9 @@ document.querySelector(".ohjeet").addEventListener("mouseover", () => {
     ilmoitus("Paina hiiren vasen painike pohjaan ja liikuta hiirtä piirtääksesi. Painamalla 'Delete' painiketta voi piirretyn viivan poistaa. ", "green");
 })
 document.addEventListener("keydown", (e) => {
-    if (e.key = "Delete") {
+    if (e.key === "Delete") {
+        koko();
+    } else if (e.key === "Backspace") {
         koko();
     }
 })
