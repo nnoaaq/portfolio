@@ -178,6 +178,7 @@ document.addEventListener("mousedown", aloita);
 document.addEventListener("mouseup", lopeta);
 window.addEventListener("resize", koko);
 
+
 koko();
 
 function koko() {
@@ -212,7 +213,12 @@ function piirra(event) {
 //piirto
 
 document.querySelector(".ohjeet").addEventListener("mouseover", () => {
-    ilmoitus("Paina hiiren vasen painike pohjaan ja liikuta hiirtä piirtääksesi", "green");
+    ilmoitus("Paina hiiren vasen painike pohjaan ja liikuta hiirtä piirtääksesi. Painamalla 'Delete' painiketta voi piirretyn viivan poistaa. ", "green");
+})
+document.addEventListener("keydown", (e) => {
+    if (e.key = "Delete") {
+        koko();
+    }
 })
 
 function ilmoitus(teksti, vari) {
