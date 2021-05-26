@@ -51,27 +51,28 @@
             </ul>
         </div>
 
-        <div onclick="hampurilainen()" class="hampurilainen">
-            <div class="viiva1"></div>
-            <div class="viiva2"></div>
-            <div class="viiva3"></div>
-        </div>
-
-        <ul class="navigaatio">
-            <li onclick="hampurilainen();liiku('kortit')">
-                <a>Tietoja</a>
-            </li>
-            <li onclick="hampurilainen();liiku('tehtavat')">
-                <a>Tehtävät</a>
-            </li>
-            <li onclick="hampurilainen();liiku('saatiedot')">
-                <a>Sää</a>
-            </li>
-            <li onclick="hampurilainen();liiku('lomake')">
-                <a>Ota yhteyttä</a>
-            </li>
-        </ul>
     </header>
+
+    <ul class="navigaatio">
+        <li onclick="hampurilainen();liiku('kortit')">
+            <a>Tietoja</a>
+        </li>
+        <li onclick="hampurilainen();liiku('tehtavat')">
+            <a>Tehtävät</a>
+        </li>
+        <li onclick="hampurilainen();liiku('saatiedot')">
+            <a>Sää</a>
+        </li>
+        <li onclick="hampurilainen();liiku('lomake')">
+            <a>Ota yhteyttä</a>
+        </li>
+    </ul>
+    <div onclick="hampurilainen()" class="hampurilainen">
+        <div class="viiva1"></div>
+        <div class="viiva2"></div>
+        <div class="viiva3"></div>
+    </div>
+
     <div class="aloitus">
         <div class="esittely-teksti">
             <h2 class="yla"></h2>
@@ -373,7 +374,7 @@
                 <div class="ennustus "></div>
                 <p class="tarjoaja ">Datan tarjoaa <a target="_blank " href="https://openweathermap.org ">OpenWeather</a></p>
                 <label class="label " for="kaupunki ">Kaupungin nimi</label>
-                <textarea name="viesti-otsikko" id="kaupunki" placeholder="Syötä kaupungin nimi hakeaksesi säätiedot" cols="30" rows="10"></textarea>
+                <textarea name="viesti-otsikko" id="kaupunki" placeholder="Syötä kaupungin nimi" cols="30" rows="10"></textarea>
                 <h4 onclick="paikannus()">Suorita haku paikannuksen avulla <i class="fas fa-search-location "></i></h4>
                 <button id="button-kaupunki">Hae</button>
             </div>
