@@ -81,13 +81,13 @@ function ilmoitusPois() {
 // ilmoitus
 
 function liiku(kohde) {
-    let maaranpaa = document.querySelector(`.${kohde}`);
-    maaranpaa.scrollIntoView();
+    //  let maaranpaa = document.querySelector(`.${kohde}`);
+    //  maaranpaa.scrollIntoView();
 }
 
 function ylos() {
-    let maaranpaa = document.querySelector(".aloitus");
-    maaranpaa.scrollIntoView();
+    //   let maaranpaa = document.querySelector(".aloitus");
+    //  maaranpaa.scrollIntoView();
 }
 // liikkuminen
 
