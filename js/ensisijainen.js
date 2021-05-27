@@ -20,8 +20,11 @@ function kirjoitus() {
             document.querySelector(".otsikko").innerHTML += kirjoitettava_teksti.charAt(vasen);
             vasen++;
             setTimeout(kirjoitus, nopeus);
-
         }
+        setTimeout(function() {
+            document.querySelector(".cta").classList.add("cta-nakyy");
+
+        }, 4000)
     } else {
 
         let kirjoitettava_teksti = "Olen Noa Julkunen, web-ohjelmoinnin opiskelija ja tämä on minun portfolioni.";
