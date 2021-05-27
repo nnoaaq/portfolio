@@ -21,6 +21,10 @@ body {
     overflow-x: hidden;
 }
 
+.hidden {
+    display: none;
+}
+
 
 /* TEEMAN MUOTOILUT (.teema) */
 
@@ -370,6 +374,12 @@ header h1 {
     color: rgb(223, 223, 223);
     text-decoration: none;
     font-size: 15px;
+    transform: translateX(-550%);
+}
+
+.cta-nakyy {
+    transform: translateX(0%);
+    transition: 1s all;
 }
 
 .cta:hover {
@@ -532,8 +542,8 @@ header h1 {
     position: relative;
     flex-grow: 1;
     padding: 15px;
-    background: var(--tausta);
-    color: var(--fontti);
+    background: #200037;
+    color: white;
     text-transform: uppercase;
     width: 100%;
     height: auto;
@@ -795,7 +805,7 @@ h4:focus {
 }
 
 .vastaus {
-    color: var(--fontti);
+    color: white;
     padding: 20px;
 }
 
@@ -890,7 +900,7 @@ label {
     flex-direction: column;
     align-items: center;
     background: var(--tausta);
-    margin-top: 0 !important;
+    margin-top: -10px !important;
 }
 
 .lomake h3 {
@@ -1026,7 +1036,6 @@ label {
     .vastaus {
         padding: 0;
         height: 100%;
-        color: var(--fontti);
     }
     h1 {
         width: 50vh;

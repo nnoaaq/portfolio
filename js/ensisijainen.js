@@ -20,6 +20,7 @@ function kirjoitus() {
             document.querySelector(".otsikko").innerHTML += kirjoitettava_teksti.charAt(vasen);
             vasen++;
             setTimeout(kirjoitus, nopeus);
+
         }
     } else {
 
@@ -28,7 +29,12 @@ function kirjoitus() {
             document.querySelector(".otsikko").innerHTML += kirjoitettava_teksti.charAt(vasen);
             vasen++;
             setTimeout(kirjoitus, nopeus);
+
         }
+        setTimeout(function() {
+            document.querySelector(".cta").classList.add("cta-nakyy");
+
+        }, 7000)
     }
 }
 // Otsikon kirjoitus
@@ -112,8 +118,10 @@ function hampurilainen() {
 window.addEventListener("scroll", () => {
     if (window.pageYOffset <= 400) {
         document.querySelector("header").classList.remove("header-nakyy");
+        document.querySelector(".ylos").classList.add("hidden");
     } else {
         document.querySelector("header").classList.add("header-nakyy");
+        document.querySelector(".ylos").classList.remove("hidden");
     }
 })
 
@@ -134,14 +142,16 @@ document.querySelector(".teema").addEventListener("click", () => {
     }
 });
 let aloitus = document.querySelector(".aloitus");
-let aaltoliike = document.querySelector(".aaltoliike");
+let aaltoliikeet = document.querySelectorAll(".aaltoliike");
 
 function oletukseksi() {
     document.querySelector(".teema-pallo").classList.remove("teema-pallo-valkoinen");
     document.querySelector(".teema").classList.remove("teema-valkoinen");
     aloitus.classList.remove("aloitus-valkoinen");
     document.body.classList.remove("valkoinen");
-    aaltoliike.classList.remove("aaltoliike-valkoinen");
+    for (let aaltoliike of aaltoliikeet) {
+        aaltoliike.classList.remove("aaltoliike-valkoinen");
+    }
 }
 
 function valkoiseksi() {
@@ -149,7 +159,9 @@ function valkoiseksi() {
     document.querySelector(".teema").classList.add("teema-valkoinen");
     aloitus.classList.add("aloitus-valkoinen");
     document.body.classList.add("valkoinen");
-    aaltoliike.classList.add("aaltoliike-valkoinen");
+    for (let aaltoliike of aaltoliikeet) {
+        aaltoliike.classList.add("aaltoliike-valkoinen");
+    }
 }
 if (localStorage.getItem("teema") === "oletus") {
     oletukseksi();
