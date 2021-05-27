@@ -5,6 +5,7 @@ window.addEventListener("load", () => {
             document.body.classList.remove("rajoitettu-korkeus");
             document.querySelector("header").classList.remove("header-nakyy");
             kirjoitus();
+
         }, 80);
     })
     // lataus valmis     
@@ -117,3 +118,40 @@ window.addEventListener("scroll", () => {
 })
 
 //scroll
+
+document.querySelector(".teema").addEventListener("click", () => {
+    if (!localStorage.getItem("teema")) {
+        localStorage.setItem("teema", "valkoinen");
+        valkoiseksi();
+    } else if (localStorage.getItem("teema") === "oletus") {
+        localStorage.clear();
+        localStorage.setItem("teema", "valkoinen");
+        valkoiseksi();
+    } else if (localStorage.getItem("teema") === "valkoinen") {
+        localStorage.clear();
+        localStorage.setItem("teema", "oletus");
+        oletukseksi();
+    }
+});
+let aloitus = document.querySelector(".aloitus");
+
+function oletukseksi() {
+    document.querySelector(".teema-pallo").classList.remove("teema-pallo-valkoinen");
+    document.querySelector(".teema").classList.remove("teema-valkoinen");
+    aloitus.classList.remove("aloitus-valkoinen");
+    document.body.classList.remove("valkoinen");
+}
+
+function valkoiseksi() {
+    document.querySelector(".teema-pallo").classList.add("teema-pallo-valkoinen");
+    document.querySelector(".teema").classList.add("teema-valkoinen");
+    aloitus.classList.add("aloitus-valkoinen");
+    document.body.classList.add("valkoinen");
+}
+if (localStorage.getItem("teema") === "oletus") {
+    oletukseksi();
+} else if (localStorage.getItem("teema") === "valkoinen") {
+    valkoiseksi();
+}
+
+//teema

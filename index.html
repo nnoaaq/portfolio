@@ -75,14 +75,14 @@
             <div class='vierita'>
                 <div class="animaatio-pallo"></div>
             </div>
-            <button class="cta">
-                <a href="#">Tutustu osaamiseeni</a>
+            <button onclick="liiku('tehtavat')" class="cta">
+                Tutustu osaamiseeni <i class="fas fa-arrow-right"></i>
             </button>
         </div>
     </div>
     <main>
         <div class="tehtavat">
-            <h3>Tutustu tuotoksiini</h3>
+            <h3>Tutustu osaamiseeni</h3>
             <div class="buttonit ">
                 <button class="ammatilliset" onclick="tutkinnonOsat( 'ammatilliset-tutkinnon-osat',event) "><i class="fas fa-plus i-vihrea"></i>ammatilliset tutkinnon osat</button>
                 <button class="yhteiset" onclick="tutkinnonOsat( 'yhteiset-tutkinnon-osat',event) "><i class="fas fa-plus i-vihrea "></i>yhteiset tutkinnon osat</button>
@@ -402,7 +402,9 @@
         <p> &#169; Noa Julkunen 2021</p>
     </footer>
     <div class="ylos hidden" onclick="ylos();liiku('aloitus')"><a><i class="fas fa-arrow-up"></i></a></div>
-
+    <div class="teema">
+        <div class="teema-pallo"></div>
+    </div>
     <script src="js/ensisijainen.js"></script>
     <script src="js/tehtavat.js"></script>
     <script src="js/saa.js"></script>
