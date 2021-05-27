@@ -138,7 +138,6 @@ function saa_ilmoitus(teksti, vari) {
     document.getElementById("ilmoitus").classList.add("ilmoitus-nakyy");
     document.getElementById("ilmoitus").style.backgroundColor = vari;
     document.querySelector("#ilmoitus div p").innerHTML = teksti;
-
 }
 
 
