@@ -557,7 +557,7 @@ header h1 {
 /*SÄÄN MUOTOILU (.saatiedot)*/
 
 .saatiedot {
-    background: var(--tausta);
+    background: var(--tausta-tummempi);
     padding: 2.5vw;
 }
 
@@ -583,7 +583,7 @@ header h1 {
 .label {
     transform: translate(7%, 86%);
     padding: 0 10px;
-    background-color: var(--tausta);
+    background-color: var(--tausta-tummempi);
     text-align: center;
     width: max-content;
     color: var(--fontti);
@@ -594,6 +594,11 @@ header h1 {
     font-size: 10px;
     color: var(--fontti);
     padding-left: 10px;
+}
+
+.hakutermi {
+    display: flex;
+    flex-direction: row;
 }
 
 #kaupunki,
@@ -610,6 +615,7 @@ header h1 {
 
 #button-kaupunki {
     background: orange;
+    max-width: 75px;
     font-size: 20px;
 }
 
@@ -672,30 +678,6 @@ header h1 {
     color: var(--fontti);
 }
 
-#sijainti {
-    background: rgb(106, 255, 0);
-    color: black;
-    padding: 10px;
-    position: fixed;
-    top: 5%;
-    z-index: 9;
-    width: 100%;
-}
-
-#sijainti button {
-    background: transparent;
-    border: 1px solid black;
-    padding: 5px;
-    font-size: 15px;
-    border: 1px solid white;
-}
-
-#sijainti button:hover,
-#sijainti button:focus {
-    background-color: black;
-    color: white;
-}
-
 .tunti-saa,
 .ennustus-paiva {
     min-width: 140px;
@@ -742,7 +724,7 @@ header h1 {
 
 h4 {
     color: var(--fontti);
-    font-size: 15px;
+    font-size: 14px;
 }
 
 h4:hover,
@@ -810,7 +792,7 @@ h4:focus {
 }
 
 .kortit {
-    background: var(--tausta-tummempi);
+    background: var(--tausta);
     width: 100%;
     padding: 11vh 2.5vw 6vh 2.5vw;
 }
