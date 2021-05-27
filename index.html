@@ -36,14 +36,14 @@
         <div class="ylapalkki-oikea">
 
             <ul>
-                <li onclick="liiku('kortit')">
-                    <a>Tietoja</a>
-                </li>
                 <li onclick="liiku('tehtavat')">
                     <a>Tehtävät</a>
                 </li>
-                <li onclick="liiku('saatiedot')">
+                <li onclick="liiku('saa')">
                     <a>Sää</a>
+                </li>
+                <li onclick="liiku('kortit')">
+                    <a>Tietoja</a>
                 </li>
                 <li onclick="liiku('lomake')">
                     <a>Ota yhteyttä</a>
@@ -54,14 +54,14 @@
     </header>
 
     <ul class="navigaatio">
-        <li onclick="hampurilainen();liiku('kortit')">
-            <a>Tietoja</a>
-        </li>
         <li onclick="hampurilainen();liiku('tehtavat')">
             <a>Tehtävät</a>
         </li>
-        <li onclick="hampurilainen();liiku('saatiedot')">
+        <li onclick="hampurilainen();liiku('saa')">
             <a>Sää</a>
+        </li>
+        <li onclick="hampurilainen();liiku('kortit')">
+            <a>Tietoja</a>
         </li>
         <li onclick="hampurilainen();liiku('lomake')">
             <a>Ota yhteyttä</a>
@@ -86,75 +86,8 @@
             </div>
         </div>
     </div>
-    <div class="aalto piilotettuna">
-        <div class="aaltoliike">
-        </div>
-    </div>
+
     <main>
-
-        <div class="kortit">
-            <div class="kortti ">
-                <div class="kortti-sisalto kortti-otsikko ">
-                    <p>Kuka olen?</p>
-                    <i class="fas fa-user "></i>
-                </div>
-                <div class="kortti-sisalto kortti-teksti ">
-                    <div class="info-piilossa ">
-                        <p class="kysymys">Kuka olen?</p>
-                        <p class="vastaus">Olen Noa, 17 vuotias tieto- ja viestintätekniikan opiskelija ammattikoulussa</p>
-                    </div>
-                </div>
-            </div>
-            <div class="kortti ">
-                <div class="kortti-sisalto kortti-otsikko ">
-                    <p>Mitä tällä sivulla on?</p>
-                    <i class="fas fa-sitemap "></i>
-                </div>
-                <div class="kortti-sisalto kortti-teksti ">
-                    <div class="info-piilossa ">
-                        <p class="kysymys">Mitä tällä sivulla on?</p>
-                        <p class="vastaus">Olen koonnut tälle sivulle tehtyjä tehtäviäni datanomi- opintojeni varrelta</p>
-                    </div>
-                </div>
-            </div>
-            <div class="kortti ">
-                <div class="kortti-sisalto kortti-otsikko ">
-                    <p>Missä ja mitä opiskelen?</p>
-                    <i class="fas fa-school "></i>
-                </div>
-                <div class="kortti-sisalto kortti-teksti ">
-                    <div class="info-piilossa ">
-                        <p class="kysymys">Missä ja mitä opiskelen?</p>
-                        <p class="vastaus">Opiskelen Helsinki Business Collegessa WEB - ohjelmointia</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="kortti ">
-                <div class="kortti-sisalto kortti-otsikko ">
-                    <p>Mitä ohjelmointikieliä osaan?</p>
-                    <i class="fas fa-envelope"></i> </div>
-                <div class="kortti-sisalto kortti-teksti ">
-                    <div class="info-piilossa ">
-                        <p class="kysymys">Mitä ohjelmointikieliä osaan?</p>
-                        <p class="vastaus">Osaan (tällä hetkellä) luoda nettisivujen rakenteen <span>HTML</span> avulla, ulkoasun <span>CSS</span> avulla ja toiminnallisuuden <span>JavaScriptin</span> avulla. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="kortti ">
-                <div class="kortti-sisalto kortti-otsikko ">
-                    <p>Miten minuun saa yhteyden?</p>
-                    <i class="fas fa-envelope"></i> </div>
-                <div class="kortti-sisalto kortti-teksti ">
-                    <div class="info-piilossa ">
-                        <p class="kysymys">Miten minuun saa yhteyden?</p>
-                        <p class="vastaus">Minulle voi lähettää sähköpostia käyttämällä <a style="text-decoration: underline;" class="hover" onclick="liiku('lomake')">lomaketta</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="aalto-alas"></div>
-
         <div class="tehtavat">
             <h3>Tutustu tuotoksiini</h3>
             <div class="buttonit ">
@@ -224,7 +157,7 @@
                                     </li>
                                     <li>DJÄJÄXF :
                                         <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxf/Arkkitehtuuri%20on%20toiselta%20nimelt%C3%A4%C3%A4n%20rakennustaide.docx
-    " target="_blank ">Laske tai arvio työmäärä</a>
+" target="_blank ">Laske tai arvio työmäärä</a>
                                         <a href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/pakolliset-tutkinnonosat/jarjestelman-hankinta-ja-kayttoonotto/djakaxf/suhteellinentyomaara.docx " target="_blank ">Suhteellinen työmäärä</a>
                                     </li>
                                 </ol>
@@ -291,7 +224,7 @@
                                         </li>
                                         <li>
                                             <a target="_blank" href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/valinnaiset-tutkinnonosat/ids_asennus.pdf">IDS-järjestelmän asennus ja konfigurointi
-                                            </a>
+                                        </a>
                                         </li>
                                         <li>
                                             <a target="_blank" href="https://public.bc.fi/s1900877/portfolio/ammatilliset-tutkinnonosat/valinnaiset-tutkinnonosat/ids_jarjestelmat.pdf">IDS-järjestelmät (Network Intrusion Detection Tools)</a>
@@ -363,6 +296,7 @@
             </div>
 
         </div>
+
         <div class="saatiedot">
             <div class="saa">
             </div>
@@ -379,8 +313,68 @@
                 <button id="button-kaupunki">Hae</button>
             </div>
         </div>
-        <div class="aalto-alas-alempi"></div>
 
+        <div class="kortit">
+            <div class="kortti ">
+                <div class="kortti-sisalto kortti-otsikko ">
+                    <p>Kuka olen?</p>
+                    <i class="fas fa-user "></i>
+                </div>
+                <div class="kortti-sisalto kortti-teksti ">
+                    <div class="info-piilossa ">
+                        <p class="kysymys">Kuka olen?</p>
+                        <p class="vastaus">Olen Noa, 17 vuotias tieto- ja viestintätekniikan opiskelija ammattikoulussa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kortti ">
+                <div class="kortti-sisalto kortti-otsikko ">
+                    <p>Mitä tällä sivulla on?</p>
+                    <i class="fas fa-sitemap "></i>
+                </div>
+                <div class="kortti-sisalto kortti-teksti ">
+                    <div class="info-piilossa ">
+                        <p class="kysymys">Mitä tällä sivulla on?</p>
+                        <p class="vastaus">Olen koonnut tälle sivulle tehtyjä tehtäviäni datanomi- opintojeni varrelta</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kortti ">
+                <div class="kortti-sisalto kortti-otsikko ">
+                    <p>Missä ja mitä opiskelen?</p>
+                    <i class="fas fa-school "></i>
+                </div>
+                <div class="kortti-sisalto kortti-teksti ">
+                    <div class="info-piilossa ">
+                        <p class="kysymys">Missä ja mitä opiskelen?</p>
+                        <p class="vastaus">Opiskelen Helsinki Business Collegessa WEB - ohjelmointia</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kortti ">
+                <div class="kortti-sisalto kortti-otsikko ">
+                    <p>Mitä ohjelmointikieliä osaan?</p>
+                    <i class="fas fa-envelope"></i> </div>
+                <div class="kortti-sisalto kortti-teksti ">
+                    <div class="info-piilossa ">
+                        <p class="kysymys">Mitä ohjelmointikieliä osaan?</p>
+                        <p class="vastaus">Osaan (tällä hetkellä) luoda nettisivujen rakenteen <span>HTML</span> avulla, ulkoasun <span>CSS</span> avulla ja toiminnallisuuden <span>JavaScriptin</span> avulla. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="kortti ">
+                <div class="kortti-sisalto kortti-otsikko ">
+                    <p>Miten minuun saa yhteyden?</p>
+                    <i class="fas fa-envelope"></i> </div>
+                <div class="kortti-sisalto kortti-teksti ">
+                    <div class="info-piilossa ">
+                        <p class="kysymys">Miten minuun saa yhteyden?</p>
+                        <p class="vastaus">Minulle voi lähettää sähköpostia käyttämällä <a style="text-decoration: underline;" class="hover" onclick="liiku('lomake')">lomaketta</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="lomake">
             <form method="POST" id="lomake-sisalto" name="lomake ">
                 <div class="lomake">

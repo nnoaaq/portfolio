@@ -1,5 +1,4 @@
 let vasen = 0;
-let kirjoitettava_teksti_vasen = "Olen Noa Julkunen, web-ohjelmoinnin opiskelija ja tämä on minun portfolioni.";
 let nopeus_vasen = 90;
 let ylos_painike = document.querySelector(".ylos");
 
@@ -97,11 +96,22 @@ function ylos() {
 
 
 function kirjoitusVasen() {
-    if (vasen < kirjoitettava_teksti_vasen.length) {
-        document.querySelector(".yla").innerHTML += kirjoitettava_teksti_vasen.charAt(vasen);
-        vasen++;
-        setTimeout(kirjoitusVasen, nopeus_vasen);
+    if (screen.width <= 1000) {
+        let kirjoitettava_teksti_vasen = "Olen Noa Julkunen ja tämä on minun portfolioni.";
+        if (vasen < kirjoitettava_teksti_vasen.length) {
+            document.querySelector(".yla").innerHTML += kirjoitettava_teksti_vasen.charAt(vasen);
+            vasen++;
+            setTimeout(kirjoitusVasen, nopeus_vasen);
+        }
+    } else {
+        let kirjoitettava_teksti_vasen = "Olen Noa Julkunen, web-ohjelmoinnin opiskelija ja tämä on minun portfolioni.";
+        if (vasen < kirjoitettava_teksti_vasen.length) {
+            document.querySelector(".yla").innerHTML += kirjoitettava_teksti_vasen.charAt(vasen);
+            vasen++;
+            setTimeout(kirjoitusVasen, nopeus_vasen);
+        }
     }
+
 }
 
 
