@@ -21,6 +21,11 @@ body {
     overflow-x: hidden;
 }
 
+main>* {
+    border: 1px solid orange;
+    height: 100vh;
+}
+
 
 /* LATAUKSEN MUOTOILUT (.latausvaihe)*/
 
@@ -259,7 +264,6 @@ header h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -709,8 +713,7 @@ h4:focus {
 }
 
 .kortit {
-    transform: translateY(-15%);
-    background: var(--tausta);
+    background: var(--tausta-tummempi);
     width: 100%;
     padding: 11vh 2.5vw 6vh 2.5vw;
 }
@@ -799,8 +802,7 @@ label {
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    background: var(--tausta-tummempi);
-    position: relative;
+    background: var(--tausta);
     margin-top: 0 !important;
 }
 
@@ -824,7 +826,7 @@ label {
     padding: 10px 0px;
     transform: translate(10%, 50%);
     width: max-content;
-    background: var(--tausta-tummempi);
+    background: var(--tausta);
     padding: 5px;
 }
 
@@ -848,8 +850,6 @@ label {
 #lomake {
     width: 70%;
     padding-top: 60px;
-    position: sticky;
-    top: 60px;
     height: 100vh;
     margin: 0 auto;
 }
@@ -1025,7 +1025,6 @@ label {
     .kortti-teksti {
         word-wrap: break-word;
         overflow-wrap: break-word;
-        position: relative;
         padding: 15px;
         height: 220px;
         font-size: 14px;
