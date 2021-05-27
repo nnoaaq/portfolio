@@ -378,6 +378,16 @@ header h1 {
     transition: 1s all;
 }
 
+.aaltoliike {
+    background-image: url(../kuvat/aalto-alas.svg);
+    transform: rotate(180deg);
+    height: 100px;
+}
+
+.aaltoliike-valkoinen {
+    background-image: url(../kuvat/aalto-alas-harmaa.svg);
+}
+
 
 /* TEHTÄVIEN MUOTOILUT (.tehtavat) */
 

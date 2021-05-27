@@ -134,12 +134,14 @@ document.querySelector(".teema").addEventListener("click", () => {
     }
 });
 let aloitus = document.querySelector(".aloitus");
+let aaltoliike = document.querySelector(".aaltoliike");
 
 function oletukseksi() {
     document.querySelector(".teema-pallo").classList.remove("teema-pallo-valkoinen");
     document.querySelector(".teema").classList.remove("teema-valkoinen");
     aloitus.classList.remove("aloitus-valkoinen");
     document.body.classList.remove("valkoinen");
+    aaltoliike.classList.remove("aaltoliike-valkoinen");
 }
 
 function valkoiseksi() {
@@ -147,6 +149,7 @@ function valkoiseksi() {
     document.querySelector(".teema").classList.add("teema-valkoinen");
     aloitus.classList.add("aloitus-valkoinen");
     document.body.classList.add("valkoinen");
+    aaltoliike.classList.add("aaltoliike-valkoinen");
 }
 if (localStorage.getItem("teema") === "oletus") {
     oletukseksi();
