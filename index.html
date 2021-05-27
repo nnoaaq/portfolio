@@ -7,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d186af660e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="tyylitiedostot/tyylit.css">
+    <link rel="stylesheet" href="tyylitiedostot/muotoilu.css">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Architects+Daughter&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="kuvat/logo.svg">
     <title>Portfolio | Noa Julkunen</title>
 </head>
+
 
 <body class="rajoitettu-korkeus">
     <div class="latausvaihe">
@@ -28,13 +29,11 @@
         </div>
         <p>Sivua ladataan.</p>
     </div>
-    <header class="hidden">
+    <header class="header-nakyy">
         <div class="ylapalkki-vasen">
             <h1 onclick="ylos()">Noa Julkunen</h1>
         </div>
-
         <div class="ylapalkki-oikea">
-
             <ul>
                 <li onclick="liiku('tehtavat')">
                     <a>Tehtävät</a>
@@ -50,9 +49,7 @@
                 </li>
             </ul>
         </div>
-
     </header>
-
     <ul class="navigaatio">
         <li onclick="hampurilainen();liiku('tehtavat')">
             <a>Tehtävät</a>
@@ -72,28 +69,24 @@
         <div class="viiva2"></div>
         <div class="viiva3"></div>
     </div>
-
     <div class="aloitus">
         <div class="esittely-teksti">
-            <h2 class="yla"></h2>
-            <canvas class="piirtoalusta">
-            </canvas>
-            <div class="ohjeet">
-                <i class="fas fa-question-circle"></i>
-            </div>
+            <h2 class="otsikko"></h2>
             <div class='vierita'>
                 <div class="animaatio-pallo"></div>
             </div>
+            <button class="cta">
+                <a href="#">Tutustu osaamiseeni</a>
+            </button>
         </div>
     </div>
-
     <main>
         <div class="tehtavat">
             <h3>Tutustu tuotoksiini</h3>
             <div class="buttonit ">
-                <button class="ammatilliset " onclick="tutkinnonOsat( 'ammatilliset-tutkinnon-osat',event) "><i class="fas fa-plus i-vihrea"></i>ammatilliset tutkinnon osat</button>
-                <button class="yhteiset " onclick="tutkinnonOsat( 'yhteiset-tutkinnon-osat',event) "><i class="fas fa-plus i-vihrea "></i>yhteiset tutkinnon osat</button>
-                <button class="vapaasti " onclick="tutkinnonOsat( 'vapaasti-valittavat-tutkinnon-osat',event) "><i class="fas fa-plus i-vihrea "></i>vapaasti valittavat tutkinnon osat</button>
+                <button class="ammatilliset" onclick="tutkinnonOsat( 'ammatilliset-tutkinnon-osat',event) "><i class="fas fa-plus i-vihrea"></i>ammatilliset tutkinnon osat</button>
+                <button class="yhteiset" onclick="tutkinnonOsat( 'yhteiset-tutkinnon-osat',event) "><i class="fas fa-plus i-vihrea "></i>yhteiset tutkinnon osat</button>
+                <button class="vapaasti" onclick="tutkinnonOsat( 'vapaasti-valittavat-tutkinnon-osat',event) "><i class="fas fa-plus i-vihrea "></i>vapaasti valittavat tutkinnon osat</button>
             </div>
             <div class="tehtavia">
                 <div class="ammatilliset-tutkinnon-osat osat piilossa ">
@@ -296,7 +289,6 @@
             </div>
 
         </div>
-
         <div class="saatiedot">
             <div class="saa">
             </div>
@@ -313,7 +305,6 @@
                 <button id="button-kaupunki">Hae</button>
             </div>
         </div>
-
         <div class="kortit">
             <div class="kortti ">
                 <div class="kortti-sisalto kortti-otsikko ">
@@ -410,11 +401,10 @@
     <footer class="footer hidden">
         <p> &#169; Noa Julkunen 2021</p>
     </footer>
-    <div class="teema" style="display: none;">
-        <div class="teema-pallo"></div>
-    </div>
-    <div class="ylos hidden" onclick="ylos();liiku('aloitus')" style="display:none;"><a><i class="fas fa-arrow-up"></i></a></div>
-    <script src="js/yleiset.js"></script>
+    <div class="ylos hidden" onclick="ylos();liiku('aloitus')"><a><i class="fas fa-arrow-up"></i></a></div>
+
+    <script src="js/ensisijainen.js"></script>
+    <script src="js/tehtavat.js"></script>
     <script src="js/saa.js"></script>
     <script src="js/lomake.js"></script>
 </body>
