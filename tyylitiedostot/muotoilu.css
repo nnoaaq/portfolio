@@ -21,11 +21,6 @@ body {
     overflow-x: hidden;
 }
 
-main>* {
-    border: 1px solid orange;
-    height: 100vh;
-}
-
 
 /* LATAUKSEN MUOTOILUT (.latausvaihe)*/
 
