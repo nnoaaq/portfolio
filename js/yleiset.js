@@ -1,5 +1,3 @@
-let vasen = 0;
-let nopeus_vasen = 90;
 let ylos_painike = document.querySelector(".ylos");
 
 window.addEventListener("load", () => {
