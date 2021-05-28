@@ -51,8 +51,15 @@ function tutkinnonOsat(tutkinnonOsa, e) {
     } else if (muutettava_i.classList.contains("fa-plus")) {
         muutettava_i.classList = "fas fa-minus i-punainen";
         muutettava_div.style.animation = "korkeus 2s";
-
+        if (screen.width <= 1000) {
+            window.scroll({
+                top: muutettava_div.offsetTop - 175,
+                left: 100,
+                behavior: 'smooth'
+            });
+        }
     }
+
     muutettava_div.classList.toggle("piilossa");
     muutettava_div.classList.toggle("nakyvissa");
 
@@ -92,7 +99,18 @@ function ilmoitusPois() {
 
 function liiku(kohde) {
     let maaranpaa = document.querySelector(`.${kohde}`);
-    maaranpaa.scrollIntoView();
+
+    if (screen.width <= 1000) {
+        window.scroll({
+            top: maaranpaa.offsetTop - 75,
+            left: 100,
+            behavior: 'smooth'
+        });
+
+    } else {
+        maaranpaa.scrollIntoView();
+    }
+
 }
 
 function ylos() {

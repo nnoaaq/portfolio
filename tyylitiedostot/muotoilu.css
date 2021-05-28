@@ -402,7 +402,7 @@ header h1 {
 /* TEHTÄVIEN MUOTOILUT (.tehtavat) */
 
 .tehtavat {
-    padding: 11vh 2.5vw 6vh 2.5vw;
+    padding: 20px 2.5vw 6vh 2.5vw;
     margin: 0 auto;
     background: var(--tausta-tummempi);
 }
@@ -442,6 +442,10 @@ header h1 {
     margin: 5px;
 }
 
+.tehtavia>* {
+    margin: 20px 0;
+}
+
 .tehtavia p,
 .oppimistehtavia li a,
 .oppimistehtavat li a {
@@ -454,7 +458,6 @@ header h1 {
 
 .tehtavat h3,
 .saa-div h3 {
-    padding-left: 10px;
     padding-bottom: 15px;
     color: var(--fontti);
 }
@@ -547,10 +550,10 @@ header h1 {
     text-transform: uppercase;
     width: 100%;
     height: auto;
+    margin: 10px 0px;
     cursor: pointer;
-    flex-direction: row;
-    justify-content: center;
     font-size: 15px;
+    border: 1px solid orange;
 }
 
 
@@ -740,7 +743,7 @@ h4:focus {
     max-height: 0;
     overflow: hidden;
     color: inherit;
-    top: 7%;
+    top: 75px;
     left: 0;
     position: fixed;
     width: 100%;
@@ -794,7 +797,7 @@ h4:focus {
 .kortit {
     background: var(--tausta);
     width: 100%;
-    padding: 11vh 2.5vw 6vh 2.5vw;
+    padding: 0 2.5vw 6vh 2.5vw;
 }
 
 .kortit h3 {
@@ -1011,6 +1014,9 @@ label {
 @media only screen and (min-width:650px) {
     .buttonit {
         flex-direction: row;
+    }
+    .buttonit>*:nth-child(even) {
+        margin: 10px 10px;
     }
 }
 
