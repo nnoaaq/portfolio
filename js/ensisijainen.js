@@ -52,13 +52,13 @@ function tutkinnonOsat(tutkinnonOsa, e) {
     } else if (muutettava_i.classList.contains("fa-plus")) {
         muutettava_i.classList = "fas fa-minus i-punainen";
         muutettava_div.style.animation = "korkeus 2s";
-        if (screen.width <= 1000) {
-            window.scroll({
-                top: muutettava_div.offsetTop - 175,
-                left: 100,
-                behavior: 'smooth'
-            });
-        }
+        //  if (screen.width <= 1000) {
+        //      window.scroll({
+        //          top: muutettava_div.offsetTop - 175,
+        //          left: 100,
+        //          behavior: 'smooth'
+        //      });
+        //  }
     }
 
     muutettava_div.classList.toggle("piilossa");
