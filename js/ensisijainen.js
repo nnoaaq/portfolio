@@ -206,7 +206,7 @@ for (let tarkistettava of observoitavat) {
     }
 }
 
-let options = {
+let optiot = {
     root: null,
     rootMargin: '0px',
     threshold: 0.8
@@ -228,7 +228,7 @@ function callbackFunction(entries) {
     })
 }
 
-let observer = new IntersectionObserver(callbackFunction, options);
+let observer = new IntersectionObserver(callbackFunction, optiot);
 for (let observoitava of observoitava_taulukko) {
     observer.observe(observoitava);
 }
