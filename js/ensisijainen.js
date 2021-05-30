@@ -103,17 +103,7 @@ function liiku(kohde) {
     for (let sisalto_osio of sisalto) {
         sisalto_osio.classList.remove("animoitava");
     }
-    if (screen.width <= 1000) {
-        window.scroll({
-            top: maaranpaa.offsetTop - 75,
-            left: 100,
-            behavior: 'smooth'
-        });
-        maaranpaa.scrollIntoView();
-
-    } else {
-        maaranpaa.scrollIntoView();
-    }
+    maaranpaa.scrollIntoView();
 
 }
 
