@@ -40,6 +40,15 @@ body {
     transition: 1s all;
 }
 
+.animoitava {
+    transform: scale(0);
+}
+
+.animoitu {
+    transform: scale(1);
+    transition: 1s all;
+}
+
 
 /* TEEMAN MUOTOILUT (.teema) */
 
@@ -810,7 +819,7 @@ h4:focus {
 }
 
 .kortit {
-    background: var(--tausta);
+    background: linear-gradient(var(--tausta), var(--tausta-tummempi));
     width: 100%;
     padding: 0 2.5vw 6vh 2.5vw;
 }
@@ -833,7 +842,6 @@ h4:focus {
 }
 
 .kortti-otsikko:hover {
-    text-decoration: underline;
     cursor: pointer;
 }
 

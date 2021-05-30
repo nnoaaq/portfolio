@@ -11,6 +11,7 @@ window.addEventListener("load", () => {
     // lataus valmis     
 let vasen = 0;
 let nopeus = 90;
+let sisalto = document.querySelectorAll("main >*");
 
 function kirjoitus() {
     if (screen.width <= 1000) {
@@ -99,7 +100,9 @@ function ilmoitusPois() {
 
 function liiku(kohde) {
     let maaranpaa = document.querySelector(`.${kohde}`);
-
+    for (let sisalto_osio of sisalto) {
+        sisalto_osio.classList.remove("animoitava");
+    }
     if (screen.width <= 1000) {
         window.scroll({
             top: maaranpaa.offsetTop - 75,
@@ -215,6 +218,7 @@ function callbackFunction(entries) {
         if (entry.isIntersecting) {
             if (muutettava !== null) {
                 muutettava.classList.add("aktiivinen");
+                entry.target.classList.add("animoitu");
             }
         } else {
             if (muutettava !== null) {
@@ -227,4 +231,11 @@ function callbackFunction(entries) {
 let observer = new IntersectionObserver(callbackFunction, options);
 for (let observoitava of observoitava_taulukko) {
     observer.observe(observoitava);
+}
+
+// observer
+
+
+for (let sisalto_osa of sisalto) {
+    sisalto_osa.classList.add("animoitava");
 }
