@@ -19,6 +19,7 @@ body {
     --korostus: orange;
     letter-spacing: 2px;
     overflow-x: hidden;
+    overflow-anchor: none;
 }
 
 .hidden {
