@@ -239,3 +239,5 @@ for (let observoitava of observoitava_taulukko) {
 for (let sisalto_osa of sisalto) {
     sisalto_osa.classList.add("animoitava");
 }
+
+// lisätään class, joka tuo scale (0) =)
