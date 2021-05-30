@@ -267,8 +267,8 @@ header h1 {
     max-height: 100%;
     position: fixed;
     top: 20px;
-    z-index: 567;
     right: 5px;
+    z-index: 999;
 }
 
 .hampurilainen:hover {
@@ -317,7 +317,7 @@ header h1 {
     position: fixed;
     top: 0;
     width: 100vw;
-    z-index: 5;
+    z-index: 888;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1032,6 +1032,12 @@ label {
 
 .ylos a i {
     color: var(--fontti);
+}
+
+.haetaan {
+    position: sticky;
+    top: 75px;
+    border: 1px solid orange;
 }
 
 @media only screen and (min-width:650px) {

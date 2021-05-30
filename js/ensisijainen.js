@@ -52,13 +52,13 @@ function tutkinnonOsat(tutkinnonOsa, e) {
     } else if (muutettava_i.classList.contains("fa-plus")) {
         muutettava_i.classList = "fas fa-minus i-punainen";
         muutettava_div.style.animation = "korkeus 2s";
-        if (screen.width <= 1000) {
-            window.scroll({
-                top: muutettava_div.offsetTop - 175,
-                left: 100,
-                behavior: 'smooth'
-            });
-        }
+        //  if (screen.width <= 1000) {
+        //      window.scroll({
+        //          top: muutettava_div.offsetTop - 175,
+        //          left: 100,
+        //          behavior: 'smooth'
+        //      });
+        //  }
     }
 
     muutettava_div.classList.toggle("piilossa");
@@ -238,4 +238,31 @@ for (let observoitava of observoitava_taulukko) {
 
 for (let sisalto_osa of sisalto) {
     sisalto_osa.classList.add("animoitava");
+}
+if (screen.width <= 1100) {
+
+    document.querySelector("#kaupunki").addEventListener("click", () => {
+        document.querySelector(".saatiedot").style.position = "sticky";
+        document.querySelector(".saatiedot").style.top = "75px";
+        document.querySelector(".saatiedot").style.zIndex = "75";
+        document.querySelector(".lomake").style.display = "none";
+    });
+    document.querySelector("#kaupunki").addEventListener("blur", () => {
+        document.querySelector(".saatiedot").style.position = "static";
+        document.querySelector(".lomake").style.display = "block";
+
+    });
+    document.querySelector("#button-kaupunki").addEventListener("click", () => {
+        document.querySelector(".saatiedot").style.position = "static";
+        document.querySelector(".lomake").style.display = "block";
+    });
+    document.querySelector(".aaltoliike-alempi").addEventListener("click", () => {
+        document.querySelector(".saatiedot").style.position = "static";
+        document.querySelector(".lomake").style.display = "block";
+    });
+
+    document.querySelector(".lomake").addEventListener("click", () => {
+        document.querySelector(".saatiedot").style.position = "static";
+        document.querySelector(".lomake").style.transform = "translateY(20%)";
+    });
 }
