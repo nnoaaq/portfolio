@@ -239,30 +239,3 @@ for (let observoitava of observoitava_taulukko) {
 for (let sisalto_osa of sisalto) {
     sisalto_osa.classList.add("animoitava");
 }
-if (screen.width <= 1100) {
-
-    document.querySelector("#kaupunki").addEventListener("click", () => {
-        document.querySelector(".saatiedot").style.position = "sticky";
-        document.querySelector(".saatiedot").style.top = "75px";
-        document.querySelector(".saatiedot").style.zIndex = "75";
-        document.querySelector(".lomake").style.display = "none";
-    });
-    document.querySelector("#kaupunki").addEventListener("blur", () => {
-        document.querySelector(".saatiedot").style.position = "static";
-        document.querySelector(".lomake").style.display = "block";
-
-    });
-    document.querySelector("#button-kaupunki").addEventListener("click", () => {
-        document.querySelector(".saatiedot").style.position = "static";
-        document.querySelector(".lomake").style.display = "block";
-    });
-    document.querySelector(".aaltoliike-alempi").addEventListener("click", () => {
-        document.querySelector(".saatiedot").style.position = "static";
-        document.querySelector(".lomake").style.display = "block";
-    });
-
-    document.querySelector(".lomake").addEventListener("click", () => {
-        document.querySelector(".saatiedot").style.position = "static";
-        document.querySelector(".lomake").style.transform = "translateY(20%)";
-    });
-}
