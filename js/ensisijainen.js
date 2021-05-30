@@ -109,6 +109,7 @@ function liiku(kohde) {
             left: 100,
             behavior: 'smooth'
         });
+        maaranpaa.scrollIntoView();
 
     } else {
         maaranpaa.scrollIntoView();
