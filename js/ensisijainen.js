@@ -140,9 +140,11 @@ window.addEventListener("scroll", () => {
     if (window.pageYOffset <= 400) {
         document.querySelector("header").classList.remove("header-nakyy");
         document.querySelector(".ylos").classList.add("hidden");
+        document.querySelector(".kupla").style.display = "none";
     } else {
         document.querySelector("header").classList.add("header-nakyy");
         document.querySelector(".ylos").classList.remove("hidden");
+        document.querySelector(".kupla").style.display = "block";
     }
 })
 
@@ -191,3 +193,38 @@ if (localStorage.getItem("teema") === "oletus") {
 }
 
 //teema
+let observoitavat = document.querySelectorAll("main >*");
+let observoitava_taulukko = [];
+for (let tarkistettava of observoitavat) {
+    if (tarkistettava.classList == "aaltoliike") {
+
+    } else {
+        observoitava_taulukko.push(tarkistettava)
+    }
+}
+
+let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.8
+};
+
+function callbackFunction(entries) {
+    entries.forEach(entry => {
+        let muutettava = document.querySelector(`[data-sijainti=${entry.target.classList[0]}]`);
+        if (entry.isIntersecting) {
+            if (muutettava !== null) {
+                muutettava.classList.add("aktiivinen");
+            }
+        } else {
+            if (muutettava !== null) {
+                muutettava.classList.remove("aktiivinen");
+            }
+        }
+    })
+}
+
+let observer = new IntersectionObserver(callbackFunction, options);
+for (let observoitava of observoitava_taulukko) {
+    observer.observe(observoitava);
+}

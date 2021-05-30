@@ -29,6 +29,7 @@
         </div>
         <p>Sivua ladataan.</p>
     </div>
+    <div class="kupla"></div>
     <header class="header-nakyy">
         <div class="ylapalkki-vasen">
             <h1 onclick="ylos()">Noa Julkunen</h1>
@@ -36,32 +37,32 @@
         <div class="ylapalkki-oikea">
             <ul>
                 <li onclick="liiku('tehtavat')">
-                    <a>Tehtävät</a>
+                    <a data-sijainti="tehtavat">Tehtävät</a>
                 </li>
                 <li onclick="liiku('kortit')">
-                    <a>Tietoja</a>
+                    <a data-sijainti="kortit">Tietoja</a>
                 </li>
                 <li onclick="liiku('saa')">
-                    <a>Sää</a>
+                    <a data-sijainti="saatiedot">Sää</a>
                 </li>
                 <li onclick="liiku('lomake')">
-                    <a>Ota yhteyttä</a>
+                    <a data-sijainti="lomake">Ota yhteyttä</a>
                 </li>
             </ul>
         </div>
     </header>
     <ul class="navigaatio">
         <li onclick="hampurilainen();liiku('tehtavat')">
-            <a>Tehtävät</a>
+            <a data-sijainti="tehtavat">Tehtävät</a>
         </li>
         <li onclick="hampurilainen();liiku('kortit')">
-            <a>Tietoja</a>
+            <a data-sijainti="kortit">Tietoja</a>
         </li>
         <li onclick="hampurilainen();liiku('saa')">
-            <a>Sää</a>
+            <a data-sijainti="saatiedot">Sää</a>
         </li>
         <li onclick="hampurilainen();liiku('lomake')">
-            <a>Ota yhteyttä</a>
+            <a data-sijainti="lomake">Ota yhteyttä</a>
         </li>
     </ul>
     <div onclick="hampurilainen()" class="hampurilainen">
