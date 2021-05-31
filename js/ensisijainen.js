@@ -103,7 +103,16 @@ function liiku(kohde) {
     for (let sisalto_osio of sisalto) {
         sisalto_osio.classList.remove("animoitava");
     }
-    maaranpaa.scrollIntoView();
+    if (screen.width <= 1000) {
+        window.scroll({
+            top: maaranpaa.offsetTop - 75,
+            left: 100,
+            behavior: 'smooth'
+        });
+
+    } else {
+        maaranpaa.scrollIntoView();
+    }
 
 }
 
@@ -135,6 +144,8 @@ window.addEventListener("scroll", () => {
         document.querySelector("header").classList.remove("header-nakyy");
         document.querySelector(".ylos").classList.add("hidden");
         document.querySelector(".kupla").style.display = "none";
+    } else if (window.pageYOffset <= 100) {
+        document.querySelector(".esittely-teksti").style.height = "auto";
     } else {
         document.querySelector("header").classList.add("header-nakyy");
         document.querySelector(".ylos").classList.remove("hidden");
@@ -196,7 +207,6 @@ for (let tarkistettava of observoitavat) {
         observoitava_taulukko.push(tarkistettava)
     }
 }
-
 let optiot = {
     root: null,
     rootMargin: '0px',
@@ -231,4 +241,12 @@ for (let sisalto_osa of sisalto) {
     sisalto_osa.classList.add("animoitava");
 }
 
-// lisätään class, joka tuo scale (0) =)
+
+//document.querySelector(".saatiedot").addEventListener("click", (event) => {
+//    console.log(event.target.parentElement.parentElement);
+//    event.target.parentElement.parentElement.scrollIntoView();
+//    document.querySelector(".saatiedot").style.position = "sticky";
+//    document.querySelector(".saatiedot").style.top = "75px";
+//    document.querySelector(".saatiedot").style.zIndex = "75";
+//
+//})
