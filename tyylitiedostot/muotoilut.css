@@ -252,6 +252,10 @@ header h1 {
     text-decoration: underline dashed rgb(177, 119, 11);
 }
 
+header h1:hover {
+    cursor: pointer;
+}
+
 .header-nakyy {
     height: 75px;
     transition: 1s all;
@@ -1105,7 +1109,7 @@ label {
     }
     .kortti {
         margin: 10px;
-        height: auto;
+        height: 100%;
         overflow: hidden;
         border: 0px solid gray;
         width: 100%;
@@ -1137,7 +1141,7 @@ label {
         display: none;
     }
     .kortti-otsikko:hover {
-        transform: translateY(-60px);
+        transform: translateY(-20px);
     }
     .kortti-teksti {
         word-wrap: break-word;
