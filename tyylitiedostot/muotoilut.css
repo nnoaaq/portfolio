@@ -425,7 +425,7 @@ header h1 {
 /* TEHTÄVIEN MUOTOILUT (.tehtavat) */
 
 .tehtavat {
-    padding: 20px 2.5vw 6vh 2.5vw;
+    padding: 11vh 2.5vw 6vh 2.5vw;
     margin: 0 auto;
     background: var(--tausta-tummempi);
 }
@@ -585,6 +585,7 @@ header h1 {
 .saatiedot {
     background: var(--tausta-tummempi);
     padding: 2.5vw;
+    padding: 11vh 2.5vw 6vh 2.5vw;
 }
 
 .saa {
@@ -820,7 +821,7 @@ h4:focus {
 .kortit {
     background: linear-gradient(var(--tausta), var(--tausta-tummempi));
     width: 100%;
-    padding: 0 2.5vw 6vh 2.5vw;
+    padding: 11vh 2.5vw 6vh 2.5vw;
 }
 
 .kortit h3 {
