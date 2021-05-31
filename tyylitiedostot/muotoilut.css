@@ -234,7 +234,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--border);
     position: fixed;
     top: 0;
     height: 0;
@@ -278,7 +277,7 @@ header h1 {
 .viiva1,
 .viiva2,
 .viiva3 {
-    background-color: var(--fontti);
+    background-color: orange;
     width: 25px;
     height: 3px;
     margin: 5px;
